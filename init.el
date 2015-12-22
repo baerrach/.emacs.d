@@ -81,3 +81,8 @@
 
 ;; Lets start with a smattering of sanity
 (require 'sane-defaults)
+
+(when is-mac
+  (require-package 'exec-path-from-shell)
+  (exec-path-from-shell-initialize)
+  (require 'mac))
