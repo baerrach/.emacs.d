@@ -62,6 +62,7 @@
      smartparens
      ido-vertical-mode
      ido-at-point
+     ido-ubiquitous
      guide-key
      nodejs-repl
      restclient
@@ -94,3 +95,17 @@
 (guide-key-mode 1)
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
+
+;; Setup extensions
+(eval-after-load 'ido '(require 'setup-ido))
+;;(eval-after-load 'org '(require 'setup-org))
+;; (eval-after-load 'dired '(require 'setup-dired))
+;; (eval-after-load 'magit '(require 'setup-magit))
+;; (eval-after-load 'grep '(require 'setup-rgrep))
+;; (eval-after-load 'shell '(require 'setup-shell))
+;; (require 'setup-hippie)
+;; (require 'setup-yasnippet)
+;; (require 'setup-perspective)
+;; (require 'setup-ffip)
+;; (require 'setup-html-mode)
+;; (require 'setup-paredit)
