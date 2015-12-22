@@ -1,5 +1,13 @@
-# Compiled
+auto-save-list
+backups
+*~
+.places
+session.*
+tramp
+elpa
+swank
+emms
 *.elc
-
-# Packaging
+.DS_Store
+.yas-compiled-snippets.el
 .cask
