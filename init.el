@@ -40,3 +40,43 @@
 (require 'saveplace)
 (setq-default save-place t)
 (setq save-place-file (expand-file-name ".places" user-emacs-directory))
+
+;; Are we on a mac?
+(setq is-mac (equal system-type 'darwin))
+
+;; Setup packages
+(require 'setup-package)
+
+
+;; Install extensions if they're missing
+(defun init--install-packages ()
+  (packages-install
+   '(magit
+     paredit
+     markdown-mode
+     f
+     flycheck
+     flx
+     flx-ido
+     dired-details
+     css-eldoc
+     yasnippet
+     smartparens
+     ido-vertical-mode
+     ido-at-point
+     guide-key
+     nodejs-repl
+     restclient
+     highlight-escape-sequences
+     whitespace-cleanup-mode
+     elisp-slime-nav
+     dockerfile-mode
+     prodigy
+     string-edit
+     )))
+
+(condition-case nil
+    (init--install-packages)
+  (error
+   (package-refresh-contents)
+   (init--install-packages)))
