@@ -39,14 +39,12 @@
 ;; Save point position between sessions
 (require 'saveplace)
 (setq-default save-place t)
-(setq save-place-file (expand-file-name ".places" user-emacs-directory))
 
 ;; Are we on a mac?
 (setq is-mac (equal system-type 'darwin))
 
 ;; Setup packages
 (require 'setup-package)
-
 
 ;; Install extensions if they're missing
 (defun init--install-packages ()
