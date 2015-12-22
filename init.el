@@ -106,7 +106,8 @@
 ;; Setup extensions
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'dired '(require 'setup-dired))
-;; (eval-after-load 'magit '(require 'setup-magit))
+(eval-after-load 'magit '(require 'setup-magit))
+
 ;; (eval-after-load 'grep '(require 'setup-rgrep))
 ;; (eval-after-load 'shell '(require 'setup-shell))
 ;; (require 'setup-hippie)
