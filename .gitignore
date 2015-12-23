@@ -12,3 +12,8 @@ emms
 .DS_Store
 .yas-compiled-snippets.el
 .cask
+.emacs.desktop*
+\#*#
+/history
+/ido.last
+/recentf
