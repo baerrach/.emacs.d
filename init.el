@@ -117,9 +117,7 @@
 (require 'setup-hippie)
 (require 'setup-ffip)
 (require 'setup-html-mode)
-
-;; (eval-after-load 'grep '(require 'setup-rgrep))
-;; (require 'setup-paredit)
+(require 'setup-paredit)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
