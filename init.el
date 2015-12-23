@@ -82,6 +82,7 @@
      restclient
      smartparens
      smart-forward
+     smex
      string-edit
      visual-regexp
      whitespace-cleanup-mode
@@ -177,6 +178,10 @@
 (global-set-key (kbd "M-<down>") 'smart-down)
 (global-set-key (kbd "M-<left>") 'smart-backward)
 (global-set-key (kbd "M-<right>") 'smart-forward)
+
+;; Smart M-x is smart
+(require 'smex)
+(smex-initialize)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
