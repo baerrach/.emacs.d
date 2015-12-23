@@ -112,11 +112,13 @@
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'magit '(require 'setup-magit))
 (eval-after-load 'shell '(require 'setup-shell))
+(require 'setup-hippie)
 
 ;; (eval-after-load 'grep '(require 'setup-rgrep))
-;; (require 'setup-hippie)
 ;; (require 'setup-yasnippet)
 ;; (require 'setup-perspective)
 ;; (require 'setup-ffip)
 ;; (require 'setup-html-mode)
 ;; (require 'setup-paredit)
+
+
