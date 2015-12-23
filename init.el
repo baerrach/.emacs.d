@@ -57,30 +57,31 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(magit
-     paredit
-     markdown-mode
+   '(css-eldoc
+     dired-details
+     dockerfile-mode
+     elisp-slime-nav
      f
-     flycheck
+     find-file-in-project
      flx
      flx-ido
-     dired-details
-     css-eldoc
-     yasnippet
-     smartparens
-     ido-vertical-mode
+     flycheck
+     guide-key
+     highlight-escape-sequences
      ido-at-point
      ido-ubiquitous
-     guide-key
+     ido-vertical-mode
+     magit
+     markdown-mode
      nodejs-repl
-     restclient
-     highlight-escape-sequences
-     whitespace-cleanup-mode
-     elisp-slime-nav
-     dockerfile-mode
-     prodigy
-     string-edit
+     paredit
      perspective
+     prodigy
+     restclient
+     smartparens
+     string-edit
+     whitespace-cleanup-mode
+     yasnippet
      )))
 
 (condition-case nil
@@ -114,10 +115,9 @@
 (eval-after-load 'magit '(require 'setup-magit))
 (eval-after-load 'shell '(require 'setup-shell))
 (require 'setup-hippie)
+(require 'setup-ffip)
 
 ;; (eval-after-load 'grep '(require 'setup-rgrep))
-;; (require 'setup-perspective)
-;; (require 'setup-ffip)
 ;; (require 'setup-html-mode)
 ;; (require 'setup-paredit)
 
