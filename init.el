@@ -80,6 +80,7 @@
      dockerfile-mode
      prodigy
      string-edit
+     perspective
      )))
 
 (condition-case nil
