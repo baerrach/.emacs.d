@@ -138,4 +138,6 @@
 
 (add-to-list 'find-file-not-found-functions 'my-create-non-existent-directory)
 
+(global-unset-key (kbd "C-z"))
+
 (provide 'sane-defaults)
