@@ -81,6 +81,7 @@
      restclient
      smartparens
      string-edit
+     visual-regexp
      whitespace-cleanup-mode
      yasnippet
      )))
@@ -163,6 +164,8 @@
 
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+(require 'expand-region)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
