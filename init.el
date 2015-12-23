@@ -115,7 +115,6 @@
 (require 'setup-hippie)
 
 ;; (eval-after-load 'grep '(require 'setup-rgrep))
-;; (require 'setup-yasnippet)
 ;; (require 'setup-perspective)
 ;; (require 'setup-ffip)
 ;; (require 'setup-html-mode)
