@@ -150,6 +150,10 @@
 (hes-mode)
 (put 'font-lock-regexp-grouping-backslash 'face-alias 'font-lock-builtin-face)
 
+;; Visual regexp
+(require 'visual-regexp)
+(define-key global-map (kbd "C-M-%") 'vr/query-replace)
+
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
