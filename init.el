@@ -57,7 +57,8 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(css-eldoc
+   '(ace-jump-buffer
+     css-eldoc
      dired-details
      dockerfile-mode
      elisp-slime-nav
@@ -160,5 +161,9 @@
   (when (file-regular-p file)
     (load file)))
 
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+
