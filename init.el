@@ -116,9 +116,9 @@
 (eval-after-load 'shell '(require 'setup-shell))
 (require 'setup-hippie)
 (require 'setup-ffip)
+(require 'setup-html-mode)
 
 ;; (eval-after-load 'grep '(require 'setup-rgrep))
-;; (require 'setup-html-mode)
 ;; (require 'setup-paredit)
 
 (global-set-key (kbd "C-x g") 'magit-status)
