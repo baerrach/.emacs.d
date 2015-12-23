@@ -154,7 +154,10 @@
 
 ;; Visual regexp
 (require 'visual-regexp)
-(define-key global-map (kbd "C-M-%") 'vr/query-replace)
+(define-key global-map (kbd "C-c r") 'vr/replace)
+(define-key global-map (kbd "C-c q") 'vr/query-replace)
+;; if you use multiple-cursors, this is for you:
+(define-key global-map (kbd "C-c m") 'vr/mc-mark)
 
 ;; Functions (load all files in defuns-dir)
 (setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
