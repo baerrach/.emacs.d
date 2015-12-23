@@ -74,6 +74,7 @@
      ido-vertical-mode
      magit
      markdown-mode
+     multiple-cursors
      nodejs-repl
      paredit
      perspective
@@ -169,6 +170,7 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 (require 'expand-region)
+(require 'multiple-cursors)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
