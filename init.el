@@ -47,8 +47,9 @@
 (require 'saveplace)
 (setq-default save-place t)
 
-;; Are we on a mac?
+;; What system are we on?
 (setq is-mac (equal system-type 'darwin))
+(setq is-win (equal system-type 'windows-nt))
 
 ;; Setup packages
 (require 'setup-package)
@@ -95,6 +96,9 @@
   (require-package 'exec-path-from-shell)
   (exec-path-from-shell-initialize)
   (require 'mac))
+
+(when is-win
+  (require 'microsoft-windows))
 
 ;; guide-key
 (require 'guide-key)
