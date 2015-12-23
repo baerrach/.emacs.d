@@ -1,3 +1,5 @@
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; full screen magit-status
 
 (defun magit-status-fullscreen (prefix)
