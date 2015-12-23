@@ -81,6 +81,7 @@
      prodigy
      restclient
      smartparens
+     smart-forward
      string-edit
      visual-regexp
      whitespace-cleanup-mode
@@ -171,6 +172,11 @@
 
 (require 'expand-region)
 (require 'multiple-cursors)
+(require 'smart-forward)
+(global-set-key (kbd "M-<up>") 'smart-up)
+(global-set-key (kbd "M-<down>") 'smart-down)
+(global-set-key (kbd "M-<left>") 'smart-backward)
+(global-set-key (kbd "M-<right>") 'smart-forward)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
