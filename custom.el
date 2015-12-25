@@ -4,6 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tango-dark)))
+ '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
+ '(js2-basic-offset 2)
  '(markdown-coding-system (quote utf-8))
  '(markdown-command "/usr/bin/redcarpet --parse-autolink")
  '(markdown-command-needs-filename t))

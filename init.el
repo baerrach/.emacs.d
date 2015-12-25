@@ -72,6 +72,8 @@
      ido-at-point
      ido-ubiquitous
      ido-vertical-mode
+     js2-mode
+     js2-refactor
      magit
      markdown-mode
      multiple-cursors
@@ -84,6 +86,7 @@
      smart-forward
      smex
      string-edit
+     tagedit
      visual-regexp
      whitespace-cleanup-mode
      yasnippet
@@ -169,20 +172,16 @@
     (load file)))
 
 (require 'ace-jump-mode)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 (require 'expand-region)
 (require 'multiple-cursors)
 (require 'smart-forward)
-(global-set-key (kbd "M-<up>") 'smart-up)
-(global-set-key (kbd "M-<down>") 'smart-down)
-(global-set-key (kbd "M-<left>") 'smart-backward)
-(global-set-key (kbd "M-<right>") 'smart-forward)
 
 ;; Smart M-x is smart
 (require 'smex)
 (smex-initialize)
 
-(global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+;; Setup key bindings
+(require 'key-bindings)
+
 
