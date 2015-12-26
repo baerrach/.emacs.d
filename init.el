@@ -181,6 +181,12 @@
 (require 'smex)
 (smex-initialize)
 
+;; Grep configurations
+(eval-after-load 'grep '(require 'setup-grep))
+
+(require 're-builder)
+(setq reb-re-syntax 'string)
+
 ;; Setup key bindings
 (require 'key-bindings)
 
