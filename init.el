@@ -190,5 +190,3 @@
 
 ;; Setup key bindings
 (require 'key-bindings)
-
-
