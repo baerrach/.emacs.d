@@ -88,6 +88,7 @@
      perspective
      prodigy
      restclient
+     simplezen
      smartparens
      smart-forward
      smex
