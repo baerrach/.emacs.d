@@ -1,3 +1,7 @@
+;;; Enable for debugging problems
+;(setq debug-on-quit t)
+(setq debug-on-error t)
+
 ;;;
 ;;; Desktop save mode
 ;;; http://ergoemacs.org/emacs/emacs_save_restore_opened_files.html
@@ -89,6 +93,7 @@
      prodigy
      restclient
      simplezen
+     slime
      smartparens
      smart-forward
      smex
@@ -124,16 +129,6 @@
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
 
-;; Setup extensions
-(eval-after-load 'ido '(require 'setup-ido))
-(eval-after-load 'dired '(require 'setup-dired))
-(eval-after-load 'magit '(require 'setup-magit))
-(eval-after-load 'shell '(require 'setup-shell))
-(require 'setup-hippie)
-(require 'setup-ffip)
-(require 'setup-html-mode)
-(require 'setup-paredit)
-
 ;; Default setup of smartparens
 (require 'smartparens-config)
 (setq sp-autoescape-string-quote nil)
@@ -147,18 +142,9 @@
           scala-mode)
   (add-hook it 'turn-on-smartparens-mode))
 
-;; Language specific setup files
-(eval-after-load 'js2-mode '(require 'setup-js2-mode))
-(eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
-(eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
 
 ;; Load stuff on demand
 (autoload 'auto-complete-mode "auto-complete" nil t)
-(eval-after-load 'flycheck '(require 'setup-flycheck))
-
-;; Map files to modes
-(require 'mode-mappings)
-
 
 ;; Highlight escape sequences
 (require 'highlight-escape-sequences)
@@ -167,13 +153,8 @@
 
 ;; Visual regexp
 (require 'visual-regexp)
-(define-key global-map (kbd "C-c r") 'vr/replace)
-(define-key global-map (kbd "C-c q") 'vr/query-replace)
-;; if you use multiple-cursors, this is for you:
-(define-key global-map (kbd "C-c m") 'vr/mc-mark)
 
 (require 'ace-jump-mode)
-
 (require 'expand-region)
 (require 'multiple-cursors)
 (require 'smart-forward)
@@ -182,11 +163,27 @@
 (require 'smex)
 (smex-initialize)
 
-;; Grep configurations
-(eval-after-load 'grep '(require 'setup-grep))
-
 (require 're-builder)
 (setq reb-re-syntax 'string)
+
+;; Setup extensions
+(eval-after-load 'dired '(require 'setup-dired))
+(eval-after-load 'find-file-in-project '(require 'setup-find-file-in-project))
+(eval-after-load 'flycheck '(require 'setup-flycheck))
+(eval-after-load 'grep '(require 'setup-grep))
+(eval-after-load 'hippie-expand '(require 'setup-hippie-expand))
+(eval-after-load 'ido '(require 'setup-ido))
+(eval-after-load 'magit '(require 'setup-magit))
+(eval-after-load 'paredit '(require 'setup-paredit))
+(eval-after-load 'sgml-mode '(require 'setup-html-mode))
+(eval-after-load 'shell '(require 'setup-shell))
+;; Language specific setup files
+(eval-after-load 'js2-mode '(require 'setup-js2-mode))
+(eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
+(eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
+
+;; Map files to modes
+(require 'mode-mappings)
 
 ;; Setup key bindings
 (require 'key-bindings)

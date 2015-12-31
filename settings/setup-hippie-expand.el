@@ -167,4 +167,4 @@ string).  It returns t if a new completion is found, nil otherwise."
   (let ((case-fold-search nil))
     (hippie-expand nil)))
 
-(provide 'setup-hippie)
+(provide 'setup-hippie-expand)

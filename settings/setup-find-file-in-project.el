@@ -63,4 +63,4 @@
                  "/.repl"
                  "/.tmp")))
 
-(provide 'setup-ffip)
+(provide 'setup-find-file-in-project)

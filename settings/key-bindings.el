@@ -1,7 +1,3 @@
-;; I don't need to kill emacs that easily
-;; the mnemonic is C-x REALLY QUIT
-(global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
-
 ;; Completion that uses many different methods to find options.
 (global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
 (global-set-key (kbd "C-:") 'hippie-expand-lines)
@@ -130,6 +126,7 @@
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 (global-set-key (kbd "C-x m") 'magit-status-fullscreen)
 (autoload 'magit-status-fullscreen "magit")
+(autoload 'magit-status "magit")
 
 ;; Toggle quotes
 (global-set-key (kbd "C-\"") 'toggle-quotes)
@@ -145,11 +142,10 @@
 ;; Browse the kill ring
 (global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
-;; Simplezen
-(defun --setup-simplezen ()
-  (set (make-local-variable 'yas/fallback-behavior)
-       '(apply simplezen-expand-or-indent-for-tab)))
-(define-key html-mode-map (kbd "TAB") 'simplezen-expand-or-indent-for-tab)
-(add-hook 'sgml-mode-hook '--setup-simplezen)
+;; Visual regexp
+(define-key global-map (kbd "C-c r") 'vr/replace)
+(define-key global-map (kbd "C-c q") 'vr/query-replace)
+;; if you use multiple-cursors, this is for you:
+(define-key global-map (kbd "C-c m") 'vr/mc-mark)
 
 (provide 'key-bindings)
