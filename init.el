@@ -1,6 +1,9 @@
 ;;; Enable for debugging problems
-;(setq debug-on-quit t)
+;; (setq debug-on-quit t)
 (setq debug-on-error t)
+;; (debug-on-entry 'flycheck-buffer)
+;; (debug-on-entry 'flycheck-start-current-syntax-check)
+(add-hook 'debugger-mode-hook 'turn-on-visual-line-mode)
 
 ;;;
 ;;; Desktop save mode
@@ -82,13 +85,13 @@
      ido-at-point
      ido-ubiquitous
      ido-vertical-mode
+     json-mode
      js2-mode
      js2-refactor
      magit
      markdown-mode
      multiple-cursors
      nodejs-repl
-     paredit
      perspective
      prodigy
      restclient
@@ -123,11 +126,11 @@
   (require 'microsoft-windows))
 
 ;; guide-key
-(require 'guide-key)
-(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x +"))
-(guide-key-mode 1)
-(setq guide-key/recursive-key-sequence-flag t)
-(setq guide-key/popup-window-position 'bottom)
+;; (require 'guide-key)
+;; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x +"))
+;; (guide-key-mode 1)
+;; (setq guide-key/recursive-key-sequence-flag t)
+;; (setq guide-key/popup-window-position 'bottom)
 
 ;; Default setup of smartparens
 (require 'smartparens-config)
@@ -174,7 +177,6 @@
 (eval-after-load 'hippie-expand '(require 'setup-hippie-expand))
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'magit '(require 'setup-magit))
-(eval-after-load 'paredit '(require 'setup-paredit))
 (eval-after-load 'sgml-mode '(require 'setup-html-mode))
 (eval-after-load 'shell '(require 'setup-shell))
 ;; Language specific setup files
