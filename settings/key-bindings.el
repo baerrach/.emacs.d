@@ -40,6 +40,7 @@
 ;; Use shell-like backspace C-h, rebind help to F1
 (define-key key-translation-map [?\C-h] [?\C-?])
 (global-set-key (kbd "<f1>") 'help-command)
+(global-unset-key (kbd "<f1> h")) ;; Don't need view-hello-file
 
 (global-set-key (kbd "M-h") 'kill-region-or-backward-word)
 
@@ -96,14 +97,6 @@
 
 ;; Completion at point
 (global-set-key (kbd "C-<tab>") 'completion-at-point)
-
-;; Like isearch, but adds region (if any) to history and deactivates mark
-(global-set-key (kbd "C-s") 'isearch-forward-use-region)
-(global-set-key (kbd "C-r") 'isearch-backward-use-region)
-
-;; Like isearch-*-use-region, but doesn't fuck with the active region
-(global-set-key (kbd "C-S-s") 'isearch-forward)
-(global-set-key (kbd "C-S-r") 'isearch-backward)
 
 ;; Move more quickly
 (global-set-key (kbd "C-S-n") (λ (ignore-errors (next-line 5))))
