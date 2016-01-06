@@ -1,4 +1,5 @@
 (require 'flycheck)
+(require 'flycheck-pos-tip)
 
 (defun magnars/adjust-flycheck-automatic-syntax-eagerness ()
   "Adjust how often we check for errors based on if there are any.
@@ -37,3 +38,7 @@ up before you execute another command."
   (flycheck-buffer-automatically 'idle-change))
 
 (provide 'setup-flycheck)
+
+(eval-after-load 'flycheck
+  '(setq flycheck-xml-parser 'flycheck-parse-xml-region))
+(setq flycheck-check-syntax-automatically '(save))
