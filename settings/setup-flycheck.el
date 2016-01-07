@@ -41,4 +41,3 @@ up before you execute another command."
 
 (eval-after-load 'flycheck
   '(setq flycheck-xml-parser 'flycheck-parse-xml-region))
-(setq flycheck-check-syntax-automatically '(save))

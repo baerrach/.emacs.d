@@ -1,8 +1,6 @@
 ;;; Enable for debugging problems
 ;; (setq debug-on-quit t)
 ;; (setq debug-on-error t)
-;; (debug-on-entry 'flycheck-buffer)
-;; (debug-on-entry 'flycheck-start-current-syntax-check)
 (add-hook 'debugger-mode-hook 'turn-on-visual-line-mode)
 
 ;;;
