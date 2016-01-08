@@ -72,7 +72,6 @@
      css-eldoc
      dired-details
      dockerfile-mode
-     elisp-slime-nav
      f
      find-file-in-project
      flx
@@ -95,7 +94,7 @@
      prodigy
      restclient
      simplezen
-     slime
+     skewer-mode
      smartparens
      smart-forward
      smex
@@ -153,31 +152,27 @@
 (hes-mode)
 (put 'font-lock-regexp-grouping-backslash 'face-alias 'font-lock-builtin-face)
 
-;; Visual regexp
-(require 'visual-regexp)
-
-(require 'ace-jump-mode)
-(require 'expand-region)
-(require 'multiple-cursors)
-(require 'smart-forward)
-
-;; Smart M-x is smart
-(require 'smex)
-(smex-initialize)
-
 (require 're-builder)
 (setq reb-re-syntax 'string)
 
 ;; Setup extensions
+(require 'ace-jump-mode)
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'find-file-in-project '(require 'setup-find-file-in-project))
+(require 'expand-region)
 (eval-after-load 'flycheck '(require 'setup-flycheck))
 (eval-after-load 'grep '(require 'setup-grep))
-(eval-after-load 'hippie-expand '(require 'setup-hippie-expand))
+(require 'setup-hippie-expand)
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'magit '(require 'setup-magit))
+(require 'multiple-cursors)
 (eval-after-load 'sgml-mode '(require 'setup-html-mode))
 (eval-after-load 'shell '(require 'setup-shell))
+(skewer-setup)
+(require 'smart-forward)
+(require 'smex)
+(smex-initialize)
+(require 'visual-regexp)
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
@@ -188,3 +183,4 @@
 
 ;; Setup key bindings
 (require 'key-bindings)
+
