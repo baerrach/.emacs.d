@@ -70,6 +70,7 @@
   (packages-install
    '(ace-jump-buffer
      css-eldoc
+     dash
      dired-details
      dockerfile-mode
      f
