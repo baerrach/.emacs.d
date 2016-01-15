@@ -25,6 +25,7 @@
     (indent-region beg (+ end 11))
     (goto-char (+ beg 4))))
 
+;; Simplezen
 (defun --setup-simplezen ()
   (require 'simplezen)
   (set (make-local-variable 'yas-fallback-behavior)
@@ -67,12 +68,5 @@
 ;; after deleting a tag, indent properly
 (defadvice sgml-delete-tag (after reindent activate)
   (indent-region (point-min) (point-max)))
-
-;; Simplezen
-(defun --setup-simplezen ()
-  (set (make-local-variable 'yas/fallback-behavior)
-       '(apply simplezen-expand-or-indent-for-tab)))
-(eval-after-load 'sgml-mode '(define-key html-mode-map (kbd "TAB") 'simplezen-expand-or-indent-for-tab))
-(add-hook 'sgml-mode-hook '--setup-simplezen)
 
 (provide 'setup-html-mode)
