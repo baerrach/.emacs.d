@@ -4,9 +4,11 @@
 (setq mc/cmds-to-run-for-all
       '(
         ido-switch-buffer
+        smex
         ))
 
 (setq mc/cmds-to-run-once
       '(
         smex
+        js2-mode-show-node
         ))

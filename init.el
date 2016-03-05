@@ -69,6 +69,7 @@
 (defun init--install-packages ()
   (packages-install
    '(ace-jump-buffer
+     buttercup
      css-eldoc
      dash
      dired-details
