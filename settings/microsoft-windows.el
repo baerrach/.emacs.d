@@ -18,4 +18,11 @@
 ;; Disable flycheck on windows its broken
 (setq global-flycheck-mode -1)
 
+;;
+;; After saving file, 
+;; revert-buffer-with-coding-system windows-1250
+;; To handle smart quotes
+;; Not sure how to force that
+;;
+
 (provide 'microsoft-windows)
