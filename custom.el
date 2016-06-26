@@ -7,6 +7,7 @@
  '(custom-enabled-themes (quote (tango-dark)))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(httpd-port 8888)
+ '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(markdown-coding-system (quote utf-8))
  '(markdown-command "/usr/bin/redcarpet --parse-autolink")
