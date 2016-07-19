@@ -10,7 +10,7 @@ http://stackoverflow.com/questions/885793/emacs-error-when-calling-server-start
 you will need to change the file's ownership to you.
 
 ;;
-;; After saving file, 
+;; After saving file,
 ;; revert-buffer-with-coding-system windows-1250
 ;; To handle smart quotes
 ;; Not sure how to force that
