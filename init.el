@@ -93,6 +93,7 @@
      multiple-cursors
      nodejs-repl
      perspective
+     perl6-mode
      prodigy
      restclient
      simplezen
