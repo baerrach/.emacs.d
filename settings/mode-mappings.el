@@ -30,6 +30,9 @@
 (add-to-list 'auto-mode-alist '("\\.jsp$" . crappy-jsp-mode))
 (add-to-list 'auto-mode-alist '("\\.jspf$" . crappy-jsp-mode))
 
+;; JSX
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+
 ;; Ruby
 (autoload 'rhtml-mode "rhtml-mode")
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))

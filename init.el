@@ -104,6 +104,7 @@
      string-edit
      tagedit
      visual-regexp
+     web-mode
      whitespace-cleanup-mode
      yasnippet
      )))
@@ -149,6 +150,8 @@
 
 ;; Load stuff on demand
 (autoload 'auto-complete-mode "auto-complete" nil t)
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;; Highlight escape sequences
 (require 'highlight-escape-sequences)
@@ -180,6 +183,7 @@
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
 (eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
+(eval-after-load 'web-mode '(require 'setup-web-mode))
 
 ;; Map files to modes
 (require 'mode-mappings)
