@@ -138,6 +138,11 @@
 
 (global-unset-key (kbd "C-z"))
 
+(add-hook 'local-write-file-hooks
+            (lambda ()
+               (delete-trailing-whitespace)
+               nil))
+
 ;;;
 ;;; http://www.emacswiki.org/emacs/SmoothScrolling
 ;;;
@@ -147,5 +152,6 @@
 (setq mouse-wheel-progressive-speed 't) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
+
 
 (provide 'sane-defaults)
