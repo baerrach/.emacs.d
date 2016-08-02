@@ -6,7 +6,11 @@
   ;;; http://web-mode.org/
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-ac-sources-alist
+        '(("css" . (ac-source-css-property))
+          ("html" . (ac-source-words-in-buffer ac-source-abbrev)))))
+
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
 (defadvice web-mode-highlight-part (around tweak-jsx activate)
@@ -14,5 +18,6 @@
     (let ((web-mode-enable-part-face nil))
       ad-do-it)
     ad-do-it))
+
 
 (provide 'setup-web-mode)
