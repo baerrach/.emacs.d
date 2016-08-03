@@ -138,7 +138,7 @@
 
 (global-unset-key (kbd "C-z"))
 
-(add-hook 'local-write-file-hooks
+(add-hook 'write-file-hooks
             (lambda ()
                (delete-trailing-whitespace)
                nil))
