@@ -40,13 +40,26 @@
 ;; Set up appearance early
 (require 'appearance)
 
-;; Write backup files to own directory
-(setq backup-directory-alist
-      `(("." . ,(expand-file-name
-                 (concat user-emacs-directory "backups")))))
-
-;; Make backups of files, even when they're in version control
-(setq vc-make-backup-files t)
+;; Backup settings
+(let ((backup-directory (expand-file-name
+            (concat user-emacs-directory "backups"))))
+  (setq
+   backup-by-copying t      ; don't clobber symlinks
+   ;; Write backup files to own directory
+   backup-directory-alist
+   `(("." . ,backup-directory))
+   ;; Make backups of files, even when they're in version control
+   vc-make-backup-files t
+   delete-old-versions t)
+  (message "Deleting old backup files...")
+  (let ((week (* 60 60 24 7))
+        (current (float-time (current-time))))
+    (dolist (file (directory-files backup-directory t))
+      (when (and (backup-file-name-p file)
+                 (> (- current (float-time (fifth (file-attributes file))))
+                    week))
+        (message "%s" file)
+        (delete-file file)))))
 
 ;; Save point position between sessions
 (require 'saveplace)
@@ -190,4 +203,3 @@
 
 ;; Setup key bindings
 (require 'key-bindings)
-
