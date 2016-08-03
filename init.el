@@ -61,6 +61,9 @@
         (message "%s" file)
         (delete-file file)))))
 
+;; Disable lock files .# as this is for single-user configuration
+(setq create-lockfiles nil)
+
 ;; Save point position between sessions
 (require 'saveplace)
 (setq-default save-place t)
