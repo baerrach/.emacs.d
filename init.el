@@ -40,34 +40,6 @@
 ;; Set up appearance early
 (require 'appearance)
 
-;; Backup settings
-(add-hook 'window-setup-hook
-          (lambda ()
-            (let ((backup-directory (expand-file-name
-                                     (concat user-emacs-directory "backups"))))
-              (setq
-               backup-by-copying t      ; don't clobber symlinks
-               ;; Write backup files to own directory
-               backup-directory-alist
-               `(("." . ,backup-directory))
-               ;; Make backups of files, even when they're in version control
-               vc-make-backup-files t
-               delete-old-versions t)
-              (message "Deleting old backup files...")
-              (let ((week (* 60 60 24 7))
-                    (current (float-time (current-time))))
-                (dolist (file (directory-files backup-directory t))
-                  (when (and (backup-file-name-p file)
-                             (> (- current (float-time (fifth (file-attributes file))))
-                                week))
-                    (message "%s" file)
-                    (delete-file file))))
-              (message "Deleting old backup files...done")
-              (message nil))))
-
-;; Disable lock files .# as this is for single-user configuration
-(setq create-lockfiles nil)
-
 ;; Save point position between sessions
 (require 'saveplace)
 (setq-default save-place t)
