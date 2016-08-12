@@ -130,8 +130,7 @@
 ;; Default setup of smartparens
 (require 'smartparens-config)
 (setq sp-autoescape-string-quote nil)
-(--each '(css-mode-hook
-          restclient-mode-hook
+(--each '(restclient-mode-hook
           js-mode-hook
           java-mode
           ruby-mode

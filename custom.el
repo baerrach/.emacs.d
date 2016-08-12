@@ -3,7 +3,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(css-indent-offset 2)
  '(custom-enabled-themes (quote (tango-dark)))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(httpd-port 8888)
