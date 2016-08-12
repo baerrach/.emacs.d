@@ -57,3 +57,6 @@ up before you execute another command."
 
 (eval-after-load 'flycheck
   '(setq flycheck-xml-parser 'flycheck-parse-xml-region))
+
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
