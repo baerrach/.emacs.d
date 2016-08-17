@@ -48,15 +48,10 @@ up before you execute another command."
 ;; customize flycheck temp file prefix
 (setq-default flycheck-temp-prefix ".flycheck")
 
-;; disable json-jsonlist checking for json files
+;; disable checkers
 (setq-default flycheck-disabled-checkers
-  (append flycheck-disabled-checkers
-    '(json-jsonlist)))
+              '(json-jsonlist emacs-lisp-checkdoc))
+
+(setq flycheck-xml-parser 'flycheck-parse-xml-region)
 
 (provide 'setup-flycheck)
-
-(eval-after-load 'flycheck
-  '(setq flycheck-xml-parser 'flycheck-parse-xml-region))
-
-(with-eval-after-load 'flycheck
-  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
