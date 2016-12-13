@@ -100,6 +100,7 @@
      web-mode
      whitespace-cleanup-mode
      yasnippet
+     yaml-mode
      )))
 
 (condition-case nil
