@@ -2,7 +2,7 @@
 
 ;; friendly font
 (when window-system
-  (setq bae/default-font "-outline-Consolas-normal-normal-normal-mono-16-*-*-*-c-*-iso8859-1")
+  (setq bae/default-font "-outline-Consolas-normal-normal-normal-mono-64-*-*-*-c-*-iso8859-1")
   (set-face-attribute 'default nil :font bae/default-font))
 
 ;; When running in Windows, we use Git Bash as alternate shell
