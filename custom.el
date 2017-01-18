@@ -11,6 +11,9 @@
  '(markdown-coding-system (quote utf-8))
  '(markdown-command "/usr/bin/redcarpet --parse-autolink")
  '(markdown-command-needs-filename t)
+ '(package-selected-packages
+   (quote
+    (ace-jump-mode yaml-mode whitespace-cleanup-mode web-mode visual-regexp tagedit string-edit smex smart-forward smartparens skewer-mode simplezen restclient prodigy perl6-mode perspective nodejs-repl markdown-mode magit js2-refactor js2-mode json-mode ido-vertical-mode ido-ubiquitous ido-at-point highlight-escape-sequences guide-key flycheck-pos-tip flycheck flx-ido flx find-file-in-project f dockerfile-mode dired-details css-eldoc buttercup auto-complete ace-jump-buffer dash)))
  '(safe-local-variable-values (quote ((ffip-project-root . "/Users/barrie/.emacs.d/")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

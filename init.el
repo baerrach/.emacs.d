@@ -1,6 +1,13 @@
 ;;; Enable for debugging problems
 ;; (setq debug-on-quit t)
 ;; (setq debug-on-error t)
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (add-hook 'debugger-mode-hook 'turn-on-visual-line-mode)
 
 ;;;
@@ -61,6 +68,7 @@
 (defun init--install-packages ()
   (packages-install
    '(ace-jump-buffer
+     ace-jump-mode
      auto-complete
      buttercup
      css-eldoc
