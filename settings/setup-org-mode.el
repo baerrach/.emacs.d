@@ -3,8 +3,8 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 
-(setq 'org-catch-invisible-edits t)
-(setq 'org-gotoauto-isearch nil)
+(setq org-catch-invisible-edits t)
+(setq org-gotoauto-isearch nil)
 
 ;;; Structure and Presentation
 
@@ -30,11 +30,12 @@
 
 ;; 8 hours days
 (setq org-time-clocksum-use-effort-durations t)
-(setq org-effort-durations (("h" . 60)
-                            ("d" . 480)
-                            ("w" . 2400)
-                            ("m" . 9600)
-                            ("y" . 96000)))
+(setq org-effort-durations (quote (("min" . 1)
+                             ("h" . 60)
+                             ("d" . 480)
+                             ("w" . 2400)
+                             ("m" . 9600)
+                             ("y" . 96000))))
 
 ;; Save the running clock and all clock history when exiting Emacs, load it on startup
 (setq org-clock-persist t)
@@ -43,7 +44,7 @@
 (setq org-clock-persist-query-resume nil)
 
 ;; Start clocking from the last clock-out time, if any
-(setq 'org-clock-continuously t)
+(setq org-clock-continuously t)
 
 ;; Clock out when moving task to a done state
 (setq org-clock-out-when-done t)
