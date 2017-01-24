@@ -21,3 +21,5 @@ emms
 server/
 eshell/
 /ac-comphist.dat
+/.org-id-locations
+/org-clock-save.el
