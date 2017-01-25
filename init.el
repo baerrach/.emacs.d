@@ -93,6 +93,7 @@
      markdown-mode
      multiple-cursors
      nodejs-repl
+     org-bullets
      perspective
      perl6-mode
      prodigy

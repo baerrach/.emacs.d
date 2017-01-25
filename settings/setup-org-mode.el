@@ -16,6 +16,9 @@
 (setq org-blank-before-new-entry (quote ((heading)
                                          (plain-list-item . auto))))
 
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 ;;; Estimation
 
 ;; global Effort estimate values
