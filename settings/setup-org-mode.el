@@ -22,7 +22,10 @@
 ;;; Estimation
 
 ;; global Effort estimate values
-(setq org-global-properties (quote (("Effort_ALL" . "0:15 0:30 1:00 2:00 4:00 8:00 0:00"))))
+(setq org-global-properties (quote (("Effort_ALL" . "0:15 0:30 1:00 2:00 4:00 1d 2d 4d 1w 2w 1m 0:00"))))
+
+;; Roll up statistics
+(setq org-hierarchical-todo-statistics nil)
 
 ;;; Column View
 
