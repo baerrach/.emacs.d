@@ -43,8 +43,15 @@ channel."
       (push (cons key value) cells-attrs-list))
     (when (or (not contents) (string= "" (org-trim contents)))
       (setq contents "&#xa0;"))
+    ;; Replace heading * with &nbsp; (throw away the first two ** as headings start at this level)
     (if (string-prefix-p "*" contents)
-        (setq contents (replace-regexp-in-string "\*" "&nbsp;" contents)))
+        (setq contents (replace-regexp-in-string "\*" (apply 'concat (make-list 8 "&nbsp;")) (substring contents 2))))
+    ;; Surround task status with css class for status
+    (if (string-match "\\(TODO\\|DONE\\)" contents)
+        (setq contents (replace-match "<span class=\"\\1\">\\1</span>" t nil contents)))
+    ;; Surround task with css class for tags
+    (if (string-match "\\(.*\\)\\s-+:\\([a-zA-Z0-9_@]+\\):" contents)
+        (setq contents (replace-match "<span class=\"\\2\">\\1</span>" t nil contents)))
     (dolist (elt cells-attrs-list cell-attrs)
       (setq key-and-value elt)
       (setq cell-attrs (concat cell-attrs (format " %s=\"%s\"" (car key-and-value) (cdr key-and-value)))))
