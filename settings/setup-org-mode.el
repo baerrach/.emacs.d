@@ -29,19 +29,13 @@ CONTENTS is nil.  INFO is a plist used as a communication
 channel."
   (let* ((table-row (org-export-get-parent table-cell))
 	 (table (org-export-get-parent-table table-cell))
-	 (cell-attrs-old
-	  (if (not org-html-table-align-individual-fields) ""
-	    (format (if (and (boundp 'org-html-format-table-no-css)
-			     org-html-format-table-no-css)
-			" align=\"%s\"" " class=\"%s\"")
-		    (org-export-table-cell-alignment table-cell info))))
 	 (cell-attrs "")
          (cells-attrs-list '())
          (key "")
          (value "")
          (key-and-value nil))
     (if (not org-html-table-align-individual-fields) nil
-      (setq value (org-export-table-cell-alignment table-cell info))
+      (setq value (symbol-name (org-export-table-cell-alignment table-cell info)))
       (if (and (boundp 'org-html-format-table-no-css)
                org-html-format-table-no-css)
           (setq key "align")
