@@ -39,4 +39,7 @@
 ;; Wrap around region
 (setq yas-wrap-around-region t)
 
+;; auto-complete has control over <tab> and the addition of ac-source-yasnippet to ac-sources doesn't seem to fix it.
+(define-key yas-minor-mode-map (kbd "<C-tab>") 'yas-expand)
+
 (provide 'setup-yasnippet)

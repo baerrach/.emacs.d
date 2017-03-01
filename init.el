@@ -182,6 +182,8 @@
 (require 'smex)
 (smex-initialize)
 (require 'visual-regexp)
+(require 'setup-yasnippet)
+
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
