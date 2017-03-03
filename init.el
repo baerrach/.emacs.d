@@ -103,7 +103,6 @@
      smartparens
      smart-forward
      smex
-     smooth-scrolling
      string-edit
      tagedit
      visual-regexp
@@ -197,9 +196,6 @@
 
 ;; Setup key bindings
 (require 'key-bindings)
-
-;; Enable smooth-scrolling mode
-(smooth-scrolling-mode 1)
 
 ;; Disable bell on scrolling past limit
 (defun my-bell-function ()
