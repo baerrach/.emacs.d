@@ -174,7 +174,7 @@
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'magit '(require 'setup-magit))
 (require 'multiple-cursors)
-(eval-after-load 'org-mode (require 'setup-org-mode))
+(eval-after-load 'org '(require 'setup-org-mode))
 (eval-after-load 'sgml-mode '(require 'setup-html-mode))
 (eval-after-load 'shell '(require 'setup-shell))
 (skewer-setup)

@@ -62,8 +62,8 @@
 
 ;; Override org-html-table-cell defun as there is no other way to hook this functionality in.
 
-(eval-after-load "org-mode"
-  (defun org-html-table-cell (table-cell contents info)
+(eval-after-load 'ox-html
+  '(defun org-html-table-cell (table-cell contents info)
     "Transcode a TABLE-CELL element from Org to HTML.
 CONTENTS is nil.  INFO is a plist used as a communication
 channel."
