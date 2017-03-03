@@ -183,6 +183,7 @@
 (smex-initialize)
 (require 'smooth-scrolling)
 (require 'visual-regexp)
+(eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
 (require 'setup-yasnippet)
 
 ;; Language specific setup files
