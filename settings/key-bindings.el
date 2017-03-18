@@ -139,4 +139,9 @@
 ;; Undo
 (define-key global-map (kbd "C-z") 'undo-tree-undo)
 
+;; I don't need to kill emacs that easily
+;; the mnemonic is C-x REALLY QUIT
+(global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
+(global-unset-key (kbd "C-x C-c"))
+
 (provide 'key-bindings)
