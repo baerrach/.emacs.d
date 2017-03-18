@@ -17,7 +17,23 @@
  '(package-selected-packages
    (quote
     (smooth-scrolling org-bullets ace-jump-mode yaml-mode whitespace-cleanup-mode web-mode visual-regexp tagedit string-edit smex smart-forward smartparens skewer-mode simplezen restclient prodigy perl6-mode perspective nodejs-repl markdown-mode magit js2-refactor js2-mode json-mode ido-vertical-mode ido-ubiquitous ido-at-point highlight-escape-sequences guide-key flycheck-pos-tip flycheck flx-ido flx find-file-in-project f dockerfile-mode dired-details css-eldoc buttercup auto-complete ace-jump-buffer dash)))
- '(safe-local-variable-values (quote ((ffip-project-root . "/Users/barrie/.emacs.d/")))))
+ '(safe-local-variable-values
+   (quote
+    ((eval progn
+           (add-to-list
+            (quote exec-path)
+            (concat
+             (locate-dominating-file default-directory ".dir-locals.el")
+             "node_modules/.bin/"))
+           (setq-local force-use-unix-file-coding-system t))
+     (ffip-project-root . "/Users/barrie/.emacs.d/")
+     (eval progn
+           (add-to-list
+            (quote exec-path)
+            (concat
+             (locate-dominating-file default-directory ".dir-locals.el")
+             "node_modules/.bin/"))
+           (setq force-use-unix-file-coding-system t))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
