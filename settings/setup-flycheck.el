@@ -1,6 +1,12 @@
 (require 'flycheck)
 (require 'flycheck-pos-tip)
 
+(defun bae/disable-flycheck-for-buffer ()
+  "Some files (like in node_modules) are not written by us and should
+not be checked"
+  (if (string-match-p (regexp-quote "node_module") buffer-file-name)
+      (flycheck-disable-checker 'javascript-eslint)))
+
 (defun magnars/adjust-flycheck-automatic-syntax-eagerness ()
   "Adjust how often we check for errors based on if there are any.
 
@@ -15,6 +21,9 @@ clean buffer we're an order of magnitude laxer about checking."
 
 (add-hook 'flycheck-after-syntax-check-hook
           'magnars/adjust-flycheck-automatic-syntax-eagerness)
+
+(add-hook 'flycheck-mode-hook
+          'bae/disable-flycheck-for-buffer)
 
 ;; Remove newline checks, since they would trigger an immediate check
 ;; when we want the idle-change-delay to be in effect while editing.
