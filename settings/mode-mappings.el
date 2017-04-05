@@ -101,4 +101,7 @@
 (add-to-list 'auto-mode-alist '("access\\.conf\\'" . apache-mode))
 (add-to-list 'auto-mode-alist '("sites-\\(available\\|enabled\\)/" . apache-mode))
 
+;; AWS ElasticBeanstalk
+(add-to-list 'auto-mode-alist '("\\.config$" . yaml-mode))
+
 (provide 'mode-mappings)
