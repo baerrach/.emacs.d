@@ -26,12 +26,8 @@
 (defun use-unix-file-coding-system ()
   (let ((coding-str (symbol-name buffer-file-coding-system)))
     (when (and (boundp 'force-use-unix-file-coding-system) force-use-unix-file-coding-system)
-      (when (string-match "-\\(?:dos\\|mac\\)$" coding-str)
-        (setq coding-str
-              (concat (substring coding-str 0 (match-beginning 0)) "-unix"))
-        (message "CODING: %s" coding-str)
-        (set-buffer-file-coding-system (intern coding-str))))))
+        (set-buffer-file-coding-system (intern coding-str)))))
 
-(add-hook 'find-file-hooks 'use-unix-file-coding-system)
+;; (add-hook 'find-file-hooks 'use-unix-file-coding-system)
 
 (provide 'microsoft-windows)
