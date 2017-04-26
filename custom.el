@@ -24,6 +24,12 @@
             (quote exec-path)
             (concat
              (locate-dominating-file default-directory ".dir-locals.el")
+             "node_modules/.bin/")))
+     (eval progn
+           (add-to-list
+            (quote exec-path)
+            (concat
+             (locate-dominating-file default-directory ".dir-locals.el")
              "node_modules/.bin/"))
            (setq-local force-use-unix-file-coding-system t))
      (ffip-project-root . "/Users/barrie/.emacs.d/")
