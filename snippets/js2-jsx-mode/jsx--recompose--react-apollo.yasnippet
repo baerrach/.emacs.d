@@ -1,0 +1,41 @@
+# -*- mode: snippet -*-
+# name: JSX React Template. Includes recompose and react-apollo.
+# key: jsx
+# contributor: barrie.treloar@gmail.com
+# --
+import React from 'react';
+import PropTypes from 'prop-types';
+import { compose, withHandlers, withState } from 'recompose';
+import { graphql } from 'react-apollo';
+import graphqlSchema from '../../../graphql-schema';
+
+const componentPropTypes = {
+};
+const withGraphQLPropTypes = {
+};
+const withStatePropTypes = {
+};
+const withHandlersPropTypes = {
+};
+const propTypes = {
+  ...componentPropTypes,
+  ...withGraphQLPropTypes,
+  ...withStatePropTypes,
+  ...withHandlersPropTypes,
+};
+
+const defaultProps = {
+};
+
+const ${1:JSXName} = ({
+}) => {
+  $0
+};
+
+$1.propTypes = propTypes;
+$1.defaultProps = defaultProps;
+
+const enhance = compose(
+);
+
+export default enhance($1);

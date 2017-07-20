@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Recompose onTouchTap handler
+# key: RE
+# --
+const onTouchTap${1:variable-name}Handler = ({
+  do${2:action-name},
+}) => (event) => {
+  do$2();
+};
+$0

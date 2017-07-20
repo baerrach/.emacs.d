@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Recompose onChange handler
+# key: RE
+# --
+const onChange${1:variable-name}Handler = ({
+  set$1,
+}) => (_, newValue) => {
+  set$1(newValue);
+};
+$0

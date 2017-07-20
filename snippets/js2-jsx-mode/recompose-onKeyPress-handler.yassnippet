@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: Recompose onKeyPress handler
+# key: RE
+# --
+const onKeyPress${1:variable-name}Handler = ({
+  do${2:action-name},
+}) => (event) => {
+  if (event.charCode === 13) { // enter key pressed
+    event.preventDefault();
+    do$2();
+  }
+};
+$0
