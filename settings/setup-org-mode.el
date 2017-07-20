@@ -3,6 +3,11 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 
+// Disable archive keys
+(define-key org-mode-map (kbd "C-c C-x C-a") nil)
+(define-key org-mode-map (kbd "C-c C-x C-s") nil)
+(define-key org-mode-map (kbd "C-c $") nil)
+
 (setq org-catch-invisible-edits t)
 (setq org-gotoauto-isearch nil)
 
