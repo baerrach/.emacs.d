@@ -206,3 +206,4 @@
               backward-char forward-char))
     (ding)))
 (setq ring-bell-function 'my-bell-function)
+(put 'downcase-region 'disabled nil)
