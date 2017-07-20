@@ -32,7 +32,7 @@
 (define-key yas-keymap (kbd "C-a") 'yas/goto-start-of-active-field)
 
 ;; No dropdowns please, yas
-(setq yas-prompt-functions '(yas-ido-prompt yas-completing-prompt))
+(setq yas-prompt-functions '(yas-ido-prompt))
 
 ;; No need to be so verbose
 (setq yas-verbosity 1)
@@ -44,5 +44,6 @@
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "<C-tab>") 'yas-expand)
+(define-key yas-minor-mode-map (kbd "C-c <C-tab>") 'yas-insert-snippet)
 
 (provide 'setup-yasnippet)
