@@ -150,11 +150,6 @@
   (add-hook it 'turn-on-smartparens-mode))
 
 
-;; Load stuff on demand
-(autoload 'auto-complete-mode "auto-complete" nil t)
-(require 'auto-complete-config)
-(ac-config-default)
-
 ;; Highlight escape sequences
 (require 'highlight-escape-sequences)
 (hes-mode)
@@ -164,6 +159,7 @@
 (setq reb-re-syntax 'string)
 
 ;; Setup extensions
+(require 'setup-ac-mode)
 (require 'ace-jump-mode)
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'find-file-in-project '(require 'setup-find-file-in-project))
