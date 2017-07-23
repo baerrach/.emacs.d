@@ -3,7 +3,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 
-// Disable archive keys
+;; Disable archive keys
 (define-key org-mode-map (kbd "C-c C-x C-a") nil)
 (define-key org-mode-map (kbd "C-c C-x C-s") nil)
 (define-key org-mode-map (kbd "C-c $") nil)
