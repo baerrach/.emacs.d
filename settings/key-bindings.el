@@ -36,6 +36,9 @@
 ;; M-i for back-to-indentation
 (global-set-key (kbd "M-i") 'back-to-indentation)
 
+;; Shift-tab for indent-rigidly
+(global-set-key (kbd "S-<tab>") 'indent-rigidly)
+
 ;; Turn on the menu bar for exploring new modes
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
