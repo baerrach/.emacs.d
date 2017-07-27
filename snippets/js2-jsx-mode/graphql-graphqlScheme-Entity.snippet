@@ -1,0 +1,48 @@
+# -*- mode: snippet -*-
+# name: GraphQL graphSchema file for defining Entity's fragments, queries, and mutations.
+# key: GRAPHQL
+# contributor: barrie.treloar@gmail.com
+# --
+import { gql } from 'react-apollo';
+
+const fragments = {
+  all: gql\`
+fragment ${1:entityName}All on $1 {
+  id
+}
+\`,
+};
+
+const queries = {
+  all: gql\`
+query all$1s {
+  all$1s(orderBy: ${2:orderByKey}_ASC) {
+    ...$1All
+  }
+}
+\${fragments.all}
+\`
+};
+
+const mutations = {
+  create: gql\`
+mutation create$1(
+
+) {
+  create$1(
+
+  ) {
+    ...$1All
+  }
+}
+\${fragments.all}
+\`,
+};
+
+const $1 = {
+  fragments,
+  queries,
+  mutations,
+};
+
+export default $1;

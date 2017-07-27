@@ -2,8 +2,8 @@
 # name: Recompose onTouchTap handler
 # key: RE
 # --
-const onTouchTap${1:variable-name}Handler = ({
-  do${2:action-name},
+const onTouchTap${1:uiComponentName}Handler = ({
+  do${2:actionName},
 }) => (event) => {
   do$2();
 };

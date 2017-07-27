@@ -2,8 +2,8 @@
 # name: Recompose onKeyPress handler
 # key: RE
 # --
-const onKeyPress${1:variable-name}Handler = ({
-  do${2:action-name},
+const onKeyPress${1:uiComponentName}Handler = ({
+  do${2:ActionName},
 }) => (event) => {
   if (event.charCode === 13) { // enter key pressed
     event.preventDefault();

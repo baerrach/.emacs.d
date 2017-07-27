@@ -2,7 +2,7 @@
 # name: Recompose onChange handler
 # key: RE
 # --
-const onChange${1:variable-name}Handler = ({
+const onChange${1:uiComponentName}Handler = ({
   set$1,
 }) => (_, newValue) => {
   set$1(newValue);
