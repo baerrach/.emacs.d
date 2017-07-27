@@ -98,6 +98,7 @@
      perl6-mode
      prodigy
      restclient
+     s
      simplezen
      skewer-mode
      smartparens
