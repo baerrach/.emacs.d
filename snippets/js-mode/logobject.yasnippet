@@ -1,5 +1,5 @@
 # -*- coding: utf-8; mode: snippet -*-
-# name: Wrap variable in string template to log out its value `var=${var}`
-# key: lo
+# name: wrap variable in string template to log its value `var=${var}`
+# expand-env : ((yas-wrap-around-region nil))
 # --
-${1:object}=\${${1:$(yas/substr yas-text "[^ ]*")}}
+${1:`(if (region-active-p) (yas-selected-text) "var")`}=\${$1}$0
