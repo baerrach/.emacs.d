@@ -7,8 +7,9 @@ import { gql } from 'react-apollo';
 
 const fragments = {
   all: gql\`
-fragment ${1:entityName}All on $1 {
+fragment ${1:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`}All on $1 {
   id
+  $0
 }
 \`,
 };
