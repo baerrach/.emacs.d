@@ -163,6 +163,7 @@
 
 ;; Setup extensions
 (require 'ace-jump-mode)
+(require 'setup-company)
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'find-file-in-project '(require 'setup-find-file-in-project))
 (require 'expand-region)
