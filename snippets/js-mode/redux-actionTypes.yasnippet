@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: redux actionTypes
+# key: REDUX
+# --
+/* eslint import/prefer-default-export: "off" */
+/**
+ * import/prefer-default-export is turned off as the pattern for importing action types is
+ * import * as actionTypes from '<module>';
+ * and then they are referred to as
+ * actionTypes.<action>
+ */
+
+export const ${2:$(string-inflection-upcase-function yas-text)} = '${1:redux-system}/${2:kebab-case-action-name}';
