@@ -71,6 +71,7 @@
      ace-jump-mode
      auto-complete
      buttercup
+     company
      css-eldoc
      dash
      dired-details
@@ -105,6 +106,7 @@
      smart-forward
      smex
      string-edit
+     string-inflection
      tagedit
      visual-regexp
      web-mode
@@ -160,7 +162,6 @@
 (setq reb-re-syntax 'string)
 
 ;; Setup extensions
-(require 'setup-ac-mode)
 (require 'ace-jump-mode)
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'find-file-in-project '(require 'setup-find-file-in-project))
