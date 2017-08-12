@@ -181,6 +181,7 @@
 (require 'smex)
 (smex-initialize)
 (require 'smooth-scrolling)
+(require 'string-inflection)
 (require 'visual-regexp)
 (eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
 (require 'setup-yasnippet)

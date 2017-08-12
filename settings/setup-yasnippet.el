@@ -1,4 +1,5 @@
 (require 'yasnippet)
+(require 'string-inflection)
 
 ;; Use only own snippets, do not use bundled ones
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
