@@ -97,6 +97,7 @@
      org-bullets
      perspective
      perl6-mode
+     prettier-js
      prodigy
      restclient
      s
@@ -174,6 +175,7 @@
 (eval-after-load 'magit '(require 'setup-magit))
 (require 'multiple-cursors)
 (eval-after-load 'org '(require 'setup-org-mode))
+(require 'setup-prettier-js)
 (eval-after-load 'sgml-mode '(require 'setup-html-mode))
 (eval-after-load 'shell '(require 'setup-shell))
 (skewer-setup)
