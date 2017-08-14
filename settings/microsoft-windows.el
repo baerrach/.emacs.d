@@ -1,11 +1,5 @@
 (require 'dash)
 
-;; friendly font
-(when window-system
-  (setq bae/default-font "-outline-Consolas-normal-normal-normal-mono-36-*-*-*-c-*-iso8859-1")
-  (set-face-attribute 'default nil :font bae/default-font)
-  (set-face-attribute 'mode-line nil :font bae/default-font))
-
 ;; When running in Windows, we use Git Bash as alternate shell
 (setq explicit-shell-file-name "C:/Program Files/Git/bin/bash.exe")
 (setq shell-file-name explicit-shell-file-name)

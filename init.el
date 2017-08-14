@@ -210,12 +210,4 @@
 (setq ring-bell-function 'my-bell-function)
 (put 'downcase-region 'disabled nil)
 
-;; Keyboard Macros
-;;; start-kbd-macro
-;;; <do the macro>
-;;; end-kbd-macro
-;;; name-last-kbd-macro
-;;; <then in this file run>
-;;; insert-kbd-macro
-(fset 'graphql-convert-variable-definition-to-argument
-   [?\M-i ?\C-f ?\C-  ?\M-f ?\M-w ?\C-  ?\C-e backspace ?\M-i ?\C-y ?: ?  ?\M-x ?s ?t backspace backspace ?k ?d backspace ?b ?d ?- ?m ?a ?c ?r down down])
+(require 'setup-personal)
