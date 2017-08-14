@@ -1,8 +1,13 @@
-;; Completion that uses many different methods to find options.
-(global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
+;; Completion via Company Mode
+;(global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
 (global-set-key (kbd "M-/") 'hippie-expand-no-case-fold) ;; Override dabbrev key
-(global-set-key (kbd "C-:") 'hippie-expand-lines)
-(global-set-key (kbd "C-,") 'completion-at-point)
+;;(global-set-key (kbd "C-:") 'hippie-expand-lines)
+;;(global-set-key (kbd "C-,") 'completion-at-point)
+(define-key company-active-map (kbd "C-/") 'company-complete)
+(define-key company-active-map (kbd "M-n") nil)
+(define-key company-active-map (kbd "M-p") nil)
+(define-key company-active-map (kbd "C-n") #'company-select-next)
+(define-key company-active-map (kbd "C-p") #'company-select-previous)
 
 ;; Smart M-x
 (global-set-key (kbd "M-x") 'smex)
