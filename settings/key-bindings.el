@@ -149,4 +149,8 @@
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-unset-key (kbd "C-x C-c"))
 
+;; Unbind commands that get invoked accidentally and will never be used.
+(global-unset-key (kbd "C-x C-n"))
+
+
 (provide 'key-bindings)
