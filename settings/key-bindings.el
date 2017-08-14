@@ -142,7 +142,8 @@
 (define-key global-map (kbd "C-c m") 'vr/mc-mark)
 
 ;; Undo
-(define-key global-map (kbd "C-z") 'undo-tree-undo)
+(define-key undo-tree-map (kbd "C-z") 'undo-tree-undo)
+(define-key undo-tree-map (kbd "C-/") nil)
 
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT
