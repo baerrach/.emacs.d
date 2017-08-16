@@ -1,6 +1,6 @@
 ;; friendly font
 (defun bae/work-settings ()
-  (interarctive)
+  (interactive)
   (setq bae/default-font "-outline-Consolas-normal-normal-normal-mono-24-*-*-*-c-*-iso8859-1")
   (set-face-attribute 'default nil :font bae/default-font)
   (set-face-attribute 'mode-line nil :font bae/default-font))
