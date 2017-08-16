@@ -3,7 +3,7 @@
 (global-set-key (kbd "M-/") 'hippie-expand-no-case-fold) ;; Override dabbrev key
 ;;(global-set-key (kbd "C-:") 'hippie-expand-lines)
 ;;(global-set-key (kbd "C-,") 'completion-at-point)
-(define-key company-active-map (kbd "C-/") 'company-complete)
+(global-set-key (kbd "C-/") 'company-complete)
 (define-key company-active-map (kbd "M-n") nil)
 (define-key company-active-map (kbd "M-p") nil)
 (define-key company-active-map (kbd "C-n") #'company-select-next)
