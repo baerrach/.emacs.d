@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name: Recomponse onNewRequest AutoComplete handler
+# key: RE
+# --
+const onNewRequestAutoComplete${1:uiComponentName}Handler = ({
+  ${2:dataModel},
+  do${3:NewAction},
+  do${4:SelectAction},
+}) => (
+  chosenRequest,
+  index
+) => {
+  // http://www.material-ui.com/#/components/auto-complete
+  //
+  // chosenRequest: Either the TextField input value, if enter is pressed in the
+  // TextField, or the text value of the corresponding list item that was
+  // selected.
+  //
+  // index: The index in dataSource of the list item selected, or -1 if enter is
+  // pressed in the TextField.
+  if (index !== -1) {
+    do$3($2[index]);
+  } else {
+    do$4(chosenRequest);
+  }
+};
+$0
