@@ -147,8 +147,8 @@
 ;; Unbind commands that get invoked accidentally and will never be used.
 (global-unset-key (kbd "C-x C-n"))
 
-;; https://emacs.stackexchange.com/a/7925/12751
-
+;;; https://emacs.stackexchange.com/a/7925/12751
+;; Note the addition of magit-mode check and using ido-complete in the minibuffer.
 (defun check-expansion ()
   (save-excursion
     (if (looking-at "\\_>") t
@@ -165,7 +165,9 @@
   (interactive)
   (cond
    ((minibufferp)
-    (minibuffer-complete))
+    (ido-complete))
+   ((derived-mode-p 'magit-mode)
+    (magit-section-toggle (magit-current-section)))
    (t
     (indent-for-tab-command)
     (if (or (not yas/minor-mode)
@@ -199,15 +201,15 @@
       (null (do-yas-expand))
       (company-abort))
       (company-complete-selection)))
-
+;;
 (defun abort-company-or-yas ()
   (interactive)
   (if (null company-candidates)
       (yas-abort-snippet)
     (company-abort)))
 
-;; Completion via Company Mode
-                                        ;(global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
+;;; Completion via Company Mode
+;;(global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
 (global-set-key (kbd "M-/") 'hippie-expand-no-case-fold) ;; Override dabbrev key
 ;;(global-set-key (kbd "C-:") 'hippie-expand-lines)
 ;;(global-set-key (kbd "C-,") 'completion-at-point)
