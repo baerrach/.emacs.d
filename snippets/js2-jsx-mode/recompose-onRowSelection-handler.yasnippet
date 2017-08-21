@@ -2,14 +2,14 @@
 # name: Recompose onRowSelection handler
 # key: RE
 # --
-const onRowSelection{$1:uiTableName}Handler = ({
+const onRowSelection${1:uiTableName}Handler = ({
   do${2:actionName},
 }) => (selectedRows) => {
   if (selectedRows.length === 0) {
-    setEditingRowNumber(null);
-    setUpdatingAdviceCategory('');
+    setSelectedRowNumber(-1);
   } else {
     const row = selectedRows[0];
+    setSelectedRowNumber(row);
     do$2();
   }
 };

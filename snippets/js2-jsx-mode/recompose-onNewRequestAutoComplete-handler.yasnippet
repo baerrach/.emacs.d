@@ -3,9 +3,7 @@
 # key: RE
 # --
 const onNewRequestAutoComplete${1:uiComponentName}Handler = ({
-  ${2:dataModel},
-  do${3:NewAction},
-  do${4:SelectAction},
+  do${2:Action},
 }) => (
   chosenRequest,
   index
@@ -18,10 +16,10 @@ const onNewRequestAutoComplete${1:uiComponentName}Handler = ({
   //
   // index: The index in dataSource of the list item selected, or -1 if enter is
   // pressed in the TextField.
-  if (index !== -1) {
-    do$3($2[index]);
+  if (index === -1) {
+    do$2({ ${3:propertyName}: chosenRequest });
   } else {
-    do$4(chosenRequest);
+    do$2(chosenRequest);
   }
 };
 $0
