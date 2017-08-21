@@ -7,6 +7,9 @@
 (define-key org-mode-map (kbd "C-c C-x C-a") nil)
 (define-key org-mode-map (kbd "C-c C-x C-s") nil)
 (define-key org-mode-map (kbd "C-c $") nil)
+(define-key org-mode-map (kbd "<C-tab>") nil)
+(define-key org-mode-map (kbd "C-C C-x a") nil)
+(define-key org-mode-map (kbd "C-C C-x A") nil)
 
 (setq org-catch-invisible-edits t)
 (setq org-gotoauto-isearch nil)
