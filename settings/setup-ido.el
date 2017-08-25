@@ -28,7 +28,6 @@
 (defun my/ido-go-straight-home ()
   (interactive)
   (cond
-   ((looking-back "~/") (insert "projects/"))
    ((looking-back "/") (insert "~/"))
    (:else (call-interactively 'self-insert-command))))
 
@@ -46,6 +45,10 @@
   (define-key ido-file-dir-completion-map (kbd "C-x C-w") 'ido-copy-current-file-name))
 
 (add-hook 'ido-setup-hook 'my/setup-ido)
+(add-hook 'ido-setup-hook
+          (lambda ()
+            (define-key ido-completion-map [tab] 'ido-complete)))
+
 
 ;; Always rescan buffer for imenu
 (set-default 'imenu-auto-rescan t)
