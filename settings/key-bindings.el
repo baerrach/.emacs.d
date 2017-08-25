@@ -144,6 +144,9 @@
 (global-set-key (kbd "C-x r q") 'save-buffers-kill-terminal)
 (global-unset-key (kbd "C-x C-c"))
 
+;; Suspend frame
+(global-unset-key (kbd "C-x C-z"))
+
 ;; Unbind commands that get invoked accidentally and will never be used.
 (global-unset-key (kbd "C-x C-n"))
 
@@ -233,5 +236,14 @@
 (define-key yas-keymap (kbd "TAB") 'tab-complete-or-next-field)
 (define-key yas-keymap [(control tab)] 'yas-next-field)
 (define-key yas-keymap (kbd "C-g") 'abort-company-or-yas)
+
+;;; How to create keyboard macros
+;; start-kbd-macro
+;; end-kbd-macro
+;; name-last-kbd-macro
+;; insert-kbd-macro
+
+(fset 'graphql-convert-variable-definition-to-argument
+      [?\M-i ?\M-f ?\C-  ?\C-e backspace ?\C-  ?\M-b ?\M-w ?\M-i ?\C-y ?: ?  ?\M-x ?e ?n ?d ?\C-n])
 
 (provide 'key-bindings)
