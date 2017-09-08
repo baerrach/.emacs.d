@@ -25,3 +25,4 @@ eshell/
 /org-clock-save.el
 .mc-lists.el
 custom.el
+abbrev_defs
