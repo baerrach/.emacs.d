@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Recompose onCheck handler
+# key: RE
+# --
+const onCheck${1:uiComponentName}Handler = ({
+  set$1,
+}) => (_, isInputChecked) => {
+  set$1(isInputChecked);
+};
+$0
