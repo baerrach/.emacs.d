@@ -97,6 +97,7 @@
      org-bullets
      perspective
      perl6-mode
+     powershell
      prettier-js
      prodigy
      restclient
