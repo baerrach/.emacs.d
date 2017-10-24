@@ -138,11 +138,6 @@
 
 (global-unset-key (kbd "C-z"))
 
-(add-hook 'write-file-hooks
-            (lambda ()
-               (delete-trailing-whitespace)
-               nil))
-
 ;; Backup settings
 (add-hook 'window-setup-hook
           (lambda ()

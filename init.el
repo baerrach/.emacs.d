@@ -113,6 +113,7 @@
      visual-regexp
      web-mode
      whitespace-cleanup-mode
+     ws-butler
      yasnippet
      yaml-mode
      )))
@@ -187,6 +188,7 @@
 (require 'string-inflection)
 (require 'visual-basic-mode)
 (require 'visual-regexp)
+(require 'setup-ws-butler)
 (eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
 (require 'setup-yasnippet)
 
