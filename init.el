@@ -112,6 +112,7 @@
      tagedit
      visual-regexp
      web-mode
+     wgrep
      whitespace-cleanup-mode
      ws-butler
      yasnippet
@@ -189,6 +190,7 @@
 (require 'visual-basic-mode)
 (require 'visual-regexp)
 (require 'setup-ws-butler)
+(require 'setup-wgrep)
 (eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
 (require 'setup-yasnippet)
 
