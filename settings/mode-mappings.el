@@ -20,6 +20,7 @@
 (add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
 ;; HTML
+(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tag$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.vm$" . web-mode))
