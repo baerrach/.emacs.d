@@ -4,6 +4,7 @@
      (add-to-list 'grep-find-ignored-directories "coverage")
      (add-to-list 'grep-find-ignored-directories "elpa")
      (add-to-list 'grep-find-ignored-directories "lib")
+     (add-to-list 'grep-find-ignored-directories "libs")
      (add-to-list 'grep-find-ignored-directories "node_modules")
      (add-to-list 'grep-find-ignored-directories "umd")
      (add-to-list 'grep-find-ignored-directories "vendor")
