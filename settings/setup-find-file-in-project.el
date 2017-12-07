@@ -1,5 +1,4 @@
 (require 'find-file-in-project)
-(require 's)
 
 ;; No need to be stingy
 (setq ffip-limit 4096)
