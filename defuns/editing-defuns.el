@@ -1,5 +1,7 @@
 ;;; editing-defuns.el --- Basic text editing defuns -*- lexical-binding: t; -*-
 
+(require 's)
+
 (defun open-line-below ()
   (interactive)
   (end-of-line)
@@ -228,8 +230,6 @@ region-end is used."
                     (goto-char (point-max))
                     (line-number-at-pos)))))
 
-(require 's)
-
 (defun incs (s &optional num)
   (let* ((inc (or num 1))
          (new-number (number-to-string (+ inc (string-to-number s))))
@@ -285,7 +285,7 @@ region-end is used."
   (let* ((beg (region-beginning))
          (end (region-end))
          (current-word (buffer-substring-no-properties beg end))
-         (snakified (snake-case current-word)))
+         (snakified (s-snake-case current-word)))
     (replace-string current-word snakified nil beg end)))
 
 (defun kebab-current-word ()
