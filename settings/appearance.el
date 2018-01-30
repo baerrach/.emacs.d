@@ -10,7 +10,6 @@
 
 ;;; https://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 ;;; Always split horizontally (i.e. windows are left/right, not top/bottom on top of each other)
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
+(setq split-height-threshold nil); originally 80
 
 (provide 'appearance)
