@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: eslint globals
+# key: eslint
+# expand-env : ((yas-wrap-around-region nil))
+# --
+/* globals ${1:`(if (region-active-p) (yas-selected-text) "variable-name")`}$0:false */
