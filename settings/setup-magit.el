@@ -12,6 +12,9 @@
 (set-default 'magit-stage-all-confirm nil)
 (set-default 'magit-revert-buffers 'silent)
 
+;;
+(set-default 'magit-diff-refine-hunk 't)
+
 ;; full screen vc-annotate
 
 (defun vc-annotate-quit ()
