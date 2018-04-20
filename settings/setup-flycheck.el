@@ -4,8 +4,8 @@
 (defun bae/disable-flycheck-for-buffer ()
   "Some files (like in node_modules) are not written by us and should
 not be checked"
-  (if (or (string-match-p (regexp-quote "node_module") buffer-file-name)
-           (string-match-p (regexp-quote "_template") buffer-file-name))
+  (if (or (string-match-p (regexp-quote "node_modules") buffer-file-name)
+          (string-match-p (regexp-quote "_template") buffer-file-name))
       (flycheck-disable-checker 'javascript-eslint)))
 
 (defun magnars/adjust-flycheck-automatic-syntax-eagerness ()
