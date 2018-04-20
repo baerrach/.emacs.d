@@ -87,6 +87,7 @@
      ido-at-point
      ido-ubiquitous
      ido-vertical-mode
+     indium
      json-mode
      js2-mode
      js2-refactor
@@ -103,7 +104,6 @@
      restclient
      s
      simplezen
-     skewer-mode
      smartparens
      smart-forward
      smex
@@ -175,13 +175,13 @@
 (eval-after-load 'grep '(require 'setup-grep))
 (require 'setup-hippie-expand)
 (eval-after-load 'ido '(require 'setup-ido))
+(require 'setup-indium)
 (eval-after-load 'magit '(require 'setup-magit))
 (require 'multiple-cursors)
 (eval-after-load 'org '(require 'setup-org-mode))
 (require 'setup-prettier-js)
 (eval-after-load 'sgml-mode '(require 'setup-html-mode))
 (eval-after-load 'shell '(require 'setup-shell))
-(skewer-setup)
 (require 'smart-forward)
 (require 'smex)
 (smex-initialize)
