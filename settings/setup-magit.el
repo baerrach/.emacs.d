@@ -1,3 +1,7 @@
+;; enable visual-line-mode in 'Magit Rev' mode
+
+(add-hook 'magit-revision-mode-hook 'visual-line-mode)
+
 ;; full screen magit-status
 
 (defun magit-status-fullscreen (prefix)
