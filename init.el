@@ -82,6 +82,7 @@
      flx-ido
      flycheck
      flycheck-pos-tip
+     graphql-mode
      guide-key
      highlight-escape-sequences
      ido-at-point
