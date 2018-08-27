@@ -168,7 +168,9 @@
   (interactive)
   (cond
    ((minibufferp)
-    (ido-complete))
+    ;(ido-complete)
+    (minibuffer-complete)
+    )
    ((derived-mode-p 'magit-mode)
     (magit-section-toggle (magit-current-section)))
    (t
