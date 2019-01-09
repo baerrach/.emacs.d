@@ -9,6 +9,7 @@
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-ac-sources-alist
         '(("css" . (ac-source-css-property))
+          ("hbs" . (ac-source-words-in-buffer ac-source-abbrev))
           ("html" . (ac-source-words-in-buffer ac-source-abbrev)))))
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)

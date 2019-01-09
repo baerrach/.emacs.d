@@ -25,6 +25,7 @@
 (add-to-list 'auto-mode-alist '("\\.tag$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.vm$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
 
 ;; JSP
 (autoload 'crappy-jsp-mode "crappy-jsp-mode")
