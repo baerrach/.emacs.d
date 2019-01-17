@@ -2,4 +2,4 @@
 # name: wrap variable in string template to log its JSON.stringify value `var=${JSON.stringify(var)}`
 # expand-env : ((yas-wrap-around-region nil))
 # --
-${1:`(if (region-active-p) (yas-selected-text) "var")`}=\${JSON.stringify($1)}$0
+${1:`(if (region-active-p) (yas-selected-text) "var")`}=\${JSON.stringify($1, null, 2)}$0
