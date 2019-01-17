@@ -75,6 +75,7 @@
      css-eldoc
      dash
      dired-details
+     dired-narrow
      dockerfile-mode
      f
      find-file-in-project

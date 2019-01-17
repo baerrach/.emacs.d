@@ -1,4 +1,5 @@
 (require 'dired)
+(require 'dired-narrow)
 (require 'dash)
 
 ;; Make dired less verbose
@@ -51,5 +52,7 @@
      (define-key wdired-mode-map (kbd "C-a") 'dired-back-to-start-of-files)
      (define-key wdired-mode-map (vector 'remap 'beginning-of-buffer) 'dired-back-to-top)
      (define-key wdired-mode-map (vector 'remap 'end-of-buffer) 'dired-jump-to-bottom)))
+
+(define-key dired-mode-map (kbd "/") 'dired-narrow)
 
 (provide 'setup-dired)
