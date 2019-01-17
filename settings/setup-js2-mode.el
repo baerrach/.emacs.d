@@ -263,4 +263,14 @@
     (unless first-line
       (indent-line-to offset))))
 
+(defun bae-disable-js2-mode-helpers ()
+  "Disable Flycheck, Prettier, WS-butler"
+  (interactive)
+  (progn
+    (flycheck-mode -1)
+    (prettier-js-mode -1)
+    (ws-butler-mode -1)))
+
+(add-hook 'js2-mode-hook (lambda () (flycheck-mode 1)))
+
 (provide 'setup-js2-mode)
