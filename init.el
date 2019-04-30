@@ -72,6 +72,7 @@
      auto-complete
      buttercup
      company
+     company-lsp
      css-eldoc
      dash
      dired-details
@@ -93,6 +94,8 @@
      json-mode
      js2-mode
      js2-refactor
+     lsp-mode
+     lsp-ui ; TODO: consider flycheck
      magit
      markdown-mode
      multiple-cursors
@@ -180,6 +183,7 @@
 (require 'setup-indium)
 (eval-after-load 'magit '(require 'setup-magit))
 (require 'multiple-cursors)
+(require 'setup-lsp)
 (eval-after-load 'org '(require 'setup-org-mode))
 (require 'setup-prettier-js)
 (eval-after-load 'sgml-mode '(require 'setup-html-mode))

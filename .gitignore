@@ -26,3 +26,4 @@ eshell/
 .mc-lists.el
 custom.el
 abbrev_defs
+.lsp-session*
