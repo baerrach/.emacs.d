@@ -1,7 +1,8 @@
 ;; Interactively Do Things
 
 (require 'ido)
-(ido-mode t)
+(ido-mode 1)
+(ido-everywhere 1)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-case-fold nil
@@ -58,10 +59,10 @@
 
 ;; Ido at point (C-,)
 (require 'ido-at-point)
-(ido-at-point-mode)
+(ido-at-point-mode 1)
 
 ;; Use ido everywhere
-(require 'ido-ubiquitous)
+(require 'ido-completing-read+)
 (ido-ubiquitous-mode 1)
 
 ;; Fix ido-ubiquitous for newer packages

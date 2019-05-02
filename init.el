@@ -88,7 +88,7 @@
      guide-key
      highlight-escape-sequences
      ido-at-point
-     ido-ubiquitous
+     ido-completing-read+
      ido-vertical-mode
      indium
      json-mode
