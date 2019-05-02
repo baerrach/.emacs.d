@@ -69,7 +69,6 @@
      company-lsp
      css-eldoc
      dash
-     dired-details
      dired-narrow
      dockerfile-mode
      f
