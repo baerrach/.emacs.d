@@ -1,5 +1,6 @@
 (eval-after-load 'grep
   '(progn
+     (add-to-list 'grep-find-ignored-directories ".cache")
      (add-to-list 'grep-find-ignored-directories "build")
      (add-to-list 'grep-find-ignored-directories "coverage")
      (add-to-list 'grep-find-ignored-directories "elpa")

@@ -63,6 +63,7 @@
   (packages-install
    '(ace-jump-buffer
      ace-jump-mode
+     add-node-modules-path
      auto-complete
      buttercup
      company
@@ -100,6 +101,7 @@
      prettier-js
      prodigy
      restclient
+     rjsx-mode
      s
      simplezen
      smartparens
