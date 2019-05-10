@@ -178,6 +178,7 @@
 (eval-after-load 'flycheck '(require 'setup-flycheck))
 (eval-after-load 'grep '(require 'setup-grep))
 (require 'setup-hippie-expand)
+(require 'setup-hunspell)
 (eval-after-load 'ido '(require 'setup-ido))
 (require 'setup-indium)
 (eval-after-load 'magit '(require 'setup-magit))
