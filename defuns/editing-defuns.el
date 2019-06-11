@@ -349,3 +349,8 @@ region-end is used."
   (while (not (looking-at "}"))
     (join-line -1))
   (back-to-indentation))
+
+(defun sort-lines-nocase ()
+  (interactive)
+  (let ((sort-fold-case t))
+    (call-interactively 'sort-lines)))
