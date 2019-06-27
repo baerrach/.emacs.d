@@ -100,6 +100,7 @@
      powershell
      prettier-js
      prodigy
+     rainbow-mode
      restclient
      rjsx-mode
      s
