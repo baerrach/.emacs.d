@@ -28,3 +28,4 @@ custom.el
 abbrev_defs
 .lsp-session*
 transient/
+var/

@@ -111,6 +111,7 @@
      string-edit
      string-inflection
      tagedit
+     unicode-fonts
      visual-regexp
      web-mode
      wgrep
@@ -218,3 +219,6 @@
 (put 'downcase-region 'disabled nil)
 
 (require 'setup-personal)
+
+(require 'unicode-fonts)
+(unicode-fonts-setup)
