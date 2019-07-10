@@ -1,3 +1,6 @@
+;; Use customize-face instead
+;; -22- === 166 in 1/10 pt
+
 ;; friendly font
 (defun bae/work-settings ()
   (interactive)
