@@ -3,6 +3,7 @@
      (add-to-list 'grep-find-ignored-directories ".cache")
      (add-to-list 'grep-find-ignored-directories "build")
      (add-to-list 'grep-find-ignored-directories "coverage")
+     (add-to-list 'grep-find-ignored-directories "dist")
      (add-to-list 'grep-find-ignored-directories "elpa")
      (add-to-list 'grep-find-ignored-directories "img")
      (add-to-list 'grep-find-ignored-directories "lib")
