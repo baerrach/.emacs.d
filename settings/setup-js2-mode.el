@@ -273,6 +273,8 @@
     (prettier-js-mode -1)
     (ws-butler-mode -1)))
 
-(add-hook 'js2-mode-hook (lambda () (flycheck-mode 1)))
+(add-hook 'js2-mode-hook (lambda ()
+                           (flycheck-mode 1)
+                           (setup-tide-mode)))
 
 (provide 'setup-js2-mode)

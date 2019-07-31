@@ -116,6 +116,7 @@
      string-edit
      string-inflection
      tagedit
+     tide
      unicode-fonts
      visual-regexp
      web-mode
@@ -202,6 +203,7 @@
 (smex-initialize)
 (require 'smooth-scrolling)
 (require 'string-inflection)
+(require 'setup-tide)
 (require 'visual-basic-mode)
 (require 'visual-regexp)
 (require 'setup-ws-butler)
