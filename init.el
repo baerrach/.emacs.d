@@ -21,6 +21,8 @@
 ;; Initialize package handling
 (require 'setup-package)
 (require 'setup-use-package)
+(require 'setup-diminish) ; needed for use-package :diminish
+(require 'setup-bind-key) ; needed for use-package :bind
 
 ;; Setup order dependent packages
 (require 'setup-custom)
