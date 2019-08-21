@@ -8,10 +8,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(require 'server)
-(unless (server-running-p)
-  (server-start))
-;; Use emacsclientw.exe to open files in running server
+(require 'setup-emacs-server)
 
 (add-hook 'debugger-mode-hook 'turn-on-visual-line-mode)
 
