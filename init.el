@@ -1,6 +1,6 @@
 ;;; Enable for debugging problems
-;; (setq debug-on-quit t)
-;; (setq debug-on-error t)
+; (setq debug-on-quit t)
+; (setq debug-on-error t)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -8,131 +8,111 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(require 'server)
-(unless (server-running-p)
-  (server-start))
-;; Use emacsclientw.exe to open files in running server
+(defun setup-load-path ()
+  "Configure load-path for local user-emacs-directory support"
+  (setq site-lisp-dir
+        (expand-file-name "site-lisp" user-emacs-directory))
+  (setq settings-dir
+        (expand-file-name "settings" user-emacs-directory))
+  (add-to-list 'load-path settings-dir)
+  (add-to-list 'load-path site-lisp-dir))
+(setup-load-path)
 
-(add-hook 'debugger-mode-hook 'turn-on-visual-line-mode)
+;; Initialize package handling
+(require 'setup-package)
+(require 'setup-use-package)
+(require 'setup-diminish) ; needed for use-package :diminish
+(require 'setup-bind-key) ; needed for use-package :bind
 
-;;;
-;;; Desktop save mode
-;;; http://ergoemacs.org/emacs/emacs_save_restore_opened_files.html
-;;;
-;; save/restore opened files and windows config
-(desktop-save-mode 1) ; 0 for off
+;; Setup order dependent packages
+(require 'setup-custom)
+(require 'setup-emacs-appearance)
 
-;;;
-;;; https://github.com/magnars/.emacs.d/blob/master/init.el
-;;;
+;; Setup order independent packages
 
-;; Turn off mouse interface early in startup to avoid momentary display
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(require 'setup-emacs-server)
 
-;; No splash screen please ... jeez
-(setq inhibit-startup-message t)
+(require 'setup-debugger)
 
-;; Set path to dependencies
-(setq site-lisp-dir
-      (expand-file-name "site-lisp" user-emacs-directory))
+(require 'setup-desktop)
 
-(setq settings-dir
-      (expand-file-name "settings" user-emacs-directory))
-
-;; Set up load path
-(add-to-list 'load-path settings-dir)
-(add-to-list 'load-path site-lisp-dir)
-
-;; Keep emacs Custom-settings in separate file
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
-
-;; Set up appearance early
-(require 'appearance)
-
-;; Save point position between sessions
-(require 'saveplace)
-(setq-default save-place t)
+(require 'setup-saveplace)
 
 ;; What system are we on?
 (setq is-mac (equal system-type 'darwin))
 (setq is-win (equal system-type 'windows-nt))
 
-;; Setup packages
-(require 'setup-package)
-
+;; TODO: Refactor to setup-* and using use-package
 ;; Install extensions if they're missing
-(defun init--install-packages ()
-  (packages-install
-   '(ace-jump-buffer
-     ace-jump-mode
-     add-node-modules-path
-     auto-complete
-     buttercup
-     company
-     company-lsp
-     css-eldoc
-     dash
-     dired-narrow
-     dockerfile-mode
-     f
-     find-file-in-project
-     flx
-     flx-ido
-     flycheck
-     flycheck-pos-tip
-     graphql-mode
-     guide-key
-     highlight-escape-sequences
-     ido-at-point
-     ido-completing-read+
-     ido-vertical-mode
-     indium
-     json-mode
-     js2-mode
-     js2-refactor
-     lsp-mode
-     lsp-ui ; TODO: consider flycheck
-     magit
-     markdown-mode
-     multiple-cursors
-     nodejs-repl
-     org-bullets
-     perspective
-     perl6-mode
-     powershell
-     prettier-js
-     prodigy
-     projectile
-     rainbow-mode
-     restclient
-     rjsx-mode
-     s
-     simplezen
-     smartparens
-     smart-forward
-     smex
-     string-edit
-     string-inflection
-     tagedit
-     tide
-     unicode-fonts
-     visual-regexp
-     web-mode
-     wgrep
-     whitespace-cleanup-mode
-     ws-butler
-     yasnippet
-     yaml-mode
-     )))
+;; (defun init--install-packages ()
+;;   (packages-install
+;;    '(ace-jump-buffer
+;;      ace-jump-mode
+;;      add-node-modules-path
+;;      auto-complete
+;;      buttercup
+;;      company
+;;      company-lsp
+;;      css-eldoc
+;;      dash
+;;      dired-narrow
+;;      dockerfile-mode
+;;      f
+;;      find-file-in-project
+;;      flx
+;;      flx-ido
+;;      flycheck
+;;      flycheck-pos-tip
+;;      graphql-mode
+;;      guide-key
+;;      highlight-escape-sequences
+;;      ido-at-point
+;;      ido-completing-read+
+;;      ido-vertical-mode
+;;      indium
+;;      json-mode
+;;      js2-mode
+;;      js2-refactor
+;;      lsp-mode
+;;      lsp-ui ; TODO: consider flycheck
+;;      magit
+;;      markdown-mode
+;;      multiple-cursors
+;;      nodejs-repl
+;;      org-bullets
+;;      perspective
+;;      perl6-mode
+;;      powershell
+;;      prettier-js
+;;      prodigy
+;;      projectile
+;;      rainbow-mode
+;;      restclient
+;;      rjsx-mode
+;;      s
+;;      simplezen
+;;      smartparens
+;;      smart-forward
+;;      smex
+;;      string-edit
+;;      string-inflection
+;;      tagedit
+;;      tide
+;;      unicode-fonts
+;;      visual-regexp
+;;      web-mode
+;;      wgrep
+;;      whitespace-cleanup-mode
+;;      ws-butler
+;;      yasnippet
+;;      yaml-mode
+;;      )))
 
-(condition-case nil
-    (init--install-packages)
-  (error
-   (package-refresh-contents)
-   (init--install-packages)))
+;; (condition-case nil
+;;     (init--install-packages)
+;;   (error
+;;    (package-refresh-contents)
+;;    (init--install-packages)))
 
 ;; Lets start with a smattering of sanity
 (require 'sane-defaults)
@@ -146,12 +126,9 @@
 (when is-win
   (require 'microsoft-windows))
 
-;; Functions (load all files in defuns-dir)
-(setq defuns-dir (expand-file-name "defuns" user-emacs-directory))
-(dolist (file (directory-files defuns-dir t "\\w+"))
-  (when (file-regular-p file)
-    (load file)))
+(require 'setup-defuns)
 
+;; TODO Add guide-key
 ;; guide-key
 ;; (require 'guide-key)
 ;; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x +"))
@@ -159,26 +136,11 @@
 ;; (setq guide-key/recursive-key-sequence-flag t)
 ;; (setq guide-key/popup-window-position 'bottom)
 
-;; Default setup of smartparens
-(require 'smartparens-config)
-(setq sp-autoescape-string-quote nil)
-(--each '(restclient-mode-hook
-          js-mode-hook
-          java-mode
-          ruby-mode
-          markdown-mode
-          groovy-mode
-          scala-mode)
-  (add-hook it 'turn-on-smartparens-mode))
+(require 'setup-smartparens)
 
+(require 'setup-highlight-escape-sequences)
 
-;; Highlight escape sequences
-(require 'highlight-escape-sequences)
-(hes-mode)
-(put 'font-lock-regexp-grouping-backslash 'face-alias 'font-lock-builtin-face)
-
-(require 're-builder)
-(setq reb-re-syntax 'string)
+(require 'setup-re-builder)
 
 ;; Setup extensions
 (require 'ace-jump-mode)
