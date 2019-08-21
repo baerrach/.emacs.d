@@ -19,6 +19,9 @@
 (add-to-list 'load-path settings-dir)
 (add-to-list 'load-path site-lisp-dir)
 
+;; Setup packages
+(require 'setup-package)
+
 (require 'setup-emacs-server)
 
 (require 'setup-debugger)
@@ -35,9 +38,6 @@
 ;; What system are we on?
 (setq is-mac (equal system-type 'darwin))
 (setq is-win (equal system-type 'windows-nt))
-
-;; Setup packages
-(require 'setup-package)
 
 ;; TODO: Refactor to setup-* and using use-package
 ;; Install extensions if they're missing
