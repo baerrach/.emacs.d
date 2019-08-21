@@ -8,16 +8,15 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; Set path to dependencies
-(setq site-lisp-dir
-      (expand-file-name "site-lisp" user-emacs-directory))
-
-(setq settings-dir
-      (expand-file-name "settings" user-emacs-directory))
-
-;; Set up load path
-(add-to-list 'load-path settings-dir)
-(add-to-list 'load-path site-lisp-dir)
+(defun setup-load-path ()
+  "Configure load-path for local user-emacs-directory support"
+  (setq site-lisp-dir
+        (expand-file-name "site-lisp" user-emacs-directory))
+  (setq settings-dir
+        (expand-file-name "settings" user-emacs-directory))
+  (add-to-list 'load-path settings-dir)
+  (add-to-list 'load-path site-lisp-dir))
+(setup-load-path)
 
 ;; Initialize package handling
 (require 'setup-package)
