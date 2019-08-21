@@ -137,8 +137,7 @@
 
 (require 'setup-highlight-escape-sequences)
 
-(require 're-builder)
-(setq reb-re-syntax 'string)
+(require 'setup-re-builder)
 
 ;; Setup extensions
 (require 'ace-jump-mode)
