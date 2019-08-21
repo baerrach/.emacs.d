@@ -25,9 +25,7 @@
 
 (require 'setup-desktop)
 
-;; Keep emacs Custom-settings in separate file
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
+(require 'setup-custom)
 
 ;; Set up appearance early
 (require 'setup-emacs-appearance)
