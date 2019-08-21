@@ -3,6 +3,8 @@ backups
 *~
 .places
 places
+projectile-bookmarks.eld
+projectile.cache
 session.*
 tramp
 elpa
