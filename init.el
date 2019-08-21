@@ -133,17 +133,7 @@
 ;; (setq guide-key/recursive-key-sequence-flag t)
 ;; (setq guide-key/popup-window-position 'bottom)
 
-;; Default setup of smartparens
-(require 'smartparens-config)
-(setq sp-autoescape-string-quote nil)
-(--each '(restclient-mode-hook
-          js-mode-hook
-          java-mode
-          ruby-mode
-          markdown-mode
-          groovy-mode
-          scala-mode)
-  (add-hook it 'turn-on-smartparens-mode))
+(require 'setup-smartparens)
 
 
 ;; Highlight escape sequences
