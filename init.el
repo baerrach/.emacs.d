@@ -105,6 +105,7 @@
      powershell
      prettier-js
      prodigy
+     projectile
      rainbow-mode
      restclient
      rjsx-mode
@@ -229,3 +230,25 @@
 
 (require 'unicode-fonts)
 (unicode-fonts-setup)
+
+(require 'projectile)
+(setq projectile-indexing-method 'alien)
+(define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+
+;; Need to configure to define spec files, its set to NPM -> make it Aurelia
+(defun my/related-files (path)
+  (if (string-match (rx (group (or "src" "test")) (group "/" (1+ anything) ".cpp")) path)
+      (let ((dir (match-string 1 path))
+            (file-name (match-string 2 path)))
+        (if (equal dir "test")
+            (list :impl (concat "src" file-name))
+          (list :test (concat "test" file-name)
+                :other (concat "src" file-name ".def"))))))
+
+(projectile-register-project-type
+ ;; ...
+ :related-files-fn #'my/related-files)
+
+
+(add-to-list 'projectile-other-file-alist '("js" "html"))
+(add-to-list 'projectile-other-file-alist '("html" "js"))
