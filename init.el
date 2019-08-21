@@ -30,9 +30,7 @@
 ;; Set up appearance early
 (require 'setup-emacs-appearance)
 
-;; Save point position between sessions
-(require 'saveplace)
-(setq-default save-place t)
+(require 'setup-saveplace)
 
 ;; What system are we on?
 (setq is-mac (equal system-type 'darwin))
