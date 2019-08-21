@@ -50,7 +50,7 @@
 (load custom-file)
 
 ;; Set up appearance early
-(require 'appearance)
+(require 'setup-emacs-appearance)
 
 ;; Save point position between sessions
 (require 'saveplace)
