@@ -21,12 +21,9 @@
 
 (require 'setup-emacs-server)
 
-;;; Desktop save mode
-;;; http://ergoemacs.org/emacs/emacs_save_restore_opened_files.html
-;;;
-;; save/restore opened files and windows config
-(desktop-save-mode 1) ; 0 for off
 (require 'setup-debugger)
+
+(require 'setup-desktop)
 
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
