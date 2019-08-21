@@ -1,6 +1,18 @@
 ;; Highlight matching parentheses when the point is on them.
 (show-paren-mode 1)
 
+;;;
+;;; https://github.com/magnars/.emacs.d/blob/master/init.el
+;;;
+
+;; Turn off mouse interface early in startup to avoid momentary display
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; No splash screen please ... jeez
+(setq inhibit-startup-message t)
+
 ;; TODO: Replace with diminish and delight
 (defmacro rename-modeline (package-name mode new-name)
   `(eval-after-load ,package-name
