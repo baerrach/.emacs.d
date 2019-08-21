@@ -9,8 +9,4 @@
 (unless (file-exists-p "~/.emacs.d/elpa/archives/melpa")
   (package-refresh-contents))
 
-(when (not (package-installed-p 'use-package))
-  (package-install 'use-package))
-(delete-other-windows)
-
 (provide 'setup-package)

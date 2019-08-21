@@ -19,19 +19,21 @@
 (add-to-list 'load-path settings-dir)
 (add-to-list 'load-path site-lisp-dir)
 
-;; Setup packages
+;; Initialize package handling
 (require 'setup-package)
+(require 'setup-use-package)
+
+;; Setup order dependent packages
+(require 'setup-custom)
+(require 'setup-emacs-appearance)
+
+;; Setup order independent packages
 
 (require 'setup-emacs-server)
 
 (require 'setup-debugger)
 
 (require 'setup-desktop)
-
-(require 'setup-custom)
-
-;; Set up appearance early
-(require 'setup-emacs-appearance)
 
 (require 'setup-saveplace)
 
