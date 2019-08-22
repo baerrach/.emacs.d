@@ -231,6 +231,12 @@
   :config
   (global-undo-tree-mode))
 
+(use-package uniquify
+  :ensure nil
+  :custom
+  (uniquify-buffer-name-style 'forward "Add parts of each file's directory to the buffer name if not unique"))
+
+
 
 ;; See setup-debugger - check all hooks are using syntax from
 ;; https://github.com/nickmccurdy/add-hooks/blob/master/add-hooks.el
