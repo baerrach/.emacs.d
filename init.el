@@ -238,3 +238,5 @@
 
 ;; check :ensure
 ;; not :ensure t
+
+;; Run eslisp lint over files
