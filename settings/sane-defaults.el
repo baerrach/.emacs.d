@@ -27,6 +27,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; UTF-16-le on Windows for Chinese character support M-x view-hello-file to see if it works
+(set-language-environment "UTF-8")
 (set-selection-coding-system 'utf-16-le)
 
 ;; Show active region
