@@ -28,11 +28,6 @@
 
 ;; UTF-16-le on Windows for Chinese character support M-x view-hello-file to see if it works
 (set-selection-coding-system 'utf-16-le)
-;(setq locale-coding-system 'utf-8) ; pretty
-;(set-terminal-coding-system 'utf-8) ; pretty
-;(set-keyboard-coding-system 'utf-8) ; pretty
-;(set-selection-coding-system 'utf-8) ; please
-;(prefer-coding-system 'utf-8) ; with sugar on top
 
 ;; Show active region
 (transient-mark-mode 1)
