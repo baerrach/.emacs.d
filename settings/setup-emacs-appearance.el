@@ -13,15 +13,6 @@
 ;; No splash screen please ... jeez
 (setq inhibit-startup-message t)
 
-;; TODO: Replace with diminish and delight
-(defmacro rename-modeline (package-name mode new-name)
-  `(eval-after-load ,package-name
-     '(defadvice ,mode (after rename-modeline activate)
-        (setq mode-name ,new-name))))
-
-;; TODO: Replace with diminish and delight
-(rename-modeline "js2-mode" js2-mode "JS2")
-
 ;;; https://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 ;;; Always split horizontally (i.e. windows are left/right, not top/bottom on top of each other)
 (setq split-height-threshold nil); originally 80
