@@ -41,7 +41,6 @@
 ;; Setup order independent packages
 (require 'setup-emacs-server)
 (require 'setup-debugger)
-
 (require 'setup-desktop)
 
 (require 'setup-saveplace)
