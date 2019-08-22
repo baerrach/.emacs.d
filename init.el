@@ -198,8 +198,8 @@
 (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
 
 ;; Need to configure to define spec files, its set to NPM -> make it Aurelia
-(defun my/related-files (path)
-  (if (string-match (rx (group (or "src" "test")) (group "/" (1+ anything) ".cpp")) path)
+(defun my/related-files (&optional path)
+  (if (and path (string-match (rx (group (or "src" "test")) (group "/" (1+ anything) ".cpp")) path))
       (let ((dir (match-string 1 path))
             (file-name (match-string 2 path)))
         (if (equal dir "test")
