@@ -1,5 +1,7 @@
-;; TODO: Use use-package
+(require 'use-package)
 
-(add-hook 'debugger-mode-hook 'turn-on-visual-line-mode)
+(use-package debug
+  :hook
+  (debugger-mode . #'turn-on-visual-line-mode))
 
 (provide 'setup-debugger)
