@@ -224,3 +224,10 @@
 
 (add-to-list 'projectile-other-file-alist '("js" "html"))
 (add-to-list 'projectile-other-file-alist '("html" "js"))
+
+;; See setup-debugger - check all hooks are using syntax from
+;; https://github.com/nickmccurdy/add-hooks/blob/master/add-hooks.el
+;;
+
+;; check :ensure
+;; not :ensure t
