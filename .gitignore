@@ -30,4 +30,5 @@ session.*
 swank
 tramp
 transient/
+url/
 var/
