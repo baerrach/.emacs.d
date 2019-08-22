@@ -9,12 +9,4 @@
 ;;; Always split horizontally (i.e. windows are left/right, not top/bottom on top of each other)
 (setq split-height-threshold nil); originally 80
 
-;; TODO: Check how solarized is installed
-;; Needs installing M-x package-install solarized-theme
-
-;; Setup theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(setq frame-background-mode 'dark)
-(load-theme 'solarized t)
-
 (provide 'setup-emacs-appearance)

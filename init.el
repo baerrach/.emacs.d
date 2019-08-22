@@ -36,6 +36,7 @@
 ;; Setup order dependent packages
 (require 'setup-custom)
 (require 'setup-emacs-appearance)
+(require 'setup-emacs-theme)
 
 ;; Setup order independent packages
 
