@@ -42,7 +42,6 @@
 (require 'setup-emacs-server)
 (require 'setup-debugger)
 (require 'setup-desktop)
-
 (require 'setup-saveplace)
 
 ;; What system are we on?

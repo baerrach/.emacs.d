@@ -1,5 +1,8 @@
-;; Save point position between sessions
-(require 'saveplace)
-(setq-default save-place t)
+(require 'use-package)
+
+(use-package saveplace
+  :ensure
+  :custom
+  (save-place t "Save point position between sessions"))
 
 (provide 'setup-saveplace)
