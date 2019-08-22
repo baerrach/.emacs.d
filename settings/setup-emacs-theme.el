@@ -1,7 +1,7 @@
 (require 'use-package)
 
 (use-package solarized-theme
-  :ensure t
+  :ensure
   :config
   (load-theme 'solarized-dark t))
 

@@ -1,6 +1,6 @@
 (require 'use-package)
 
 (use-package bind-key
-  :ensure t)
+  :ensure)
 
 (provide 'setup-bind-key)

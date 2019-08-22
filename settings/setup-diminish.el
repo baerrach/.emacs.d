@@ -1,6 +1,6 @@
 (require 'use-package)
 
 (use-package diminish
-  :ensure t)
+  :ensure)
 
 (provide 'setup-diminish)

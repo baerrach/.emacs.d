@@ -1,6 +1,6 @@
 (require 'use-package)
 
 (use-package delight
-  :ensure t)
+  :ensure)
 
 (provide 'setup-delight)
