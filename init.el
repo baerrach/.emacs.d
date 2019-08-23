@@ -154,7 +154,6 @@
 ;;; TODO - UP TO HERE
 (require 'setup-company)
 (eval-after-load 'dired '(require 'setup-dired))
-(eval-after-load 'find-file-in-project '(require 'setup-find-file-in-project))
 (require 'expand-region)
 (eval-after-load 'flycheck '(require 'setup-flycheck))
 (eval-after-load 'grep '(require 'setup-grep))
