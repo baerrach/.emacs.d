@@ -1,15 +1,8 @@
-;; TODO: Use use-package, not require of --each from dash
+(require 'use-package)
 
-;; Default setup of smartparens
-(require 'smartparens-config)
-(setq sp-autoescape-string-quote nil)
-(--each '(restclient-mode-hook
-          js-mode-hook
-          java-mode
-          ruby-mode
-          markdown-mode
-          groovy-mode
-          scala-mode)
-  (add-hook it 'turn-on-smartparens-mode))
+(use-package smartparens-config
+  :custom
+  (sp-autoescape-string-quote nil)
+  :hook ((emacs-lisp-mode groovy-mode java-mode js-mode markdown-mode restclient-mode ruby-mode scala-mode) . #'turn-on-smartparens-mode))
 
 (provide 'setup-smartparens)
