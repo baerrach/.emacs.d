@@ -1,8 +1,9 @@
-;; TODO: Use use-package
+(require 'use-package)
 
-;; Highlight escape sequences
-(require 'highlight-escape-sequences)
-(hes-mode)
-(put 'font-lock-regexp-grouping-backslash 'face-alias 'font-lock-builtin-face)
+(use-package highlight-escape-sequences
+  :init
+  (put 'font-lock-regexp-grouping-backslash 'face-alias 'font-lock-builtin-face)
+  :config
+  (hes-mode))
 
 (provide 'setup-highlight-escape-sequences)
