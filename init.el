@@ -52,8 +52,8 @@
 ;; Install extensions if they're missing
 ;; (defun init--install-packages ()
 ;;   (packages-install
-;;    '(ace-jump-buffer
-;;      ace-jump-mode
+;;    '(ace-jump-buffer ;; replacing with avy
+;;      ace-jump-mode ;; replacing with avy
 ;;      add-node-modules-path
 ;;      auto-complete
 ;;      buttercup
@@ -144,12 +144,14 @@
 
 (require 'setup-smartparens)
 
+
 (require 'setup-highlight-escape-sequences)
 
 (require 'setup-re-builder)
 
 ;; Setup extensions
-(require 'ace-jump-mode)
+(require 'setup-avy)
+;;; TODO - UP TO HERE
 (require 'setup-company)
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'find-file-in-project '(require 'setup-find-file-in-project))
