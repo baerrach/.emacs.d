@@ -151,9 +151,12 @@
 
 ;; Setup extensions
 (require 'setup-avy)
-;;; TODO - UP TO HERE
 (require 'setup-company)
-(eval-after-load 'dired '(require 'setup-dired))
+;;; TODO - UP TO HERE
+(use-package dired-narrow)
+(use-package dash)
+(use-package wdired)
+(require 'setup-dired)
 (require 'expand-region)
 (eval-after-load 'flycheck '(require 'setup-flycheck))
 (eval-after-load 'grep '(require 'setup-grep))
