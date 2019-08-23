@@ -1,6 +1,7 @@
-;; TODO: Use use-package
+(require 'use-package)
 
-(require 're-builder)
-(setq reb-re-syntax 'string)
+(use-package re-builder
+  :custom
+  (reb-re-syntax 'string))
 
 (provide 'setup-re-builder)
