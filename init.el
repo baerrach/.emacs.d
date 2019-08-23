@@ -248,5 +248,6 @@
 
 ;; check :ensure
 ;; not :ensure t
+;; All non-bundled packages need :ensure to download them
 
 ;; Run eslisp lint over files
