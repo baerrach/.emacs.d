@@ -1,9 +1,8 @@
-(require 'company)
+(require 'use-package)
 
-(add-hook 'after-init-hook 'global-company-mode)
-
-;; Replacement text should not be downcased, it should use the case of the text
-;; it matched
-(setq company-dabbrev-downcase nil)
+(use-package company
+  :custom
+  (company-dabbrev-downcase nil "Replacement text should not be downcased, it should use the case of the text it matched")
+  :hook (after-init-hook . global-company-mode))
 
 (provide 'setup-company)
