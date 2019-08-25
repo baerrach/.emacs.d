@@ -157,8 +157,9 @@
 (use-package wdired)
 (require 'setup-dired)
 (require 'setup-expand-region)
+(use-package flycheck-pos-tip)
+(require 'setup-flycheck)
 ;;; TODO - UP TO HERE
-(eval-after-load 'flycheck '(require 'setup-flycheck))
 (eval-after-load 'grep '(require 'setup-grep))
 (require 'setup-hippie-expand)
 (require 'setup-hunspell)
