@@ -149,7 +149,7 @@
 
 (require 'setup-re-builder)
 
-;; Setup extensions
+;; Setup extensions - DO NOT USE :require, use :after instead.
 (require 'setup-avy)
 (require 'setup-company)
 (use-package dired-narrow)
