@@ -160,21 +160,18 @@
 ;; (setq guide-key/popup-window-position 'bottom)
 
 (require 'setup-smartparens)
-
-
 (require 'setup-highlight-escape-sequences)
-
 (require 'setup-re-builder)
 
 ;; Setup extensions - DO NOT USE :require, use :after instead.
 (require 'setup-avy)
 (require 'setup-company)
-(use-package dired-narrow)
-(use-package dash)
-(use-package wdired)
+(require 'setup-dired-narrow)
+(require 'setup-dash)
+(require 'setup-wdired)
 (require 'setup-dired)
 (require 'setup-expand-region)
-(use-package flycheck-pos-tip)
+(require 'setup-flycheck-pos-tip)
 (require 'setup-flycheck)
 (require 'setup-move-text)
 (require 'setup-grep)
