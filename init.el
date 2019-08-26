@@ -134,6 +134,16 @@
 
 (require 'setup-defuns)
 
+;; TODO
+;; Describe how to use use-package, i.e file in settings/setup-<package-name>.el, provide 'setup-<package-name>
+;; Bundled packages must always have :ensure nil
+;; Always use :after not :require
+;; Always ensure any packages declared in :after also have use-package definitions
+;; Order independent
+;; Hooks: don't append '-hook' it wont work
+;; Hooks: don't prepend functions with #' as it wont work, hooks expect symbols
+;; Use commands: <mode-name>/command to defer loading until that command is invoked
+
 ;; TODO Add guide-key
 ;; guide-key
 ;; (require 'guide-key)
