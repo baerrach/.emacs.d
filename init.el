@@ -159,6 +159,7 @@
 (require 'setup-expand-region)
 (use-package flycheck-pos-tip)
 (require 'setup-flycheck)
+(require 'setup-move-text)
 ;;; TODO - UP TO HERE
 (eval-after-load 'grep '(require 'setup-grep))
 (require 'setup-hippie-expand)
