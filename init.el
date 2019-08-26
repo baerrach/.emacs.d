@@ -26,19 +26,21 @@
   (add-to-list 'load-path site-lisp-dir))
 (setup-load-path)
 
-;; Initialize package handling
+;;; Initialize package handling
 (require 'setup-package)
 (require 'setup-use-package)
 (require 'setup-delight) ; needed for use-pacakge :delight
 (require 'setup-diminish) ; needed for use-package :diminish
 (require 'setup-bind-key) ; needed for use-package :bind
 
-;; Setup order dependent packages
+;;; Setup order dependent packages
 (require 'setup-custom)
 (require 'setup-emacs-appearance)
 (require 'setup-emacs-theme)
 
-;; Setup order independent packages
+;;; Libraries
+
+;;; Setup order independent packages
 (require 'setup-emacs-server)
 (require 'setup-debugger)
 (require 'setup-desktop)
