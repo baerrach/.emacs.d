@@ -171,10 +171,10 @@
 (require 'setup-flycheck)
 (require 'setup-move-text)
 (require 'setup-grep)
-;;; TODO - UP TO HERE
 (require 'setup-hippie-expand)
 (require 'setup-hunspell)
-(eval-after-load 'ido '(require 'setup-ido))
+(require 'setup-ido)
+;; TODO - UP TO HERE
 (require 'setup-indium)
 (eval-after-load 'magit '(require 'setup-magit))
 (require 'multiple-cursors)

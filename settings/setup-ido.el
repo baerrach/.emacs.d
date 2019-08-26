@@ -1,79 +1,77 @@
+(require 'use-package)
+
 ;; Interactively Do Things
+(use-package ido
+  :bind (:map ido-file-completion-map
+              ("~" . my/ido-go-straight-home)
+              ("C-~" . my/ido-go-straight-home)
+              ;; Use C-w to go back up a dir to better match normal usage of C-w
+              ;; - insert current file name with C-x C-w instead.
+              ("C-w" . ido-delete-backward-updir)
+              ("C-x C-w" . ido-copy-current-file-name)
+              :map ido-file-dir-completion-map
+              ("C-w" . ido-delete-backward-updir)
+              ("C-x C-w" . ido-copy-current-file-name)
+              :map ido-completion-map
+              ("<tab>" . ido-complete))
+  :custom
+  (ido-enable-prefix nil)
+  (ido-enable-flex-matching t)
+  (ido-case-fold nil)
+  (ido-auto-merge-work-directories-length -1)
+  (ido-create-new-buffer 'always)
+  (ido-use-filename-at-point nil)
+  (ido-max-prospects 10)
+  (ido-use-faces nil "disable ido faces to see flx highlights")
+  (ido-vertical-define-keys 'C-n-C-p-up-down-left-right "C-n/p is more intuitive in vertical layout")
+  (imenu-auto-rescan t "Always rescan buffer for imenu")
 
-(require 'ido)
-(ido-mode 1)
-(ido-everywhere 1)
-(setq ido-enable-prefix nil
-      ido-enable-flex-matching t
-      ido-case-fold nil
-      ido-auto-merge-work-directories-length -1
-      ido-create-new-buffer 'always
-      ido-use-filename-at-point nil
-      ido-max-prospects 10)
+  :config
+  (ido-mode 1)
+  (ido-everywhere 1)
 
-;; Try out flx-ido for better flex matching between words
-(require 'flx-ido)
-(flx-ido-mode 1)
-;; disable ido faces to see flx highlights.
-(setq ido-use-faces nil)
+  (defun my/ido-go-straight-home ()
+    (interactive)
+    (cond
+     ((looking-back "/") (insert "~/"))
+     (:else (call-interactively 'self-insert-command))))
 
-;; flx-ido looks better with ido-vertical-mode
-(require 'ido-vertical-mode)
-(ido-vertical-mode)
+  (add-to-list 'ido-ignore-directories "target")
+  (add-to-list 'ido-ignore-directories "node_modules"))
 
-;; C-n/p is more intuitive in vertical layout
-(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
+(use-package flx-ido
+  ;; Try out flx-ido for better flex matching between words
+  :after (flx ido)
+  :config
+  (flx-ido-mode 1))
 
-(require 'dash)
+(use-package ido-vertical-mode
+  ;; flx-ido looks better with ido-vertical-mode
+  :after (ido)
+  :config
+  (ido-vertical-mode))
 
-(defun my/ido-go-straight-home ()
-  (interactive)
-  (cond
-   ((looking-back "/") (insert "~/"))
-   (:else (call-interactively 'self-insert-command))))
+(use-package ido-at-point
+  ;; Ido at point C-M-i
+  :after (ido)
+  :config
+  (ido-at-point-mode 1))
 
-(defun my/setup-ido ()
-  ;; Go straight home
-  (define-key ido-file-completion-map (kbd "~") 'my/ido-go-straight-home)
-  (define-key ido-file-completion-map (kbd "C-~") 'my/ido-go-straight-home)
+(use-package ido-completing-read+
+  ;; Use ido everywhere
+  :after (ido)
+  :config
+  (ido-ubiquitous-mode 1)
 
-  ;; Use C-w to go back up a dir to better match normal usage of C-w
-  ;; - insert current file name with C-x C-w instead.
-  (define-key ido-file-completion-map (kbd "C-w") 'ido-delete-backward-updir)
-  (define-key ido-file-completion-map (kbd "C-x C-w") 'ido-copy-current-file-name)
+  ;; Fix ido-ubiquitous for newer packages
+  (defmacro ido-ubiquitous-use-new-completing-read (cmd package)
+    `(eval-after-load ,package
+       '(defadvice ,cmd (around ido-ubiquitous-new activate)
+          (let ((ido-ubiquitous-enable-compatibility nil))
+            ad-do-it))))
 
-  (define-key ido-file-dir-completion-map (kbd "C-w") 'ido-delete-backward-updir)
-  (define-key ido-file-dir-completion-map (kbd "C-x C-w") 'ido-copy-current-file-name))
-
-(add-hook 'ido-setup-hook 'my/setup-ido)
-(add-hook 'ido-setup-hook
-          (lambda ()
-            (define-key ido-completion-map [tab] 'ido-complete)))
-
-
-;; Always rescan buffer for imenu
-(set-default 'imenu-auto-rescan t)
-
-(add-to-list 'ido-ignore-directories "target")
-(add-to-list 'ido-ignore-directories "node_modules")
-
-;; Ido at point (C-,)
-(require 'ido-at-point)
-(ido-at-point-mode 1)
-
-;; Use ido everywhere
-(require 'ido-completing-read+)
-(ido-ubiquitous-mode 1)
-
-;; Fix ido-ubiquitous for newer packages
-(defmacro ido-ubiquitous-use-new-completing-read (cmd package)
-  `(eval-after-load ,package
-     '(defadvice ,cmd (around ido-ubiquitous-new activate)
-        (let ((ido-ubiquitous-enable-compatibility nil))
-          ad-do-it))))
-
-(ido-ubiquitous-use-new-completing-read webjump 'webjump)
-(ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
-(ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
+  (ido-ubiquitous-use-new-completing-read webjump 'webjump)
+  (ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
+  (ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet))
 
 (provide 'setup-ido)
