@@ -1,35 +1,39 @@
-(defun ispell-find-hunspell-dictionaries-use-nul (orig-fun &rest args)
-  "Use Windows NUL and not /dev/null as the null-device."
-  (let ((null-device "NUL"))
-    (apply orig-fun args)))
+(require 'use-package)
 
-(advice-add 'ispell-find-hunspell-dictionaries :around #'ispell-find-hunspell-dictionaries-use-nul)
+(use-package ispell
+  :ensure nil
+  :custom
+  (ispell-program-name (executable-find "hunspell"))
 
-(add-to-list 'exec-path "C:/Program Files/hunspell-1.3.2-3/bin/")
+  (ispell-local-dictionary-alist '(
+                                   (nil
+                                    "[[:alpha:]]"
+                                    "[^[:alpha:]]"
+                                    "[']"
+                                    t
+                                    ("-d" "en_GB" "-p" "C:\\Program Files\\hunspell-1.3.2-3\\share\\hunspell")
+                                    nil
+                                    iso-8859-1)
 
-(setq ispell-program-name (executable-find "hunspell"))
+                                   ("en_GB"
+                                    "[[:alpha:]]"
+                                    "[^[:alpha:]]"
+                                    "[']"
+                                    t
+                                    ("-d" "en_GB" "-p" "C:\\Program Files\\hunspell-1.3.2-3\\share\\hunspell")
+                                    nil
+                                    iso-8859-1)
+                                   ))
+  :config
+  (defun ispell-find-hunspell-dictionaries-use-nul (orig-fun &rest args)
+    "Use Windows NUL and not /dev/null as the null-device."
+    (let ((null-device "NUL"))
+      (apply orig-fun args)))
 
-(setq ispell-local-dictionary-alist '(
-                                      (nil
-                                       "[[:alpha:]]"
-                                       "[^[:alpha:]]"
-                                       "[']"
-                                       t
-                                       ("-d" "en_GB" "-p" "C:\\Program Files\\hunspell-1.3.2-3\\share\\hunspell")
-                                       nil
-                                       iso-8859-1)
+  (advice-add 'ispell-find-hunspell-dictionaries :around #'ispell-find-hunspell-dictionaries-use-nul)
 
-                                      ("en_GB"
-                                       "[[:alpha:]]"
-                                       "[^[:alpha:]]"
-                                       "[']"
-                                       t
-                                       ("-d" "en_GB" "-p" "C:\\Program Files\\hunspell-1.3.2-3\\share\\hunspell")
-                                       nil
-                                       iso-8859-1)
-                                      ))
+  (add-to-list 'exec-path "C:/Program Files/hunspell-1.3.2-3/bin/")
 
-(ispell-change-dictionary "en_GB" t)
+  (ispell-change-dictionary "en_GB" t))
 
-(require 'ispell)
 (provide 'setup-hunspell)
