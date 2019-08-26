@@ -5,7 +5,7 @@
 # --
 (require 'use-package)
 
-(use-package ${1:`(if (region-active-p) (yas-selected-text) "<package-name>")`})
+(use-package ${1:`(if (region-active-p) (yas-selected-text) "<package-name>")`}
+  $0)
 
 (provide 'setup-$1)
-$0
