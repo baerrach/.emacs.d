@@ -160,8 +160,8 @@
 (use-package flycheck-pos-tip)
 (require 'setup-flycheck)
 (require 'setup-move-text)
+(require 'setup-grep)
 ;;; TODO - UP TO HERE
-(eval-after-load 'grep '(require 'setup-grep))
 (require 'setup-hippie-expand)
 (require 'setup-hunspell)
 (eval-after-load 'ido '(require 'setup-ido))
