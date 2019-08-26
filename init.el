@@ -178,9 +178,9 @@
 (require 'setup-hippie-expand)
 (require 'setup-hunspell)
 (require 'setup-ido)
-;; TODO - UP TO HERE
 (require 'setup-indium)
-(eval-after-load 'magit '(require 'setup-magit))
+(require 'setup-magit)
+;; TODO - UP TO HERE
 (require 'multiple-cursors)
 (require 'setup-lsp)
 (eval-after-load 'org '(require 'setup-org-mode))

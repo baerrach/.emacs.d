@@ -1,39 +1,17 @@
-;; enable visual-line-mode in 'Magit Rev' mode
+(require 'use-package)
 
-(add-hook 'magit-revision-mode-hook 'visual-line-mode)
-
-;; full screen magit-status
-
-(defun magit-status-fullscreen (prefix)
-  (interactive "P")
-  (magit-status)
-  (unless prefix
-    (delete-other-windows)))
-
-;; don't prompt me
-
-(set-default 'magit-unstage-all-confirm nil)
-(set-default 'magit-stage-all-confirm nil)
-(set-default 'magit-revert-buffers 'silent)
-
-;;
-(set-default 'magit-diff-refine-hunk 't)
-
-;; full screen vc-annotate
-
-(defun vc-annotate-quit ()
-  "Restores the previous window configuration and kills the vc-annotate buffer"
-  (interactive)
-  (kill-buffer)
-  (jump-to-register :vc-annotate-fullscreen))
-
-(eval-after-load "vc-annotate"
-  '(progn
-     (defadvice vc-annotate (around fullscreen activate)
-       (window-configuration-to-register :vc-annotate-fullscreen)
-       ad-do-it
-       (delete-other-windows))
-
-     (define-key vc-annotate-mode-map (kbd "q") 'vc-annotate-quit)))
+(use-package magit
+  :ensure t
+  :hook ((magit-revision-mode . visual-line-mode)
+         (magit-mode . hl-line-mode))
+  :bind (("C-x g" . magit-status))
+  :custom
+  (magit-section-initial-visibility-alist
+   '((untracked . show)
+     (unstaged . show)
+     (unpushed . show)
+     (unpulled . show)
+     (stashes . show)))
+  (magit-diff-refine-hunk t "how fine differences for the current diff hunk only"))
 
 (provide 'setup-magit)
