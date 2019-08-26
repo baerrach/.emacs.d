@@ -9,6 +9,7 @@
               ;; - insert current file name with C-x C-w instead.
               ("C-w" . ido-delete-backward-updir)
               ("C-x C-w" . ido-copy-current-file-name)
+              ("M-b" . backward-word)
               :map ido-file-dir-completion-map
               ("C-w" . ido-delete-backward-updir)
               ("C-x C-w" . ido-copy-current-file-name)
