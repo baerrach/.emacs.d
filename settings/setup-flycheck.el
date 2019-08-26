@@ -54,9 +54,9 @@ up before you execute another command."
   ;; Each buffer gets its own idle-change-delay because of the
   ;; buffer-sensitive adjustment above.
   (make-variable-buffer-local 'flycheck-idle-change-delay)
-  :hook ((flycheck-after-syntax-check-hook . magnars/adjust-flycheck-automatic-syntax-eagerness)
-         (flycheck-mode-hook . bae/disable-flycheck-for-buffer)
-         (flycheck-mode-hook . my/use-eslint-from-node-modules))
+  :hook ((flycheck-after-syntax-check . magnars/adjust-flycheck-automatic-syntax-eagerness)
+         (flycheck-mode . bae/disable-flycheck-for-buffer)
+         (flycheck-mode . my/use-eslint-from-node-modules))
   )
 
 

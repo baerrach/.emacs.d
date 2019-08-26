@@ -4,6 +4,7 @@
 
 (use-package grep
   :ensure nil
+  :hook (grep-mode . turn-on-visual-line-mode)
   :config
   (add-to-list 'grep-find-ignored-directories ".cache")
   (add-to-list 'grep-find-ignored-directories "build")
@@ -17,6 +18,6 @@
   (add-to-list 'grep-find-ignored-directories "node_modules")
   (add-to-list 'grep-find-ignored-directories "static")
   (add-to-list 'grep-find-ignored-directories "umd")
-  (add-to-list 'grep-find-ignored-directories "vendor")
-  (add-hook 'grep-setup-hook #'turn-on-visual-line-mode))
+  (add-to-list 'grep-find-ignored-directories "vendor"))
+
 (provide 'setup-grep)
