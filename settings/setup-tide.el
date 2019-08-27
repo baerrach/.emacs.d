@@ -1,28 +1,26 @@
-;;; Example jscconfig file
-;;; See https://code.visualstudio.com/docs/languages/jsconfig
-;;; {
-;;;   "compilerOptions": {
-;;;     "target": "es6",
-;;;     "checkJs": true,
-;;;     "experimentalDecorators": true,
-;;;
-;;;   },
-;;;   "include": [
-;;;     "src/**/*"
-;;;   ],
-;;;   "exclude": [
-;;;     "node_modules"
-;;;   ]
-;;; }
+(require 'use-package)
 
-(defun setup-tide-mode ()
-  (interactive)
-  (tide-setup)
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  ;; company is an optional dependency. You have to
-  ;; install it separately via package-install
-  ;; `M-x package-install [ret] company`
-)
+;;; Example jscconfig file
+;; See https://code.visualstudio.com/docs/languages/jsconfig
+;; {
+;;   "compilerOptions": {
+;;     "target": "es6",
+;;     "checkJs": true,
+;;     "experimentalDecorators": true,
+;;
+;;   },
+;;   "include": [
+;;     "src/**/*"
+;;   ],
+;;   "exclude": [
+;;     "node_modules"
+;;   ]
+;; }
+
+(use-package tide
+  :ensure
+  :after (js2-mode company flycheck)
+  :hook ((js2-mode . tide-setup)
+         (js2-mode . tide-hl-identifier-mode)))
 
 (provide 'setup-tide)
