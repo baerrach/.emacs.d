@@ -189,10 +189,10 @@
 (require 'setup-smart-forward)
 (require 'setup-smex)
 (require 'setup-smooth-scrolling)
-;; TODO - UP TO HERE
 (require 'setup-string-inflection)
 (require 'setup-tide)
-(require 'visual-basic-mode)
+;; TODO - UP TO HERE
+(require 'setup-visual-basic-mode)
 (require 'visual-regexp)
 (require 'setup-undo-tree)
 (require 'setup-ws-butler)
