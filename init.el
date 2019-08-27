@@ -195,6 +195,7 @@
 (require 'setup-tide)
 (require 'visual-basic-mode)
 (require 'visual-regexp)
+(require 'setup-undo-tree)
 (require 'setup-ws-butler)
 (require 'setup-wgrep)
 (eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
@@ -241,15 +242,6 @@
 (add-to-list 'projectile-other-file-alist '("js" "html"))
 (add-to-list 'projectile-other-file-alist '("html" "js"))
 
-(use-package undo-tree
-  ;; Represent undo-history as an actual tree (visualize with C-x u)
-  :ensure
-  :diminish
-  :bind
-  ("C-z" . undo-tree-undo)
-  ("C-/" . nil)
-  :config
-  (global-undo-tree-mode))
 
 (use-package uniquify
   :ensure nil
