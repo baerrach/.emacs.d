@@ -207,18 +207,10 @@
 ;;(global-set-key (kbd "M-/") 'hippie-expand-no-case-fold) ;; Override dabbrev key
 ;;(global-set-key (kbd "C-:") 'hippie-expand-lines)
 ;;(global-set-key (kbd "C-,") 'completion-at-point)
-(global-set-key (kbd "C-/") 'company-complete)
-(define-key company-active-map (kbd "M-n") nil)
-(define-key company-active-map (kbd "M-p") nil)
-(define-key company-active-map (kbd "C-n") #'company-select-next)
-(define-key company-active-map (kbd "C-p") #'company-select-previous)
 
-(global-set-key [tab] 'tab-indent-or-complete)
-(global-set-key (kbd "TAB") 'tab-indent-or-complete)
-(global-set-key [(control return)] 'company-complete-common)
-
-(define-key company-active-map [tab] 'expand-snippet-or-complete-selection)
-(define-key company-active-map (kbd "TAB") 'expand-snippet-or-complete-selection)
+;(global-set-key [tab] 'tab-indent-or-complete)
+;(global-set-key (kbd "TAB") 'tab-indent-or-complete)
+;(global-set-key [(control return)] 'company-complete-common)
 
 (define-key yas-minor-mode-map [tab] nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
