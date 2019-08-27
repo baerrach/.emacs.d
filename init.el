@@ -185,8 +185,8 @@
 (require 'setup-lsp-mode)
 (require 'setup-org-mode)
 (require 'setup-prettier-js)
+(require 'setup-shell)
 ;; TODO - UP TO HERE
-(eval-after-load 'shell '(require 'setup-shell))
 (require 'smart-forward)
 (require 'smex)
 (smex-initialize)
