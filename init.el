@@ -191,8 +191,8 @@
 (require 'setup-tide)
 (require 'setup-visual-basic-mode)
 (require 'setup-visual-regexp)
-;; TODO - UP TO HERE
 (require 'setup-undo-tree)
+;; TODO - UP TO HERE
 (require 'setup-ws-butler)
 (require 'setup-wgrep)
 (eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
