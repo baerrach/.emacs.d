@@ -12,6 +12,16 @@
      (unpushed . show)
      (unpulled . show)
      (stashes . show)))
-  (magit-diff-refine-hunk t "how fine differences for the current diff hunk only"))
+  (magit-diff-refine-hunk t "how fine differences for the current diff hunk only")
+  :config
+  (defun disable-debug-on-error--around-with-editor-finish (orig-fun &rest args)
+    "Disable debug-on-error around with-editor-finish.
+
+Saving files soft handles errors and promotes them to warnings.
+But with debug-on-error enabled it causes the debugger to open
+instead of ignoring what should be a warning."
+    (let (debug-on-error nil)
+      (apply orig-fun args)))
+  (advice-add 'with-editor :around #'disable-debug-on-error--around-with-editor-finish))
 
 (provide 'setup-magit)
