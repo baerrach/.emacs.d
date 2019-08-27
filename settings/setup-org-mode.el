@@ -1,72 +1,45 @@
-;; Setup org-mode
+(require 'use-package)
 
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
+(use-package org-mode
+  :ensure nil
+  :commands (org-mode)
+  :bind (("C-c a" . org-agenda)
+         ;; Disable archive keys
+         ("C-c C-x C-a" . nil)
+         ("C-c C-x C-s" . nil)
+         ("C-c $" . nil)
+         ("<C-tab>" . nil)
+         ("C-C C-x a" . nil)
+         ("C-C C-x A" . nil))
+  :custom
+  (org-clock-persist t "Save the running clock and all clock history when exiting Emacs, load it on startup")
+  (org-clock-persist-query-resume nil "Do not prompt to resume an active clock")
+  (org-clock-out-when-done t "Clock out when moving task to a done state")
+  (org-clock-into-drawer t "Save clock data and state changes and notes in the LOGBOOK drawer")
+  ;; Structure and Presentation
+  (org-catch-invisible-edits t)
+  (org-gotoauto-isearch nil)
+  (org-startup-indented t "Indent the org tree")
+  (org-hierarchical-todo-statistics nil "Roll up statistics")
+  (org-columns-default-format "%80ITEM(Task) %10Effort(Effort){:} %10CLOCKSUM" "Set default column view headings: Task Effort Clock_Summary")
+  ;; Dont insert blank lines
+  (org-cycle-separator-lines 0)
+  (org-blank-before-new-entry '((heading) (plain-list-item . auto)))
+  ;; Export
+  (org-export-initial-scope 'subtree)
+  (org-html-doctype "html5")
+  ;; Estimation
+  (org-global-properties '(("Effort_ALL" . "0:15 0:30 1:00 2:00 4:00 1d 2d 4d 1w 2w 1m 0:00")) "global Effort estimate values")
+  ;; Clock mode
+  ;; 8 hours days
+  (org-time-clocksum-use-effort-durations t)
+  (org-effort-durations '(("min" . 1) ("h" . 60) ("d" . 480) ("w" . 2400) ("m" . 9600) ("y" . 96000)))
+  :config
+  (org-clock-persistence-insinuate))
 
-;; Disable archive keys
-(define-key org-mode-map (kbd "C-c C-x C-a") nil)
-(define-key org-mode-map (kbd "C-c C-x C-s") nil)
-(define-key org-mode-map (kbd "C-c $") nil)
-(define-key org-mode-map (kbd "<C-tab>") nil)
-(define-key org-mode-map (kbd "C-C C-x a") nil)
-(define-key org-mode-map (kbd "C-C C-x A") nil)
-
-(setq org-catch-invisible-edits t)
-(setq org-gotoauto-isearch nil)
-
-;;; Structure and Presentation
-
-;; Indent the org tree
-(setq org-startup-indented t)
-
-;; Dont insert blank lines
-(setq org-cycle-separator-lines 0)
-(setq org-blank-before-new-entry (quote ((heading)
-                                         (plain-list-item . auto))))
-
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-
-(setq org-export-initial-scope 'subtree)
-(setq org-html-doctype "html5")
-
-;;; Estimation
-
-;; global Effort estimate values
-(setq org-global-properties (quote (("Effort_ALL" . "0:15 0:30 1:00 2:00 4:00 1d 2d 4d 1w 2w 1m 0:00"))))
-
-;; Roll up statistics
-(setq org-hierarchical-todo-statistics nil)
-
-;;; Column View
-
-;; Set default column view headings: Task Effort Clock_Summary
-(setq org-columns-default-format "%80ITEM(Task) %10Effort(Effort){:} %10CLOCKSUM")
-
-;;; Clock mode
-
-;; 8 hours days
-(setq org-time-clocksum-use-effort-durations t)
-(setq org-effort-durations (quote (("min" . 1)
-                             ("h" . 60)
-                             ("d" . 480)
-                             ("w" . 2400)
-                             ("m" . 9600)
-                             ("y" . 96000))))
-
-;; Save the running clock and all clock history when exiting Emacs, load it on startup
-(setq org-clock-persist t)
-
-;; Do not prompt to resume an active clock
-(setq org-clock-persist-query-resume nil)
-
-;; Clock out when moving task to a done state
-(setq org-clock-out-when-done t)
-
-;; Save clock data and state changes and notes in the LOGBOOK drawer
-(setq org-clock-into-drawer t)
-
-(org-clock-persistence-insinuate)
+(use-package org-bullets
+  :ensure
+  :hook (org-mode . org-bullets-mode))
 
 ;; Override org-html-table-cell defun as there is no other way to hook this functionality in.
 
