@@ -186,9 +186,9 @@
 (require 'setup-prettier-js)
 (require 'setup-shell)
 ;; TODO - UP TO HERE
-(require 'smooth-scrolling)
 (require 'setup-smart-forward)
 (require 'setup-smex)
+(require 'setup-smooth-scrolling)
 (require 'string-inflection)
 (require 'setup-tide)
 (require 'visual-basic-mode)
