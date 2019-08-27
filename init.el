@@ -5,6 +5,7 @@
 (setq use-package-verbose t)
 (setq use-package-expand-minimally nil)
 (setq use-package-compute-statistics t)
+(setq debug-on-error t)
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
