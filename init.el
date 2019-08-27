@@ -186,10 +186,10 @@
 (require 'setup-prettier-js)
 (require 'setup-shell)
 ;; TODO - UP TO HERE
-(require 'smart-forward)
 (require 'smex)
 (smex-initialize)
 (require 'smooth-scrolling)
+(require 'setup-smart-forward)
 (require 'string-inflection)
 (require 'setup-tide)
 (require 'visual-basic-mode)
