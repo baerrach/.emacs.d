@@ -164,6 +164,7 @@
 (require 'setup-re-builder)
 
 ;; Setup extensions - DO NOT USE :require, use :after instead.
+(require 'setup-add-node-modules-path)
 (require 'setup-avy)
 (require 'setup-company)
 (require 'setup-dired-narrow)
