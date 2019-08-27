@@ -175,7 +175,7 @@
 (require 'setup-flycheck)
 (require 'setup-move-text)
 (require 'setup-grep)
-(require 'setup-hippie-expand)
+;(require 'setup-hippie-expand) ; TODO DELETE and setup file
 (require 'setup-hunspell)
 (require 'setup-ido)
 (require 'setup-indium)
