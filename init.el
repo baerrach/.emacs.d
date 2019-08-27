@@ -184,9 +184,8 @@
 (require 'setup-multiple-cursors)
 (require 'setup-lsp-mode)
 (require 'setup-org-mode)
-;; TODO - UP TO HERE
 (require 'setup-prettier-js)
-(eval-after-load 'sgml-mode '(require 'setup-html-mode))
+;; TODO - UP TO HERE
 (eval-after-load 'shell '(require 'setup-shell))
 (require 'smart-forward)
 (require 'smex)
