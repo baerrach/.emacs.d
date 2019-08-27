@@ -192,9 +192,9 @@
 (require 'setup-visual-basic-mode)
 (require 'setup-visual-regexp)
 (require 'setup-undo-tree)
-;; TODO - UP TO HERE
 (require 'setup-ws-butler)
 (require 'setup-wgrep)
+;; TODO - UP TO HERE
 (eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
 (require 'setup-yasnippet)
 
