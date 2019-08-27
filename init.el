@@ -180,9 +180,9 @@
 (require 'setup-ido)
 (require 'setup-indium)
 (require 'setup-magit)
-;; TODO - UP TO HERE
 (require 'setup-multiple-cursors)
-(require 'setup-lsp)
+;; TODO - UP TO HERE
+(require 'setup-lsp-mode)
 (eval-after-load 'org '(require 'setup-org-mode))
 (require 'setup-prettier-js)
 (eval-after-load 'sgml-mode '(require 'setup-html-mode))
