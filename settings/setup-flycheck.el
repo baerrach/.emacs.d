@@ -1,10 +1,14 @@
 (require 'use-package)
 
 (use-package flycheck
-  :after flycheck-pos-tip
+  :after (flycheck-pos-tip js2-mode add-node-modules-path)
   :commands (flycheck-mode
              flycheck-next-error
              flycheck-previous-error)
+  :hook ((flycheck-after-syntax-check . magnars/adjust-flycheck-automatic-syntax-eagerness)
+         (flycheck-mode . bae/disable-flycheck-for-buffer)
+         (flycheck-mode . my/use-eslint-from-node-modules)
+         (js2-mode . bae-flycheck-mode))
   :custom
   (flycheck-disabled-checkers (append flycheck-disabled-checkers '(javascript-jshint)) "disable jshint since we prefer eslint checking")
   (flycheck-check-syntax-automatically '(save idle-change mode-enabled) "Remove newline checks, since they would trigger an immediate check when we want the idle-change-delay to be in effect while editing")
@@ -13,6 +17,11 @@
   (flycheck-disabled-checkers '(json-jsonlist emacs-lisp-checkdoc) "disable checkers")
   (flycheck-xml-parser 'flycheck-parse-xml-region)
   :config
+  (defun bae-flycheck-mode ()
+    "Enable Flycheck after calling add-node-modules-path."
+    (add-node-modules-path)
+    (flycheck-mode 1))
+
   (defun bae/disable-flycheck-for-buffer ()
     "Some files (like in node_modules) are not written by us and should
 not be checked"
@@ -53,11 +62,7 @@ up before you execute another command."
 
   ;; Each buffer gets its own idle-change-delay because of the
   ;; buffer-sensitive adjustment above.
-  (make-variable-buffer-local 'flycheck-idle-change-delay)
-  :hook ((flycheck-after-syntax-check . magnars/adjust-flycheck-automatic-syntax-eagerness)
-         (flycheck-mode . bae/disable-flycheck-for-buffer)
-         (flycheck-mode . my/use-eslint-from-node-modules))
-  )
+  (make-variable-buffer-local 'flycheck-idle-change-delay))
 
 
 (provide 'setup-flycheck)
