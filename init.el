@@ -185,11 +185,11 @@
 (require 'setup-org-mode)
 (require 'setup-prettier-js)
 (require 'setup-shell)
-;; TODO - UP TO HERE
 (require 'setup-smart-forward)
 (require 'setup-smex)
 (require 'setup-smooth-scrolling)
-(require 'string-inflection)
+;; TODO - UP TO HERE
+(require 'setup-string-inflection)
 (require 'setup-tide)
 (require 'visual-basic-mode)
 (require 'visual-regexp)
