@@ -1,7 +1,7 @@
 ;;; setup-js2-mode.el --- tweak js2 settings -*- lexical-binding: t; -*-
 
 (use-package js2-mode
-  :defer t
+  :commands js2-mode
   :delight js2-mode "JS2"
   :custom
   (js-indent-level 2)
