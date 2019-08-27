@@ -1,5 +1,7 @@
 (require 'use-package)
 
+;; TODO - migrate to IVY
+
 ;; Interactively Do Things
 (use-package ido
   :bind (:map ido-file-completion-map
@@ -13,8 +15,9 @@
               :map ido-file-dir-completion-map
               ("C-w" . ido-delete-backward-updir)
               ("C-x C-w" . ido-copy-current-file-name)
-              :map ido-completion-map
-              ("<tab>" . ido-complete))
+              ;:map ido-completion-map
+              ;("<tab>" . ido-complete)
+              )
   :custom
   (ido-enable-prefix nil)
   (ido-enable-flex-matching t)
