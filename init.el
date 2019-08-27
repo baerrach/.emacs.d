@@ -191,9 +191,9 @@
 (require 'setup-smooth-scrolling)
 (require 'setup-string-inflection)
 (require 'setup-tide)
-;; TODO - UP TO HERE
 (require 'setup-visual-basic-mode)
-(require 'visual-regexp)
+(require 'setup-visual-regexp)
+;; TODO - UP TO HERE
 (require 'setup-undo-tree)
 (require 'setup-ws-butler)
 (require 'setup-wgrep)
