@@ -1,7 +1,7 @@
 (require 'use-package)
 
 (use-package prettier-js
-  :after add-node-modules-path
+  :after (js2-mode add-node-modules-path)
   :commands prettier-js-mode
   :hook ((js2-mode js2-jsx-mode) . bae/maybe-use-prettier)
   :config
