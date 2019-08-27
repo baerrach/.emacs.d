@@ -1,5 +1,8 @@
-;;; setup-yaml-mode
+(require 'use-package)
 
-(add-hook 'yaml-mode-hook (lambda () (flycheck-mode 1)))
+(use-package yaml-mode
+  :ensure
+  :commands yaml-mode
+  :hook (yaml-mode . flycheck-mode))
 
 (provide 'setup-yaml-mode)

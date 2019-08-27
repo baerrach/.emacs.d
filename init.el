@@ -194,8 +194,8 @@
 (require 'setup-undo-tree)
 (require 'setup-ws-butler)
 (require 'setup-wgrep)
+(require 'setup-yaml-mode)
 ;; TODO - UP TO HERE
-(eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
 (require 'setup-yasnippet)
 
 ;; Language specific setup files
