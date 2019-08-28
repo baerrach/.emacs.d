@@ -195,11 +195,11 @@
 (require 'setup-ws-butler)
 (require 'setup-wgrep)
 (require 'setup-yaml-mode)
-;; TODO - UP TO HERE
 (require 'setup-yasnippet)
 
 ;; Language specific setup files
-(eval-after-load 'js2-mode '(require 'setup-js2-mode))
+;; TODO - UP TO HERE
+(require 'setup-js2-mode)
 (eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
 (require 'setup-ruby-mode)
 (eval-after-load 'web-mode '(require 'setup-web-mode))
