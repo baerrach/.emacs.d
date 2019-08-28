@@ -199,9 +199,9 @@
 (require 'setup-yasnippet)
 
 ;; Language specific setup files
-;; TODO - UP TO HERE
 (require 'setup-js2-mode)
-(eval-after-load 'markdown-mode '(require 'setup-markdown-mode))
+;; TODO - UP TO HERE
+(require 'setup-markdown-mode)
 (require 'setup-ruby-mode)
 (eval-after-load 'web-mode '(require 'setup-web-mode))
 
