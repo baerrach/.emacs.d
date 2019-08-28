@@ -208,6 +208,7 @@
 ;; Map files to modes
 (require 'setup-image-mode)
 (require 'setup-rjsx-mode)
+(require 'setup-json-mode)
 (require 'mode-mappings)
 
 ;; Setup key bindings
