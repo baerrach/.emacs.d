@@ -43,6 +43,8 @@ the bits that you need.
 * expand region `er/` prefix, use `C-'` to `er/expand-region`
 * visual regexp `vr/` prefix.
 * browse kill ring
+* hydra - all hydra's heads should be prefixed to `C-c h <a key>`
+* multiple cursors - hydra bound to `C-h h m`
 
 ## New tools to use ##
 
