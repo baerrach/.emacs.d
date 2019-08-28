@@ -46,6 +46,8 @@ the bits that you need.
 * hydra - all hydra's heads should be prefixed to `C-c h <a key>`
 * multiple cursors - hydra bound to `C-h h m`
 * avy (replaces ace jump)
+* moving faster `C-S-n` and `C-S-p`
+* comment or uncomment region `C-c c`
 
 ## New tools to use ##
 
