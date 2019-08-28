@@ -37,7 +37,7 @@ the bits that you need.
 ```
 * imenu - display list of things in the file in a hierarchical menu drilling
   down into each new level, useful in js2-mode and markdown-mode
-* js2-mode - hydra for refactoring, bound to `C-c r`
+* js2-mode - hydra for refactoring, bound to `C-c h r`
 * string inflection bound to `C-c C-u`, rotates through snake, camel, underscore
   casing.
 * expand region `er/` prefix, use `C-'` to `er/expand-region`

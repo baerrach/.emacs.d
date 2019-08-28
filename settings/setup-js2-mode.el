@@ -40,20 +40,20 @@
   :commands js2-mode
   :bind (:map js2-mode-map
               ("C-k" . js2r-kill)
-              ("C-c r" . hydra-js2-refactor/body))
+              ("C-c h r" . hydra-js2-refactor/body))
   :config
   (defhydra hydra-js2-refactor (:color blue :hint nil)
     "
 ^Functions^                    ^Variables^               ^Buffer^                      ^sexp^               ^Debugging^
 ------------------------------------------------------------------------------------------------------------------------------
 [_lp_] Localize Parameter      [_ev_] Extract variable   [_wi_] Wrap buffer in IIFE    [_k_]  js2 kill      [_lt_] log this
-[_ef_] Extract function        [_iv_] Inline variable    [_ig_] Inject global in IIFE  [_ss_] split string  [_dt_] debug this
-[_ip_] Introduce parameter     [_rv_] Rename variable    [_ee_] Expand node at point   [_sl_] forward slurp
-[_em_] Extract method          [_vt_] Var to this        [_cc_] Contract node at point [_ba_] forward barf
-[_ao_] Arguments to object     [_sv_] Split var decl.    [_uw_] unwrap
+[_ef_] Extract function        [_iv_] Inline variable    [_ig_] Inject global in IIFE  [_ss_] Split string  [_dt_] debug this
+[_ip_] Introduce parameter     [_rv_] Rename variable    [_ee_] Expand node at point   [_sl_] Forward slurp
+[_em_] Extract method          [_vt_] Var to this        [_cc_] Contract node at point [_ba_] Forward barf
+[_ao_] Arguments to object     [_sv_] Split var decl.    [_uw_] Unwrap
 [_tf_] Toggle fun exp and decl [_ag_] Add var to globals
 [_ta_] Toggle fun expr and =>  [_ti_] Ternary to if
-[_q_]  quit"
+[_q_]  Quit"
     ("ee" js2r-expand-node-at-point)
     ("cc" js2r-contract-node-at-point)
     ("ef" js2r-extract-function)
