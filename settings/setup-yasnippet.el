@@ -2,6 +2,7 @@
 
 (use-package yasnippet
   :ensure
+  :hook (snippet-mode . yas-force-unix-buffer-file-coding-system)
   :bind (:map yas-keymap
               ;; Jump to end of snippet definition
               ("<return>" . yas-exit-all-snippets)
@@ -36,6 +37,13 @@
            (position (yas--field-end (yas--snippet-active-field snippet))))
       (if (= (point) position)
           (move-end-of-line 1)
-        (goto-char position)))))
+        (goto-char position))))
+
+  (defun yas-force-unix-buffer-file-coding-system ()
+    "Snippet files must be in UNIX line endings.
+
+yasnippet does not support DOS line ending.
+See https://github.com/joaotavora/yasnippet/issues/204#issuecomment-3167077"
+    (set-buffer-file-coding-system 'unix t)))
 
 (provide 'setup-yasnippet)
