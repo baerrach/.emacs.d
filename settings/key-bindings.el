@@ -67,9 +67,6 @@
 (global-set-key (kbd "M-<left>") 'smart-backward)
 (global-set-key (kbd "M-<right>") 'smart-forward)
 
-;; Ace jump
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-
 ;; Completion at point
 (global-set-key (kbd "C-<tab>") 'completion-at-point)
 

@@ -45,6 +45,7 @@ the bits that you need.
 * browse kill ring
 * hydra - all hydra's heads should be prefixed to `C-c h <a key>`
 * multiple cursors - hydra bound to `C-h h m`
+* avy (replaces ace jump)
 
 ## New tools to use ##
 

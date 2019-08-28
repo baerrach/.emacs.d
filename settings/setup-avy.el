@@ -3,7 +3,7 @@
 (use-package avy
   :ensure
   :bind (("C-c C-j" . avy-resume)
-         ("C-'" . avy-goto-char-2)
+         ("C-c <SPC>" . avy-goto-char)
          :map isearch-mode-map
               ("C-'" . avy-isearch)))
 
