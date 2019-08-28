@@ -114,8 +114,6 @@
 ;; Sorting
 (global-set-key (kbd "M-s l") 'sort-lines)
 
-;; Browse the kill ring
-(global-set-key (kbd "C-x C-y") 'browse-kill-ring)
 
 ;; I don't need to kill emacs that easily
 ;; the mnemonic is C-x REALLY QUIT

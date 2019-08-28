@@ -42,6 +42,7 @@ the bits that you need.
   casing.
 * expand region `er/` prefix, use `C-'` to `er/expand-region`
 * visual regexp `vr/` prefix.
+* browse kill ring
 
 ## New tools to use ##
 

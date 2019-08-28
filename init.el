@@ -204,14 +204,14 @@
 (require 'setup-ruby-mode)
 (require 'setup-web-mode)
 
-;; TODO - UP TO HERE
-;; Map files to modes
 (require 'setup-image-mode)
 (require 'setup-rjsx-mode)
 (require 'setup-json-mode)
 (require 'setup-apache-mode)
+(require 'setup-browse-kill-ring)
 
 ;; Setup key bindings
+;; TODO - UP TO HERE
 (require 'key-bindings)
 
 (put 'downcase-region 'disabled nil)
