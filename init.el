@@ -209,6 +209,7 @@
 (require 'setup-image-mode)
 (require 'setup-rjsx-mode)
 (require 'setup-json-mode)
+(require 'setup-apache-mode)
 (require 'mode-mappings)
 
 ;; Setup key bindings
