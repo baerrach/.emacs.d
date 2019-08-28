@@ -3,6 +3,7 @@
 (use-package markdown-mode
   :ensure
   :commands markdown-mode
+  :mode "\\.md'"
   :hook (markdown-mode . turn-on-auto-fill)
   :custom
   (markdown-imenu-generic-expression

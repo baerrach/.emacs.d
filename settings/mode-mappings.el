@@ -1,11 +1,6 @@
 ;; JavaScript
 (autoload 'js2-mode "js2-mode" nil t)
 
-;; Markdown
-(autoload 'markdown-mode "markdown-mode")
-(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
-
 ;; org-mode
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
