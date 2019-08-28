@@ -200,11 +200,11 @@
 
 ;; Language specific setup files
 (require 'setup-js2-mode)
-;; TODO - UP TO HERE
 (require 'setup-markdown-mode)
 (require 'setup-ruby-mode)
-(eval-after-load 'web-mode '(require 'setup-web-mode))
+(require 'setup-web-mode)
 
+;; TODO - UP TO HERE
 ;; Map files to modes
 (require 'mode-mappings)
 
