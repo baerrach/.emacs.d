@@ -25,6 +25,8 @@
 
 ;; File finding
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+
+;; Buffers
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)

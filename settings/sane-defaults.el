@@ -39,9 +39,6 @@
 ;; Remove text in active region if inserting text
 (delete-selection-mode 1)
 
-;; Don't highlight matches with jump-char - it's distracting
-(setq jump-char-lazy-highlight-face nil)
-
 ;; Always display line and column numbers
 (setq line-number-mode t)
 (setq column-number-mode t)
@@ -49,7 +46,7 @@
 ;; Lines should be 80 characters wide, not 72
 (setq-default fill-column 80)
 
-;; Save a list of recent files visited. (open recent file with C-x f)
+;; Save a list of recent files visited.
 (recentf-mode 1)
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
 
@@ -140,8 +137,6 @@
 ;; Disable lock files .# as this is for single-user configuration
 (setq create-lockfiles nil)
 
-
-
 ;;;
 ;;; http://www.emacswiki.org/emacs/SmoothScrolling
 ;;;
@@ -151,6 +146,5 @@
 (setq mouse-wheel-progressive-speed 't) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
-
 
 (provide 'sane-defaults)
