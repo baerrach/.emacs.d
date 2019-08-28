@@ -2,6 +2,7 @@
 
 (use-package yasnippet
   :ensure
+  :mode ("\\.yasnippet'" . snippet-mode)
   :hook (snippet-mode . yas-force-unix-buffer-file-coding-system)
   :bind (:map yas-keymap
               ;; Jump to end of snippet definition

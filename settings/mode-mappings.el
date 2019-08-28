@@ -1,10 +1,6 @@
 ;; JavaScript
 (autoload 'js2-mode "js2-mode" nil t)
 
-;; Snippets
-(add-to-list 'auto-mode-alist '("yasnippet/snippets" . snippet-mode))
-(add-to-list 'auto-mode-alist '("\\.yasnippet$" . snippet-mode))
-
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode")
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
