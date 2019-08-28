@@ -209,12 +209,11 @@
 (require 'setup-json-mode)
 (require 'setup-apache-mode)
 (require 'setup-browse-kill-ring)
+(require 'setup-disabled-commands)
 
 ;; Setup key bindings
 ;; TODO - UP TO HERE
 (require 'key-bindings)
-
-(put 'downcase-region 'disabled nil)
 
 (require 'setup-personal)
 
