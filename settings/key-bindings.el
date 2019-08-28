@@ -1,6 +1,3 @@
-;; Expand region (increases selected region by semantic units)
-(global-set-key (kbd "C-'") 'er/expand-region)
-
 ;; Multiple-cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
