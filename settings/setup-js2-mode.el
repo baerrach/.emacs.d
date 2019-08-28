@@ -3,6 +3,7 @@
 (use-package js2-mode
   :ensure
   :commands js2-mode
+  :mode "\\.js\\'\\|\\.gs\\'"
   :delight js2-mode "JS2"
   :custom
   (js-indent-level 2)
