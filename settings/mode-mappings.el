@@ -1,6 +1,3 @@
-;; CSS
-(autoload 'turn-on-css-eldoc "css-eldoc")
-
 ;; SVG
 (add-to-list 'auto-mode-alist '("\\.svg$" . image-mode))
 
