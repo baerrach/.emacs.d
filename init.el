@@ -206,6 +206,7 @@
 
 ;; TODO - UP TO HERE
 ;; Map files to modes
+(require 'setup-image-mode)
 (require 'mode-mappings)
 
 ;; Setup key bindings
