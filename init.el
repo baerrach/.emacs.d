@@ -212,14 +212,13 @@
 (require 'setup-disabled-commands)
 
 ;; Setup key bindings
-;; TODO - UP TO HERE
 (require 'key-bindings)
 
 (require 'setup-personal)
 
-(require 'unicode-fonts)
-(unicode-fonts-setup)
+(require 'setup-unicode-fonts)
 
+;; TODO - UP TO HERE
 (require 'projectile)
 (setq projectile-indexing-method 'alien)
 (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
