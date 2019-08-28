@@ -5,7 +5,10 @@
 # --
 (require 'use-package)
 
-(use-package ${1:`(if (region-active-p) (yas-selected-text) (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`}
+(use-package ${1:`(if (region-active-p)
+    (yas-selected-text)
+  (replace-regexp-in-string "^setup-" "" (file-name-nondirectory (file-name-sans-extension (buffer-file-name)))))
+`}
   $0)
 
-(provide '$1)
+(provide 'setup-$1)
