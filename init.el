@@ -207,6 +207,7 @@
 ;; TODO - UP TO HERE
 ;; Map files to modes
 (require 'setup-image-mode)
+(require 'setup-rjsx-mode)
 (require 'mode-mappings)
 
 ;; Setup key bindings
