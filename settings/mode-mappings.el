@@ -1,11 +1,5 @@
 ;; CSS
-(add-to-list 'auto-mode-alist '("\\.scss$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.css$" . web-mode))
 (autoload 'turn-on-css-eldoc "css-eldoc")
-
-;; HTML
-(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
 ;; SVG
 (add-to-list 'auto-mode-alist '("\\.svg$" . image-mode))
