@@ -7,12 +7,14 @@
 (setq use-package-compute-statistics t)
 (setq debug-on-error t)
 
+;;; Bare-Bones Emacs Setup::Start
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
-;; No splash screen please ... jeez
+;; No splash screen please
 (setq inhibit-startup-message t)
 
 ;; Added by Package.el.  This must come before configurations of
@@ -31,12 +33,18 @@
   (add-to-list 'load-path site-lisp-dir))
 (setup-load-path)
 
-;;; Initialize package handling
+;; Initialize package handling
 (require 'setup-package)
 (require 'setup-use-package)
 (require 'setup-delight) ; needed for use-pacakge :delight
 (require 'setup-diminish) ; needed for use-package :diminish
 (require 'setup-bind-key) ; needed for use-package :bind
+
+;;; Bare-Bones Emacs Setup::End
+
+;;; User Specific Settings
+;; From this point onwards you want to pick and choose which pieces make sense
+;; to your Emacs workflow and only include those.
 
 ;;; Setup order dependent packages
 (require 'setup-custom)
@@ -141,16 +149,6 @@
 
 (require 'setup-defuns)
 
-;; TODO
-;; Describe how to use use-package, i.e file in settings/setup-<package-name>.el, provide 'setup-<package-name>
-;; Bundled packages must always have :ensure nil
-;; Always use :after not :require
-;; Always ensure any packages declared in :after also have use-package definitions
-;; Order independent
-;; Hooks: don't append '-hook' it wont work
-;; Hooks: don't prepend functions with #' as it wont work, hooks expect symbols
-;; Use commands: <mode-name>/command to defer loading until that command is invoked
-
 ;; TODO Add guide-key
 ;; guide-key
 ;; (require 'guide-key)
@@ -189,15 +187,15 @@
 (require 'setup-smart-forward)
 (require 'setup-smex)
 (require 'setup-smooth-scrolling)
-;; TODO - UP TO HERE
 (require 'setup-string-inflection)
 (require 'setup-tide)
-(require 'visual-basic-mode)
-(require 'visual-regexp)
+(require 'setup-visual-basic-mode)
+(require 'setup-visual-regexp)
 (require 'setup-undo-tree)
 (require 'setup-ws-butler)
 (require 'setup-wgrep)
-(eval-after-load 'yaml-mode '(require 'setup-yaml-mode))
+(require 'setup-yaml-mode)
+;; TODO - UP TO HERE
 (require 'setup-yasnippet)
 
 ;; Language specific setup files
