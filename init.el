@@ -167,6 +167,7 @@
 (require 'setup-avy)
 (require 'setup-company)
 (require 'setup-dired-narrow)
+(require 'setup-css-eldoc)
 (require 'setup-dash)
 (require 'setup-wdired)
 (require 'setup-dired)
