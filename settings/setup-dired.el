@@ -14,11 +14,7 @@
               ([remap end-of-buffer] . dired-jump-to-bottom)
               ([remap smart-down] . dired-jump-to-bottom)
               ;; Delete with C-x C-k to match file buffers and magit
-              ("C-x C-k" .  dired-do-delete)
-              :map wdired-mode-map
-              ("C-a" . dired-back-to-start-of-files)
-              ([remap beginning-of-buffer] . dired-back-to-top)
-              ([remap end-of-buffer] . dired-jump-to-bottom))
+              ("C-x C-k" .  dired-do-delete))
   :custom
   (dired-details-hidden-string "" "Make dired less verbose when in hide details mode")
   (dired-dwim-target t "Move files between split panes")
