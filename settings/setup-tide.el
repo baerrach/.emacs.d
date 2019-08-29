@@ -21,7 +21,11 @@
   :ensure
   :commands tide
   :after (js2-mode company flycheck)
-  :hook ((js2-mode . tide-setup)
-         (js2-mode . tide-hl-identifier-mode)))
+  :hook ((js2-mode . bae-setup-tide-mode))
+  :config
+  (defun bae-setup-tide-mode ()
+    (tide-setup)
+    (tide-hl-identifier-mode 1)
+    (eldoc-mode 1)))
 
 (provide 'setup-tide)
