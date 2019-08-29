@@ -1,5 +1,3 @@
-(require 'dash)
-
 ;; When running in Windows, we use Git Bash as alternate shell
 (setq explicit-shell-file-name "C:/Program Files/Git/bin/bash.exe")
 (setq shell-file-name explicit-shell-file-name)
@@ -16,12 +14,5 @@
 ;; To handle smart quotes
 ;; Not sure how to force that
 ;;
-
-(defun use-unix-file-coding-system ()
-  (let ((coding-str (symbol-name buffer-file-coding-system)))
-    (when (and (boundp 'force-use-unix-file-coding-system) force-use-unix-file-coding-system)
-        (set-buffer-file-coding-system (intern coding-str)))))
-
-;; (add-hook 'find-file-hooks 'use-unix-file-coding-system)
 
 (provide 'microsoft-windows)
