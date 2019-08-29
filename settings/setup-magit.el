@@ -2,11 +2,13 @@
 
 (use-package magit
   :ensure
+  :after ivy
   :hook ((magit-revision-mode . visual-line-mode)
          (magit-mode . hl-line-mode)
          (magit-post-refresh . bae-magit-move-to-next-section-if-at-head))
   :bind (("C-x g" . magit-status))
   :custom
+  (magit-completing-read-function 'ivy-completing-read)
   (magit-section-initial-visibility-alist
    '((untracked . show)
      (unstaged . show)
