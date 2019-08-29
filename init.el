@@ -64,69 +64,18 @@
 (setq is-win (equal system-type 'windows-nt))
 
 ;; TODO: Refactor to setup-* and using use-package
-;; Install extensions if they're missing
-;; (defun init--install-packages ()
-;;   (packages-install
 ;;    '(ace-jump-buffer ;; replacing with avy
 ;;      ace-jump-mode ;; replacing with avy
-;;      add-node-modules-path
 ;;      auto-complete
-;;      buttercup
-;;      company
-;;      company-lsp
-;;      css-eldoc
-;;      dash
-;;      dired-narrow
-;;      dockerfile-mode
-;;      f
 ;;      find-file-in-project
 ;;      flx
 ;;      flx-ido
-;;      flycheck
-;;      flycheck-pos-tip
-;;      graphql-mode
 ;;      guide-key
-;;      highlight-escape-sequences
 ;;      ido-at-point
 ;;      ido-completing-read+
 ;;      ido-vertical-mode
-;;      indium
-;;      json-mode
-;;      js2-mode
-;;      js2-refactor
-;;      lsp-mode
-;;      lsp-ui ; TODO: consider flycheck
-;;      magit
-;;      markdown-mode
-;;      multiple-cursors
 ;;      nodejs-repl
-;;      org-bullets
-;;      perspective
-;;      perl6-mode
-;;      powershell
-;;      prettier-js
-;;      prodigy
 ;;      projectile
-;;      rainbow-mode
-;;      restclient
-;;      rjsx-mode
-;;      s
-;;      simplezen
-;;      smartparens
-;;      smart-forward
-;;      smex
-;;      string-edit
-;;      string-inflection
-;;      tagedit
-;;      tide
-;;      unicode-fonts
-;;      visual-regexp
-;;      web-mode
-;;      wgrep
-;;      whitespace-cleanup-mode
-;;      ws-butler
-;;      yasnippet
-;;      yaml-mode
 ;;      )))
 
 ;; (condition-case nil
