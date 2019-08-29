@@ -75,8 +75,11 @@
 (when is-win
   (require 'microsoft-windows))
 
+;;; Setup Packages
+
 (require 'setup-defuns)
 (require 'setup-add-node-modules-path)
+(require 'setup-amx)
 (require 'setup-apache-mode)
 (require 'setup-auto-package-update)
 (require 'setup-avy)
@@ -118,7 +121,6 @@
 (require 'setup-simplezen)
 (require 'setup-smart-forward)
 (require 'setup-smartparens)
-(require 'setup-smex)
 (require 'setup-smooth-scrolling)
 (require 'setup-string-inflection)
 (require 'setup-tide)
@@ -133,6 +135,8 @@
 (require 'setup-ws-butler)
 (require 'setup-yaml-mode)
 (require 'setup-yasnippet)
+
+;; Setup Packages - End
 
 (require 'key-bindings)
 
