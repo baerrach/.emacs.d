@@ -221,6 +221,8 @@
 (require 'setup-projectile)
 (require 'setup-uniquify)
 
+(require 'setup-auto-package-update)
+
 ;; TODO - UP TO HERE
 
 ;; See setup-debugger - check all hooks are using syntax from
