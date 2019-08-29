@@ -46,6 +46,9 @@
 ;; Lines should be 80 characters wide, not 72
 (setq-default fill-column 80)
 
+;; Don't ring the bell
+(setq ring-bell-function 'ignore)
+
 ;; Save a list of recent files visited.
 (recentf-mode 1)
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
