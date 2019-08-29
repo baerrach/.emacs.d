@@ -108,34 +108,33 @@
 
 (global-unset-key (kbd "C-z"))
 
-;; Backup settings
-(add-hook 'window-setup-hook
-          (lambda ()
-            (let ((backup-directory (expand-file-name
-                                     (concat user-emacs-directory "backups"))))
-              (setq
-               backup-by-copying t      ; don't clobber symlinks
-               ;; Write backup files to own directory
-               backup-directory-alist
-               `(("." . ,backup-directory))
-               ;; Make backups of files, even when they're in version control
-               vc-make-backup-files t
-               delete-old-versions t)
-              (message "Deleting old backup files...")
-              (let ((week (* 60 60 24 7))
-                    (current (float-time (current-time))))
-                (dolist (file (directory-files backup-directory t))
-                  (when (and (backup-file-name-p file)
-                             (> (- current (float-time (fifth (file-attributes file))))
-                                week))
-                    (message "%s" file)
-                    (delete-file file))))
-              (message "Deleting old backup files...done")
-              (message nil))))
+;;; Backup settings
 
-(let ((autosave-dir (expand-file-name
-                                     (concat user-emacs-directory "auto-saves"))))
-  (setq auto-save-file-name-transforms `((".*" ,autosave-dir t))))
+;; deleting old backups
+(defun bae-delete-old-backups ()
+  (let* ((backup-directory (expand-file-name
+                            (concat user-emacs-directory "backups")))
+         (auto-save-directory (concat backup-directory "/\\1")))
+    (setq backup-by-copying t)      ; don't clobber symlinks
+    ;; Write backup files to own directory
+    (setq backup-directory-alist `(("." . ,backup-directory)))
+    ;; auto-save files to same backup-directory
+    (setq auto-save-file-name-transforms `((".*" ,auto-save-directory t)))
+    ;; Make backups of files, even when they're in version control
+    (setq vc-make-backup-files t)
+    (setq delete-old-versions t)
+    (message "Deleting old backup files...")
+    (let ((week (* 60 60 24 7))
+          (current (float-time (current-time))))
+      (dolist (file (directory-files backup-directory t)) ;
+        (when (and (backup-file-name-p file)
+                   (> (- current (float-time (fifth (file-attributes file))))
+                      week))
+          (message "%s" file)
+          (delete-file file))))
+    (message "Deleting old backup files...done")
+    (message nil)))
+(add-hook 'window-setup-hook #'bae-delete-old-backups)
 
 ;; Disable lock files .# as this is for single-user configuration
 (setq create-lockfiles nil)
@@ -151,3 +150,5 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 (provide 'sane-defaults)
+
+;; asfhjlkjaskfj
