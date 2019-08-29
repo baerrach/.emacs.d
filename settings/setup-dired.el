@@ -23,7 +23,7 @@
   (dired-details-hidden-string "" "Make dired less verbose when in hide details mode")
   (dired-dwim-target t "Move files between split panes")
   :config
-  (defun dired-revert-buffer--reload-after-changes (ignored)
+  (defun dired-revert-buffer--reload-after-changes (&optional ignored)
     "Reload dired after any changes are made"
     (revert-buffer))
 
