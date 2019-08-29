@@ -156,83 +156,67 @@
 ;; (guide-key-mode 1)
 ;; (setq guide-key/recursive-key-sequence-flag t)
 ;; (setq guide-key/popup-window-position 'bottom)
-
-(require 'setup-smartparens)
-(require 'setup-highlight-escape-sequences)
-(require 'setup-re-builder)
-
-;; Setup extensions - DO NOT USE :require, use :after instead.
-(require 'setup-hydra)
 (require 'setup-add-node-modules-path)
+(require 'setup-apache-mode)
+(require 'setup-auto-package-update)
 (require 'setup-avy)
+(require 'setup-browse-kill-ring)
 (require 'setup-company)
-(require 'setup-dired-narrow)
 (require 'setup-company-lsp)
 (require 'setup-css-eldoc)
 (require 'setup-dash)
-(require 'setup-wdired)
 (require 'setup-dired)
+(require 'setup-dired-narrow)
+(require 'setup-disabled-commands)
 (require 'setup-expand-region)
-(require 'setup-flycheck-pos-tip)
 (require 'setup-flycheck)
-(require 'setup-move-text)
+(require 'setup-flycheck-pos-tip)
 (require 'setup-grep)
-;(require 'setup-hippie-expand) ; TODO DELETE and setup file
+(require 'setup-highlight-escape-sequences)
 (require 'setup-hunspell)
+(require 'setup-hydra)
 (require 'setup-ido)
+(require 'setup-image-mode)
 (require 'setup-indium)
-(require 'setup-magit)
-(require 'setup-multiple-cursors)
+(require 'setup-js2-mode)
+(require 'setup-json-mode)
 (require 'setup-lsp-mode)
+(require 'setup-magit)
+(require 'setup-markdown-mode)
+(require 'setup-move-text)
+(require 'setup-multiple-cursors)
 (require 'setup-org-mode)
+(require 'setup-personal)
 (require 'setup-prettier-js)
+(require 'setup-projectile)
+(require 'setup-re-builder)
+(require 'setup-rjsx-mode)
+(require 'setup-ruby-mode)
 (require 'setup-shell)
 (require 'setup-smart-forward)
+(require 'setup-smartparens)
 (require 'setup-smex)
 (require 'setup-smooth-scrolling)
 (require 'setup-string-inflection)
 (require 'setup-tide)
+(require 'setup-undo-tree)
+(require 'setup-unicode-fonts)
+(require 'setup-uniquify)
 (require 'setup-visual-basic-mode)
 (require 'setup-visual-regexp)
-(require 'setup-undo-tree)
-(require 'setup-ws-butler)
+(require 'setup-wdired)
+(require 'setup-web-mode)
 (require 'setup-wgrep)
+(require 'setup-ws-butler)
 (require 'setup-yaml-mode)
 (require 'setup-yasnippet)
 
-;; Language specific setup files
-(require 'setup-js2-mode)
-(require 'setup-markdown-mode)
-(require 'setup-ruby-mode)
-(require 'setup-web-mode)
-
-(require 'setup-image-mode)
-(require 'setup-rjsx-mode)
-(require 'setup-json-mode)
-(require 'setup-apache-mode)
-(require 'setup-browse-kill-ring)
-(require 'setup-disabled-commands)
-
 (require 'key-bindings)
-
-(require 'setup-personal)
-(require 'setup-unicode-fonts)
-
-;; Setup key bindings
-
-(require 'setup-projectile)
-(require 'setup-uniquify)
-
-(require 'setup-auto-package-update)
 
 ;; TODO - UP TO HERE
 
 ;; See setup-debugger - check all hooks are using syntax from
 ;; https://github.com/nickmccurdy/add-hooks/blob/master/add-hooks.el
 ;;
-
-;; check :ensure
-;; not :ensure t
-;; All non-bundled packages need :ensure to download them
 
 ;; Run eslisp lint over files
