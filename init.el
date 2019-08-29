@@ -63,27 +63,6 @@
 (setq is-mac (equal system-type 'darwin))
 (setq is-win (equal system-type 'windows-nt))
 
-;; TODO: Refactor to setup-* and using use-package
-;;    '(ace-jump-buffer ;; replacing with avy
-;;      ace-jump-mode ;; replacing with avy
-;;      auto-complete
-;;      find-file-in-project
-;;      flx
-;;      flx-ido
-;;      guide-key
-;;      ido-at-point
-;;      ido-completing-read+
-;;      ido-vertical-mode
-;;      nodejs-repl
-;;      projectile
-;;      )))
-
-;; (condition-case nil
-;;     (init--install-packages)
-;;   (error
-;;    (package-refresh-contents)
-;;    (init--install-packages)))
-
 ;; Lets start with a smattering of sanity
 (require 'sane-defaults)
 
@@ -97,14 +76,6 @@
   (require 'microsoft-windows))
 
 (require 'setup-defuns)
-
-;; TODO Add guide-key
-;; guide-key
-;; (require 'guide-key)
-;; (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-x v" "C-x 8" "C-x +"))
-;; (guide-key-mode 1)
-;; (setq guide-key/recursive-key-sequence-flag t)
-;; (setq guide-key/popup-window-position 'bottom)
 (require 'setup-add-node-modules-path)
 (require 'setup-apache-mode)
 (require 'setup-auto-package-update)
@@ -125,7 +96,6 @@
 (require 'setup-highlight-escape-sequences)
 (require 'setup-hunspell)
 (require 'setup-hydra)
-;(require 'setup-ido)
 (require 'setup-image-mode)
 (require 'setup-indium)
 (require 'setup-ivy)
@@ -165,8 +135,6 @@
 (require 'setup-yasnippet)
 
 (require 'key-bindings)
-
-;; TODO - UP TO HERE
 
 ;; See setup-debugger - check all hooks are using syntax from
 ;; https://github.com/nickmccurdy/add-hooks/blob/master/add-hooks.el
