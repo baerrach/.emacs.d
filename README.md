@@ -48,6 +48,7 @@ the bits that you need.
 * avy (replaces ace jump)
 * moving faster `C-S-n` and `C-S-p`
 * comment or uncomment region `C-c c`
+* simplezen for html https://github.com/magnars/simplezen.el
 * guidekey - needs configuring. Work out which key sequences are used
   infrequently and would benefit from popups
 

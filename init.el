@@ -194,6 +194,7 @@
 (require 'setup-rjsx-mode)
 (require 'setup-ruby-mode)
 (require 'setup-shell)
+(require 'setup-simplezen)
 (require 'setup-smart-forward)
 (require 'setup-smartparens)
 (require 'setup-smex)
