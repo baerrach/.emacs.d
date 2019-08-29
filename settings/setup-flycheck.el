@@ -2,9 +2,7 @@
 
 (use-package flycheck
   :after (flycheck-pos-tip js2-mode add-node-modules-path)
-  :commands (flycheck-mode
-             flycheck-next-error
-             flycheck-previous-error)
+  :commands (flycheck-mode flycheck-next-error flycheck-previous-error)
   :hook ((flycheck-after-syntax-check . magnars/adjust-flycheck-automatic-syntax-eagerness)
          (flycheck-mode . bae/disable-flycheck-for-buffer)
          (flycheck-mode . my/use-eslint-from-node-modules)

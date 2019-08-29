@@ -1,3 +1,5 @@
+;; TODO: Delete this
+
 (require 'use-package)
 
 (use-package hippie-exp

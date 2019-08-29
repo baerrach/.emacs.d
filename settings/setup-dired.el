@@ -1,25 +1,8 @@
 (require 'use-package)
 
-(defun dired-revert-buffer--reload-after-changes (ignored)
-  "Reload dired after any changes are made"
-  (revert-buffer))
-
-(defun dired-back-to-start-of-files ()
-  (interactive)
-  (backward-char (- (current-column) 2)))
-
-(defun dired-back-to-top ()
-  (interactive)
-  (beginning-of-buffer)
-  (dired-next-line 4))
-
-(defun dired-jump-to-bottom ()
-  (interactive)
-  (end-of-buffer)
-  (dired-next-line -1))
-
 (use-package dired
-  :after (dired-narrow dash wdired)
+  :ensure nil
+  :after dash
   :bind (:map dired-mode-map
               ("C-a" . dired-back-to-start-of-files) ;; C-a is nicer in dired if it moves back to start of files
               ("k" . dired-do-delete)
@@ -40,11 +23,28 @@
   (dired-details-hidden-string "" "Make dired less verbose when in hide details mode")
   (dired-dwim-target t "Move files between split panes")
   :config
+  (defun dired-revert-buffer--reload-after-changes (ignored)
+    "Reload dired after any changes are made"
+    (revert-buffer))
+
+  (defun dired-back-to-start-of-files ()
+    (interactive)
+    (backward-char (- (current-column) 2)))
+
+  (defun dired-back-to-top ()
+    (interactive)
+    (beginning-of-buffer)
+    (dired-next-line 4))
+
+  (defun dired-jump-to-bottom ()
+    (interactive)
+    (end-of-buffer)
+    (dired-next-line -1))
+
   ;; Reload dired after making changes
   (--each '(dired-do-rename
             dired-do-copy
-            dired-create-directory
-            wdired-abort-changes)
+            dired-create-directory)
     (advice-add it :after #'dired-revert-buffer--reload-after-changes)))
 
 (provide 'setup-dired)

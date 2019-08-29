@@ -19,6 +19,7 @@
 
 (use-package tide
   :ensure
+  :commands tide
   :after (js2-mode company flycheck)
   :hook ((js2-mode . tide-setup)
          (js2-mode . tide-hl-identifier-mode)))

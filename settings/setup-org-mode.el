@@ -2,7 +2,7 @@
 
 (use-package org-mode
   :ensure nil
-  :commands (org-mode)
+  :commands org-mode
   :mode "\\.org'"
   :bind (("C-c a" . org-agenda)
          ;; Disable archive keys

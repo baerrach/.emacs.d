@@ -1,6 +1,8 @@
 (require 'use-package)
 
 (use-package indium
+  :ensure
+  :commands js2-mode
   :hook (js2-mode . indium-interaction-mode)
   :custom
   (indium-nodejs-inspect-brk nil)

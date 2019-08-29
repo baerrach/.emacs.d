@@ -7,6 +7,7 @@
 
 (use-package wgrep
   :ensure
+  :commands wgrep
   :custom
   (wgrep-auto-save-buffer t))
 

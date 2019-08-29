@@ -3,7 +3,7 @@
 (use-package ruby-mode
   :ensure
   :after string-inflection
-  :commands (ruby-mode)
+  :commands ruby-mode
   :bind (:map ruby-mode-map
               ("C-c C-u" . string-inflection-ruby-style-cycle))
   :custom

@@ -1,6 +1,7 @@
 (require 'use-package)
 
 (use-package flycheck-pos-tip
-  :ensure)
+  :ensure
+  :after flycheck)
 
 (provide 'setup-flycheck-pos-tip)

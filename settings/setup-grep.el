@@ -1,5 +1,3 @@
-;(add-hook 'grep-mode-hook
-
 (require 'use-package)
 
 (use-package grep

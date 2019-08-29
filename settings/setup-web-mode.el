@@ -2,6 +2,7 @@
 
 (use-package web-mode
   :ensure
+  :commands web-mode
   :mode "\\.s?css\\'\\|\\.html\\'"
   :custom
   (web-mode-markup-indent-offset 2)
