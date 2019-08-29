@@ -218,15 +218,10 @@
 
 ;; Setup key bindings
 
-;; TODO - UP TO HERE
 (require 'setup-projectile)
+(require 'setup-uniquify)
 
-(use-package uniquify
-  :ensure nil
-  :custom
-  (uniquify-buffer-name-style 'forward "Add parts of each file's directory to the buffer name if not unique"))
-
-
+;; TODO - UP TO HERE
 
 ;; See setup-debugger - check all hooks are using syntax from
 ;; https://github.com/nickmccurdy/add-hooks/blob/master/add-hooks.el
