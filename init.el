@@ -51,8 +51,6 @@
 (require 'setup-emacs-appearance)
 (require 'setup-emacs-theme)
 
-;;; Libraries
-
 ;;; Setup order independent packages
 (require 'setup-emacs-server)
 (require 'setup-debugger)
@@ -63,12 +61,11 @@
 (require 'setup-mac)
 (require 'setup-microsoft-windows)
 
-;; Lets start with a smattering of sanity
+;;; Lets start with a smattering of sanity
 (require 'sane-defaults)
 
 ;;; Setup Packages
 
-(require 'setup-defuns)
 (require 'setup-add-node-modules-path)
 (require 'setup-amx)
 (require 'setup-apache-mode)
@@ -79,6 +76,7 @@
 (require 'setup-company-lsp)
 (require 'setup-css-eldoc)
 (require 'setup-dash)
+(require 'setup-defuns)
 (require 'setup-dired)
 (require 'setup-dired-narrow)
 (require 'setup-disabled-commands)
