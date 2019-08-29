@@ -1,6 +1,8 @@
 (require 'use-package)
 
+; needed for use-package :diminish
 (use-package diminish
-  :ensure)
+  :ensure
+  :after use-package)
 
 (provide 'setup-diminish)

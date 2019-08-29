@@ -36,7 +36,7 @@
 ;; Initialize package handling
 (require 'setup-package)
 (require 'setup-use-package)
-(require 'setup-delight) ; needed for use-pacakge :delight
+(require 'setup-delight) ; needed for use-package :delight
 (require 'setup-diminish) ; needed for use-package :diminish
 (require 'setup-bind-key) ; needed for use-package :bind
 
