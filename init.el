@@ -139,6 +139,7 @@
 (require 'setup-personal)
 (require 'setup-prettier-js)
 (require 'setup-projectile)
+(require 'setup-rainbow-mode)
 (require 'setup-re-builder)
 (require 'setup-rjsx-mode)
 (require 'setup-ruby-mode)
