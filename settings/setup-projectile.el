@@ -7,7 +7,18 @@
               ("C-c C-p" . projectile-command-map))
   :custom
   (projectile-completion-system 'ivy)
-  (projectile-indexing-method 'alien))
+  (projectile-indexing-method 'alien)
+  :config
+  (defun my-projectile-invalidate-cache (&rest _args)
+    ;; We ignore the args to `magit-checkout'.
+    (projectile-invalidate-cache nil))
+
+  (eval-after-load 'magit-branch
+    '(progn
+       (advice-add 'magit-checkout
+                   :after #'my-projectile-invalidate-cache)
+       (advice-add 'magit-branch-and-checkout
+                   :after #'my-projectile-invalidate-cache))))
 
 (provide 'setup-projectile)
 
