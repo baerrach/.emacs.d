@@ -40,7 +40,7 @@ the bits that you need.
 * simplezen for html https://github.com/magnars/simplezen.el
 * guidekey - needs configuring. Work out which key sequences are used
   infrequently and would benefit from popups
-* webmode - see shortcut list
+* webmode - see shortcut list (http://web-mode.org/)
 * ivy - recent files added to switch buffer list.
 * swiper - replaces isearch
 * counsel - replaces some M-x commands to work better with ivy
