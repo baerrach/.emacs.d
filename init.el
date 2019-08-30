@@ -74,6 +74,7 @@
 (require 'setup-browse-kill-ring)
 (require 'setup-company)
 (require 'setup-company-lsp)
+(require 'setup-counsel)
 (require 'setup-css-eldoc)
 (require 'setup-dash)
 (require 'setup-defuns)
