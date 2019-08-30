@@ -41,6 +41,9 @@ the bits that you need.
 * guidekey - needs configuring. Work out which key sequences are used
   infrequently and would benefit from popups
 * webmode - see shortcut list
+* ivy - recent files added to switch buffer list.
+* swiper - replaces isearch
+* counsel - replaces some M-x commands to work better with ivy
 
 ### Trouble Shooting ###
 
