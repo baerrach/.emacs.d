@@ -112,6 +112,7 @@
 (require 'setup-smartparens)
 (require 'setup-smooth-scrolling)
 (require 'setup-string-inflection)
+(require 'setup-swiper)
 (require 'setup-tide)
 (require 'setup-undo-tree)
 (require 'setup-unicode-fonts)
