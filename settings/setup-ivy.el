@@ -2,6 +2,7 @@
 
 (use-package ivy
   :ensure
+  :diminish
   :custom
   (ivy-use-virtual-buffers t "Add recent files and bookmarks to ivy-switch-buffer")
   (enable-recursive-minibuffers t)

@@ -2,6 +2,7 @@
 
 (use-package smartparens
   :ensure
+  :diminish
   :custom
   (sp-autoescape-string-quote nil)
   :hook ((emacs-lisp-mode groovy-mode java-mode js-mode markdown-mode restclient-mode ruby-mode scala-mode) . turn-on-smartparens-mode))
