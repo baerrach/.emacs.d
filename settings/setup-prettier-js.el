@@ -3,6 +3,7 @@
 (use-package prettier-js
   :after (js2-mode add-node-modules-path)
   :commands prettier-js-mode
+  :diminish
   :hook ((js2-mode js2-jsx-mode) . bae/maybe-use-prettier)
   :config
   (defun bae/maybe-use-prettier ()
