@@ -4,14 +4,15 @@
   :ensure nil
   :commands org-mode
   :mode "\\.org'"
-  :bind (("C-c a" . org-agenda)
-         ;; Disable archive keys
+  :bind (;; Disable archive keys
          ("C-c C-x C-a" . nil)
          ("C-c C-x C-s" . nil)
          ("C-c $" . nil)
          ("<C-tab>" . nil)
          ("C-C C-x a" . nil)
-         ("C-C C-x A" . nil))
+         ("C-C C-x A" . nil)
+         :map org-mode-map
+         ("C-c a" . org-agenda))
   :custom
   (org-clock-persist t "Save the running clock and all clock history when exiting Emacs, load it on startup")
   (org-clock-persist-query-resume nil "Do not prompt to resume an active clock")
