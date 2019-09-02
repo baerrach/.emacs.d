@@ -22,19 +22,6 @@ the bits that you need.
 
 **TOOD** Scan through init.el and provide overview
 
-### Trouble Shooting ###
-
-```
-;; TODO
-;; Describe how to use use-package, i.e file in settings/setup-<package-name>.el, provide 'setup-<package-name>
-;; Bundled packages must always have :ensure nil
-;; Always use :after not :require
-;; Always ensure any packages declared in :after also have use-package definitions
-;; Order independent
-;; Hooks: don't append '-hook' it wont work
-;; Hooks: don't prepend functions with #' as it wont work, hooks expect symbols
-;; Use commands: <mode-name>/command to defer loading until that command is invoked
-```
 * imenu - display list of things in the file in a hierarchical menu drilling
   down into each new level, useful in js2-mode and markdown-mode
 * js2-mode - hydra for refactoring, bound to `C-c h r`
@@ -53,7 +40,24 @@ the bits that you need.
 * simplezen for html https://github.com/magnars/simplezen.el
 * guidekey - needs configuring. Work out which key sequences are used
   infrequently and would benefit from popups
+* webmode - see shortcut list (http://web-mode.org/)
+* ivy - recent files added to switch buffer list.
+* swiper - replaces isearch
+* counsel - replaces some M-x commands to work better with ivy
 
+### Trouble Shooting ###
+
+```
+;; TODO
+;; Describe how to use use-package, i.e file in settings/setup-<package-name>.el, provide 'setup-<package-name>
+;; Bundled packages must always have :ensure nil
+;; Always use :after not :require
+;; Always ensure any packages declared in :after also have use-package definitions
+;; Order independent
+;; Hooks: don't append '-hook' it wont work
+;; Hooks: don't prepend functions with #' as it wont work, hooks expect symbols
+;; Use commands: <mode-name>/command to defer loading until that command is invoked
+```
 
 ## New tools to use ##
 

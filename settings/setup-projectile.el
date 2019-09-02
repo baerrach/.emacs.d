@@ -23,6 +23,16 @@
                                     :src-dir "src/"
                                     :test-dir "test/"
                                     :related-files-fn projectile-aurelia-related-files)
-  )
+
+  (defun my-projectile-invalidate-cache (&rest _args)
+    ;; We ignore the args to `magit-checkout'.
+    (projectile-invalidate-cache nil))
+
+  (eval-after-load 'magit-branch
+    '(progn
+       (advice-add 'magit-checkout
+                   :after #'my-projectile-invalidate-cache)
+       (advice-add 'magit-branch-and-checkout
+                   :after #'my-projectile-invalidate-cache))))
 
 (provide 'setup-projectile)

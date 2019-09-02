@@ -2,6 +2,7 @@
 
 (use-package ws-butler
   :ensure
+  :diminish
   :custom
   (ws-butler-keep-whitespace-before-point nil)
   (ws-butler-trim-predicate (lambda (beg end)

@@ -51,40 +51,33 @@
 (require 'setup-emacs-appearance)
 (require 'setup-emacs-theme)
 
-;;; Libraries
-
 ;;; Setup order independent packages
 (require 'setup-emacs-server)
 (require 'setup-debugger)
 (require 'setup-desktop)
 (require 'setup-saveplace)
 
-;; What system are we on?
-(setq is-mac (equal system-type 'darwin))
-(setq is-win (equal system-type 'windows-nt))
+;;; Operating Specific setups
+(require 'setup-mac)
+(require 'setup-microsoft-windows)
 
-;; Lets start with a smattering of sanity
+;;; Lets start with a smattering of sanity
 (require 'sane-defaults)
 
-;; Setup environment variables from the user's shell.
-(when is-mac
-  (require-package 'exec-path-from-shell)
-  (exec-path-from-shell-initialize)
-  (require 'mac))
+;;; Setup Packages
 
-(when is-win
-  (require 'microsoft-windows))
-
-(require 'setup-defuns)
 (require 'setup-add-node-modules-path)
+(require 'setup-amx)
 (require 'setup-apache-mode)
 (require 'setup-auto-package-update)
 (require 'setup-avy)
 (require 'setup-browse-kill-ring)
 (require 'setup-company)
 (require 'setup-company-lsp)
+(require 'setup-counsel)
 (require 'setup-css-eldoc)
 (require 'setup-dash)
+(require 'setup-defuns)
 (require 'setup-dired)
 (require 'setup-dired-narrow)
 (require 'setup-disabled-commands)
@@ -118,9 +111,9 @@
 (require 'setup-simplezen)
 (require 'setup-smart-forward)
 (require 'setup-smartparens)
-(require 'setup-smex)
 (require 'setup-smooth-scrolling)
 (require 'setup-string-inflection)
+(require 'setup-swiper)
 (require 'setup-tide)
 (require 'setup-undo-tree)
 (require 'setup-unicode-fonts)
@@ -133,6 +126,8 @@
 (require 'setup-ws-butler)
 (require 'setup-yaml-mode)
 (require 'setup-yasnippet)
+
+;; Setup Packages - End
 
 (require 'key-bindings)
 

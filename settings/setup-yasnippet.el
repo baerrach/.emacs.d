@@ -2,6 +2,7 @@
 
 (use-package yasnippet
   :ensure
+  :diminish yas-minor-mode
   :mode ("\\.yasnippet'" . snippet-mode)
   :hook (snippet-mode . yas-force-unix-buffer-file-coding-system)
   :bind (:map yas-keymap
