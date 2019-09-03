@@ -1,6 +1,7 @@
 (require 'use-package)
 
 (use-package flycheck
+  :ensure
   :after (flycheck-pos-tip js2-mode add-node-modules-path)
   :commands (flycheck-mode flycheck-next-error flycheck-previous-error)
   :hook ((flycheck-after-syntax-check . magnars/adjust-flycheck-automatic-syntax-eagerness)
@@ -61,6 +62,5 @@ up before you execute another command."
   ;; Each buffer gets its own idle-change-delay because of the
   ;; buffer-sensitive adjustment above.
   (make-variable-buffer-local 'flycheck-idle-change-delay))
-
 
 (provide 'setup-flycheck)
