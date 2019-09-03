@@ -88,6 +88,7 @@
 (require 'setup-grep)
 (require 'setup-guide-key)
 (require 'setup-highlight-escape-sequences)
+(require 'setup-hippie-exp)
 (require 'setup-hunspell)
 (require 'setup-hydra)
 (require 'setup-image-mode)
