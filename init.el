@@ -82,6 +82,7 @@
 (require 'setup-dired-narrow)
 (require 'setup-disabled-commands)
 (require 'setup-expand-region)
+(require 'setup-files)
 (require 'setup-flycheck)
 (require 'setup-flycheck-pos-tip)
 (require 'setup-grep)
