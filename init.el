@@ -5,7 +5,6 @@
 (setq use-package-verbose t)
 (setq use-package-expand-minimally nil)
 (setq use-package-compute-statistics t)
-(setq debug-on-error t)
 
 ;;; Bare-Bones Emacs Setup::Start
 
