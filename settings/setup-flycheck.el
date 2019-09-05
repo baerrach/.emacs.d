@@ -1,5 +1,17 @@
 (require 'use-package)
 
+;; flycheck-start-command-checker start of instrumentation
+;; flycheck-process-send-buffer where next problem is
+;; - chunking works fine
+;; process-send-eof process is failing
+;; flycheck-jav... 13240   run     --              --           c:/ide/frontend/node_modules/.bin/eslint.cmd --format=json --stdin --stdin-filename c:/ide/frontend/src/views/pages/station/data-view.js
+;; flycheck-jav... 13240   run     --              --           c:\ide\frontend\node_modules\.bin\eslint.cmd --format=json --stdin --stdin-filename c:\ide\frontend\src\views\pages\station\data-view.js
+
+
+; (setq flycheck-xml-parser 'flycheck-parse-xml-region))
+
+; (setq flycheck-check-syntax-automatically '(save))
+
 (use-package flycheck
   :ensure
   :after (flycheck-pos-tip js2-mode add-node-modules-path)
@@ -15,6 +27,12 @@
   (flycheck-temp-prefix ".flycheck" "customize flycheck temp file prefix")
   (flycheck-disabled-checkers '(json-jsonlist emacs-lisp-checkdoc) "disable checkers")
   (flycheck-xml-parser 'flycheck-parse-xml-region)
+  ;; See
+  ;; * https://github.com/flycheck/flycheck/issues/1529
+  ;; * https://github.com/nodejs/node/issues/4697
+  ;; Node fails at 4096 bytes when reading Windows stdin.
+  ;; When fixed update https://stackoverflow.com/questions/54406400/flycheck-eslint-on-emacs-doesnt-work-invalid-argument-flycheck-javascript-esl
+  (flycheck-chunked-process-input t)
   :config
   (defun bae-flycheck-mode ()
     "Enable Flycheck after calling add-node-modules-path."
