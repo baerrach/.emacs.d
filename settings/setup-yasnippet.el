@@ -12,9 +12,7 @@
               ("C-a" . yas-goto-start-of-active-field)
               :map yas-minor-mode-map
               ;; Remap <tab> to <C-tab>
-              ("<tab>" . nil)
-              ("<C-tab>" . yas-expand)
-              ("C-c <C-tab>" . yas-insert-snippet))
+              ("<tab>" . nil))
   :custom
   (yas-snippet-dirs '("~/.emacs.d/snippets") "Use only own snippets, do not use bundled ones")
   (yas-prompt-functions '(yas-ido-prompt) "No dropdowns please, yas")
@@ -47,5 +45,11 @@
 yasnippet does not support DOS line ending.
 See https://github.com/joaotavora/yasnippet/issues/204#issuecomment-3167077"
     (set-buffer-file-coding-system 'unix t)))
+
+(use-package ivy-yasnippet
+  :ensure
+  :after yasnippet ivy
+  :bind (:map yas-minor-mode-map
+              ("C-c <C-tab>" . ivy-yasnippet)))
 
 (provide 'setup-yasnippet)
