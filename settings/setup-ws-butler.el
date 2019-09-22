@@ -4,6 +4,7 @@
   :ensure
   :diminish
   :custom
+  (show-trailing-whitespace t)
   (ws-butler-keep-whitespace-before-point nil)
   (ws-butler-trim-predicate (lambda (beg end)
                               (not (eq 'font-lock-string-face
