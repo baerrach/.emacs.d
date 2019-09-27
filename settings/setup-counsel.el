@@ -4,6 +4,7 @@
   :ensure
   :after ivy
   :diminish
+  :bind (("C-x F" . counsel-recentf))
   :config
   (counsel-mode 1))
 
