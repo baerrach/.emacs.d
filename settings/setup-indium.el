@@ -20,6 +20,35 @@
     (funcall orig-indium-backend-evaluate backend string callback)
     )
 
-  (advice-add 'indium-backend-evaluate :around #'bae/indium-backend-evaluate))
+  (defun bae/indium-debugger-select-frame (orig-indium-debugger-select-frame frame)
+    "Copied from indium-debugger.el to remove download script source
+
+Make FRAME the current debugged stack frame.
+
+Setup a debugging buffer for the current stack FRAME and switch
+to that buffer.
+
+If no local file exists for the FRAME, ask the user if the remote
+source for that frame should be downloaded.  If not, resume the
+execution."
+    (setq indium-debugger-current-frame frame)
+    (switch-to-buffer (indium-debugger-get-buffer-create))
+    (if buffer-file-name
+        (indium-debugger-setup-buffer-with-file)
+      (progn
+        (if (and nil (yes-or-no-p "No file found for debugging (sourcemap issue?), download script source (might be slow)?"))
+            (progn
+              (message "Downloading script source for debugging...")
+              (indium-client-get-frame-source
+               frame
+               (lambda (source)
+                 (with-current-buffer (indium-debugger-get-buffer-create)
+                   (indium-debugger-setup-buffer-with-source source))
+                 (message "Downloading script source for debugging...done!"))))
+          (indium-client-resume)))))
+
+  (advice-add 'indium-backend-evaluate :around #'bae/indium-backend-evaluate)
+  (advice-add 'indium-debugger-select-frame :around #'bae/indium-debugger-select-frame))
+
 
 (provide 'setup-indium)
