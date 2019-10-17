@@ -5,8 +5,6 @@
   :commands js2-mode
   :delight indium-interaction-mode " Indium"
   :hook (js2-mode . indium-interaction-mode)
-  :custom
-  (indium-nodejs-inspect-brk nil)
   :config
   ;; selenium-utils needs the REPL environment set to something to run the debug REPL loop.
   (setenv "REPL" "1")
