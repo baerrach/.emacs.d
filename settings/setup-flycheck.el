@@ -21,11 +21,12 @@
          (flycheck-mode . my/use-eslint-from-node-modules)
          (js2-mode . bae-flycheck-mode))
   :custom
-  (flycheck-disabled-checkers (append flycheck-disabled-checkers '(javascript-jshint)) "disable jshint since we prefer eslint checking")
   (flycheck-check-syntax-automatically '(save idle-change mode-enabled) "Remove newline checks, since they would trigger an immediate check when we want the idle-change-delay to be in effect while editing")
+  (flycheck-disabled-checkers '(json-jsonlist emacs-lisp-checkdoc) "always disable these checkers")
+  (flycheck-disabled-checkers (append flycheck-disabled-checkers '(javascript-jshint)) "disable jshint since we prefer eslint checking")
+  (flycheck-disabled-checkers (append flycheck-disabled-checkers '(javascript-tide)) "disable tide since we prefer eslint checking")
   (flycheck-display-errors-function #'flycheck-pos-tip-error-messages)
   (flycheck-temp-prefix ".flycheck" "customize flycheck temp file prefix")
-  (flycheck-disabled-checkers '(json-jsonlist emacs-lisp-checkdoc) "disable checkers")
   (flycheck-xml-parser 'flycheck-parse-xml-region)
   ;; See
   ;; * https://github.com/flycheck/flycheck/issues/1529
