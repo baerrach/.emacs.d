@@ -3,16 +3,13 @@
 (use-package org-mode
   :ensure nil
   :commands org-mode
-  :mode "\\.org'"
-  :bind (;; Disable archive keys
-         ("C-c C-x C-a" . nil)
-         ("C-c C-x C-s" . nil)
-         ("C-c $" . nil)
+  :bind (("C-c a" . org-agenda)
+         ;; Disable archive keys
          ("<C-tab>" . nil)
-         ("C-C C-x a" . nil)
-         ("C-C C-x A" . nil)
-         :map org-mode-map
-         ("C-c a" . org-agenda))
+         ("C-c $" . nil) ; disable org-archive-subtree
+         ("C-c C-x A" . nil)
+         ("C-c C-x C-s" . nil) ; disable org-archive-subtree
+         ("C-c C-x a" . nil))
   :custom
   (org-clock-persist t "Save the running clock and all clock history when exiting Emacs, load it on startup")
   (org-clock-persist-query-resume nil "Do not prompt to resume an active clock")
