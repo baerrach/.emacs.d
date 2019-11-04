@@ -100,6 +100,7 @@
 (require 'setup-markdown-mode)
 (require 'setup-move-text)
 (require 'setup-multiple-cursors)
+(require 'setup-olivetti)
 (require 'setup-org-mode)
 (require 'setup-personal)
 (require 'setup-prettier-js)
