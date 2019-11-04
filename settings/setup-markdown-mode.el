@@ -2,9 +2,11 @@
 
 (use-package markdown-mode
   :ensure
+  :requires olivetti
   :commands markdown-mode
   :mode "\\.md'"
-  :hook (markdown-mode . turn-on-auto-fill)
+  :hook ((markdown-mode . turn-on-auto-fill)
+         (markdown-mode . olivetti-mode))
   :custom
   (markdown-imenu-generic-expression
    '(("title"  "^\\(.*\\)[\n]=+$" 1)
