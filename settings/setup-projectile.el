@@ -32,6 +32,8 @@
        (advice-add 'magit-checkout
                    :after #'my-projectile-invalidate-cache)
        (advice-add 'magit-branch-and-checkout
-                   :after #'my-projectile-invalidate-cache))))
+                   :after #'my-projectile-invalidate-cache)))
+
+  (projectile-mode +1))
 
 (provide 'setup-projectile)
