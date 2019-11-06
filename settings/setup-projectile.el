@@ -3,7 +3,7 @@
 (use-package projectile
   :after ivy
   :bind (:map projectile-mode-map
-              ("C-c C-p" . projectile-command-map))
+              ("C-c p" . projectile-command-map))
   :custom
   (projectile-completion-system 'ivy)
   (projectile-indexing-method 'alien)

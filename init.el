@@ -137,6 +137,7 @@
 (require 'setup-wdired)
 (require 'setup-web-mode)
 (require 'setup-wgrep)
+(require 'setup-wgrep-ag)
 (require 'setup-ws-butler)
 (require 'setup-yaml-mode)
 (require 'setup-yasnippet)
