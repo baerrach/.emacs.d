@@ -18,7 +18,6 @@
 ;; }
 
 (use-package tide
-  :ensure
   :commands tide
   :after (js2-mode company flycheck)
   :hook ((js2-mode . bae-setup-tide-mode))

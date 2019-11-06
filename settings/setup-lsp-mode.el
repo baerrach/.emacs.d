@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package lsp-mode
-  :ensure
   :commands lsp-mode
   :hook ((lsp-after-open . lsp-enable-imenu)
          (python-mode . lsp))
@@ -12,7 +11,6 @@
                     :server-id 'pyls)))
 
 (use-package lsp-ui
-  :ensure
   :after (lsp-mode)
   :custom
   (lsp-ui-sideline-ignore-duplicate t))

@@ -1,7 +1,6 @@
 ;;; setup-js2-mode.el --- tweak js2 settings -*- lexical-binding: t; -*-
 
 (use-package js2-mode
-  :ensure
   :commands js2-mode
   :mode "\\.js\\'\\|\\.gs\\'"
   :delight js2-mode "JS2"
@@ -27,15 +26,15 @@
   :config
   )
 
+(straight-use-package '(js2-imenu-extras :type built-in))
+
 (use-package js2-imenu-extras
-  :ensure nil ; part of js2-mode
   :after js2-mode
   :commands js2-mode
   :config
   (js2-imenu-extras-setup))
 
 (use-package js2-refactor
-  :ensure
   :after (js2-mode hydra)
   :commands js2-mode
   :bind (:map js2-mode-map

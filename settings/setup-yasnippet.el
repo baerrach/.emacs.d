@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package yasnippet
-  :ensure
   :diminish yas-minor-mode
   :mode ("\\.yasnippet'" . snippet-mode)
   :hook (snippet-mode . yas-force-unix-buffer-file-coding-system)
@@ -47,7 +46,6 @@ See https://github.com/joaotavora/yasnippet/issues/204#issuecomment-3167077"
     (set-buffer-file-coding-system 'unix t)))
 
 (use-package ivy-yasnippet
-  :ensure
   :after yasnippet ivy
   :bind (:map yas-minor-mode-map
               ("C-c <C-tab>" . ivy-yasnippet)))

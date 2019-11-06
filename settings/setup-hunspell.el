@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package ispell
-  :ensure nil
   :custom
   (ispell-program-name (executable-find "hunspell"))
 

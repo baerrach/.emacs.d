@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package markdown-mode
-  :ensure
   :requires olivetti
   :commands markdown-mode
   :mode "\\.md'"

@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package ruby-mode
-  :ensure
   :after string-inflection
   :commands ruby-mode
   :bind (:map ruby-mode-map

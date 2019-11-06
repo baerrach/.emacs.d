@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package company
-  :ensure
   :diminish
   :commands (company-mode company-indent-or-complete-common)
   :hook (after-init . global-company-mode)

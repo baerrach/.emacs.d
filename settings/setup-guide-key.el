@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package guide-key
-  :ensure
   :diminish
   :hook ((org-mode . bae-guide-keys-for-org-mode)
          (projectile-mode . bae-guide-keys-for-projectile-mode))

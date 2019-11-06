@@ -2,7 +2,6 @@
 
 ;; Smart M-x Alternative
 (use-package amx
-  :ensure
   :bind (("M-x" . amx))
   :config
   (amx-mode))

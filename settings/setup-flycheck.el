@@ -13,7 +13,6 @@
 ; (setq flycheck-check-syntax-automatically '(save))
 
 (use-package flycheck
-  :ensure
   :after (flycheck-pos-tip js2-mode add-node-modules-path)
   :commands (flycheck-mode flycheck-next-error flycheck-previous-error)
   :hook ((flycheck-after-syntax-check . magnars/adjust-flycheck-automatic-syntax-eagerness)

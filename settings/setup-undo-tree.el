@@ -2,7 +2,6 @@
 
 (use-package undo-tree
   ;; Represent undo-history as an actual tree (visualize with C-x u)
-  :ensure
   :diminish
   :bind (("C-z" . undo-tree-undo)
          ("C-S-z" . undo-tree-redo)

@@ -11,10 +11,9 @@
 ;; https://dejavu-fonts.github.io/
 
 (use-package persistent-soft
-  :ensure)
+  )
 
 (use-package unicode-fonts
-  :ensure
   :after persistent-soft
   :config
   (unicode-fonts-setup))

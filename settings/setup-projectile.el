@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package projectile
-  :ensure
   :after ivy
   :bind (:map projectile-mode-map
               ("C-c C-p" . projectile-command-map))

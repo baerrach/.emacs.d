@@ -1,7 +1,6 @@
 (require 'use-package)
 
-(use-package org-mode
-  :ensure nil
+(use-package org
   :commands org-mode
   :bind (("C-c a" . org-agenda)
          ;; Disable archive keys
@@ -37,7 +36,6 @@
   (org-clock-persistence-insinuate))
 
 (use-package org-bullets
-  :ensure
   :hook (org-mode . org-bullets-mode))
 
 ;; Override org-html-table-cell defun as there is no other way to hook this functionality in.

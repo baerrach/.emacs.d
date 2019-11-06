@@ -1,7 +1,8 @@
 (require 'use-package)
 
+(straight-use-package '(dired :type built-in))
+
 (use-package dired
-  :ensure nil
   :after dash
   :bind (:map dired-mode-map
               ("C-a" . dired-back-to-start-of-files) ;; C-a is nicer in dired if it moves back to start of files

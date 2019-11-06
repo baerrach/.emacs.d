@@ -1,7 +1,8 @@
 (require 'use-package)
 
+(straight-use-package '(files :type built-in))
+
 (use-package files
-  :ensure nil
   :config
   (defun disable-debug-on-error--backup-buffer-copy (orig-fun &rest args)
     "Disable debug-on-error around backup-buffer-copy.

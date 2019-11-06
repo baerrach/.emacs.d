@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package smartparens
-  :ensure
   :diminish
   :custom
   (sp-autoescape-string-quote nil)

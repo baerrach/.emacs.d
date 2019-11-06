@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package wdired
-  :ensure
   :after dired
   :bind (:map wdired-mode-map
               ("C-a" . dired-back-to-start-of-files)

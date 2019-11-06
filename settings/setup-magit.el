@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package magit
-  :ensure
   :after ivy
   :hook ((magit-revision-mode . visual-line-mode)
          (magit-mode . hl-line-mode)

@@ -2,6 +2,26 @@
 ; (setq debug-on-quit t)
 ; (setq debug-on-error t)
 
+;;; Use straight.el
+;;; TODO: use el-patch instead of advice to hack changes
+
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+;; https://github.com/raxod502/straight.el/blob/develop/README.md#integration-with-use-package
+(setq straight-use-package-by-default t)
+(straight-use-package 'use-package)
+
 (setq use-package-verbose t)
 (setq use-package-expand-minimally nil)
 (setq use-package-compute-statistics t)
@@ -16,12 +36,6 @@
 ;; No splash screen please
 (setq inhibit-startup-message t)
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
 (defun setup-load-path ()
   "Configure load-path for local user-emacs-directory support"
   (setq site-lisp-dir
@@ -33,7 +47,6 @@
 (setup-load-path)
 
 ;; Initialize package handling
-(require 'setup-package)
 (require 'setup-use-package)
 (require 'setup-delight) ; needed for use-package :delight
 (require 'setup-diminish) ; needed for use-package :diminish
@@ -64,8 +77,8 @@
 (require 'sane-defaults)
 
 ;;; Setup Packages
-
 (require 'setup-add-node-modules-path)
+(require 'setup-ag)
 (require 'setup-amx)
 (require 'setup-apache-mode)
 (require 'setup-auto-package-update)
@@ -120,7 +133,6 @@
 (require 'setup-undo-tree)
 (require 'setup-unicode-fonts)
 (require 'setup-uniquify)
-(require 'setup-visual-basic-mode)
 (require 'setup-visual-regexp)
 (require 'setup-wdired)
 (require 'setup-web-mode)

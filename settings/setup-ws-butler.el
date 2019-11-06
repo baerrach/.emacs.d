@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package ws-butler
-  :ensure
   :diminish
   :custom
   (show-trailing-whitespace t)

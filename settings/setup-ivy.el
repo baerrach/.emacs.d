@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package ivy
-  :ensure
   :diminish
   :custom
   (enable-recursive-minibuffers t)

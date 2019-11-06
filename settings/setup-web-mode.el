@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package web-mode
-  :ensure
   :commands web-mode
   :mode "\\.s?css\\'\\|\\.html\\'"
   :custom

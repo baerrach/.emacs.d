@@ -6,7 +6,6 @@
 ;; So mac users should ln -s .profile .bashrc
 
 (use-package shell-command
-  :ensure nil
   :commands shell)
 
 (provide 'setup-shell)

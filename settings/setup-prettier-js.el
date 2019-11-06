@@ -1,7 +1,6 @@
 (require 'use-package)
 
 (use-package prettier-js
-  :ensure
   :after (js2-mode add-node-modules-path)
   :commands prettier-js-mode
   :diminish

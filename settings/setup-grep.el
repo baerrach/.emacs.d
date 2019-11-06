@@ -1,7 +1,8 @@
 (require 'use-package)
 
+;; TODO replace with ag
+
 (use-package grep
-  :ensure nil
   :hook (grep-mode . turn-on-visual-line-mode)
   :config
   (add-to-list 'grep-find-ignored-directories ".cache")
