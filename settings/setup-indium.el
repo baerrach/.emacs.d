@@ -1,5 +1,10 @@
 (require 'use-package)
 
+(straight-use-package
+ '(indium :type git :flavor melpa :host github :repo "NicolasPetton/Indium"
+          :fork (:host github
+                       :repo "baerrach/Indium"
+                       :branch "develop")))
 (use-package indium
   :commands js2-mode
   :delight indium-interaction-mode " Indium"
