@@ -87,6 +87,7 @@
 (require 'setup-company)
 (require 'setup-company-lsp)
 (require 'setup-counsel)
+(require 'setup-counsel-projectile)
 (require 'setup-css-eldoc)
 (require 'setup-dash)
 (require 'setup-defuns)
