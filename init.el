@@ -3,7 +3,6 @@
 ; (setq debug-on-error t)
 
 ;;; Use straight.el
-;;; TODO: use el-patch instead of advice to hack changes
 
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -94,6 +93,7 @@
 (require 'setup-dired)
 (require 'setup-dired-narrow)
 (require 'setup-disabled-commands)
+(require 'setup-el-patch)
 (require 'setup-expand-region)
 (require 'setup-files)
 (require 'setup-flycheck)
