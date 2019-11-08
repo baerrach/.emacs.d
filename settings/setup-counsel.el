@@ -1,7 +1,7 @@
 (require 'use-package)
 
 (use-package counsel
-  :after ivy
+  :after (ivy)
   :diminish
   :bind (("C-x F" . counsel-recentf))
   :config

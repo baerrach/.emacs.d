@@ -14,7 +14,7 @@
   )
 
 (use-package unicode-fonts
-  :after persistent-soft
+  :after (persistent-soft)
   :config
   (unicode-fonts-setup))
 

@@ -1,7 +1,7 @@
 (require 'use-package)
 
 (use-package ruby-mode
-  :after string-inflection
+  :after (string-inflection)
   :commands ruby-mode
   :bind (:map ruby-mode-map
               ("C-c C-u" . string-inflection-ruby-style-cycle))

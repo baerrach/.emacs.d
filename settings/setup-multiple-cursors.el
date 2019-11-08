@@ -1,7 +1,7 @@
 (require 'use-package)
 
 (use-package multiple-cursors
-  :after hydra
+  :after (hydra)
   :bind (("C-S-c C-S-c" . mc/edit-lines)
          ("C-c C-<" . mc/mark-all-like-this)
          ("C-S-<mouse-1>" . mc/add-cursor-on-click)

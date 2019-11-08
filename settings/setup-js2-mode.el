@@ -29,7 +29,7 @@
 (straight-use-package '(js2-imenu-extras :type built-in))
 
 (use-package js2-imenu-extras
-  :after js2-mode
+  :after (js2-mode)
   :commands js2-mode
   :config
   (js2-imenu-extras-setup))

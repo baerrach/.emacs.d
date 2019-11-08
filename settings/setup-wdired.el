@@ -1,7 +1,7 @@
 (require 'use-package)
 
 (use-package wdired
-  :after dired
+  :after (dired)
   :bind (:map wdired-mode-map
               ("C-a" . dired-back-to-start-of-files)
               ([remap beginning-of-buffer] . dired-back-to-top)
