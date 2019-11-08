@@ -7,12 +7,20 @@
   :custom
   (projectile-completion-system 'ivy)
   (projectile-indexing-method 'alien)
-  ;;   "Teach Projectile about Aurelia related files:
+  ;; Teach Projectile about Aurelia related files:
   ;;
   ;; * View (.html) -> ViewModel (.js)
   (projectile-aurelia-related-files
    (list
     (projectile-related-files-fn-extensions :other '("html" "js"))))
+  ;; Teach Projectile about Green Brain related files:
+  ;;
+  ;; JavaScript test files end in ".test" or ".spec"
+  (greenbrain/related-files
+        (list
+          (projectile-related-files-fn-test-with-suffix "js" ".test")
+          (projectile-related-files-fn-test-with-suffix "js" ".spec")
+          ))
   :config
   (projectile-register-project-type 'aurelia '("aurelia_project/aurelia.json")
                                     :compile nil
@@ -22,6 +30,12 @@
                                     :src-dir "src/"
                                     :test-dir "test/"
                                     :related-files-fn projectile-aurelia-related-files)
+
+  (projectile-register-project-type 'npm '("package.json")
+                                    :compile "npm install"
+                                    :test "npm test"
+                                    :test-dir "test/"
+                                    :related-files-fn greenbrain/related-files)
 
   (defun my-projectile-invalidate-cache (&rest _args)
     ;; We ignore the args to `magit-checkout'.
