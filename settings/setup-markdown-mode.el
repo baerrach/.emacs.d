@@ -1,7 +1,7 @@
 (require 'use-package)
 
 (use-package markdown-mode
-  :requires olivetti
+  :after olivetti
   :commands markdown-mode
   :mode "\\.md'"
   :hook ((markdown-mode . turn-on-auto-fill)
