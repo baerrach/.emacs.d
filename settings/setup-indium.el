@@ -52,7 +52,8 @@ execution."
           (indium-client-resume)))))
 
   (advice-add 'indium-backend-evaluate :around #'bae/indium-backend-evaluate)
-  (advice-add 'indium-debugger-select-frame :around #'bae/indium-debugger-select-frame))
+  ;(advice-remove 'indium-debugger-select-frame :around #'bae/indium-debugger-select-frame)
+  )
 
 
 (provide 'setup-indium)
