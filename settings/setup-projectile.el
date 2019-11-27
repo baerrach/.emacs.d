@@ -5,6 +5,7 @@
   :bind (:map projectile-mode-map
               ("C-c p" . projectile-command-map))
   :custom
+  (projectile-mode-line-prefix " Ⓟ")
   (projectile-completion-system 'ivy)
   (projectile-indexing-method 'alien)
   ;; Teach Projectile about Aurelia related files:
