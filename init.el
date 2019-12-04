@@ -118,6 +118,7 @@
 (require 'setup-olivetti)
 (require 'setup-org-mode)
 (require 'setup-personal)
+(require 'setup-php-mode)
 (require 'setup-prettier-js)
 (require 'setup-projectile)
 (require 'setup-rainbow-mode)
