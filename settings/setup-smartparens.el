@@ -12,5 +12,8 @@
          )
   :custom
   (sp-autoescape-string-quote nil)
+  :config
+  (sp-local-pair 'markdown-mode "'" nil :actions '(:rem insert))
+  (sp-local-pair 'markdown-mode "`" nil :actions '(:rem insert)))
 
 (provide 'setup-smartparens)
