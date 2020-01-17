@@ -4,8 +4,7 @@
   :after olivetti
   :commands markdown-mode
   :mode "\\.md'"
-  :hook ((markdown-mode . turn-on-auto-fill)
-         (markdown-mode . olivetti-mode))
+  :hook ((markdown-mode . olivetti-mode))
   :custom
   (markdown-imenu-generic-expression
    '(("title"  "^\\(.*\\)[\n]=+$" 1)
