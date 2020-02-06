@@ -1,8 +1,9 @@
 # -*- mode: snippet -*-
 # name: console.log with eslint-disable-next-line
 # key: log
+# expand-env: ((yas-wrap-around-region 'nil))
 # contributor: barrie.treloar@gmail.com
 # --
 // TODO: Remove Console
 // eslint-disable-next-line no-console
-console.log(\`$0\`);
+console.log(\`${1:`yas-selected-text`}$0\`, $1);
