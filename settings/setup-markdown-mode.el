@@ -5,6 +5,7 @@
   :commands markdown-mode
   :mode "\\.md'"
   :hook ((markdown-mode . olivetti-mode))
+  :bind (("C-c C-u" . string-inflection-all-cycle))
   :custom
   (markdown-imenu-generic-expression
    '(("title"  "^\\(.*\\)[\n]=+$" 1)
