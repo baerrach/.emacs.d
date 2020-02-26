@@ -18,10 +18,20 @@
 
 ;; Change word separators
 (global-unset-key (kbd "C-x +")) ;; used to be balance-windows
-(global-set-key (kbd "C-x + -") (λ (replace-region-by 's-dashed-words)))
-(global-set-key (kbd "C-x + _") (λ (replace-region-by 's-snake-case)))
-(global-set-key (kbd "C-x + c") (λ (replace-region-by 's-lower-camel-case)))
-(global-set-key (kbd "C-x + C") (λ (replace-region-by 's-upper-camel-case)))
+(defhydra hydra-string-inflection-region (:color blue :hint nil)
+    "
+Change string inflection of region
+----------------------------------
+ ^_u_^ underscore
+ ^_-_^ kebab-case
+ ^_c_^ lowerCamelCase
+ ^_C_^ UpperCamelCase"
+    ("u" string-inflection-underscore)
+    ("-" string-inflection-kebab-case)
+    ("c" string-inflection-lower-camelcase)
+    ("C" string-inflection-camelcase)
+)
+(global-set-key (kbd "C-c h +") 'hydra-string-inflection-region/body)
 
 ;; Buffers
 (global-set-key (kbd "C-c y") 'bury-buffer)
