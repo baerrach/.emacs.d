@@ -31,3 +31,20 @@ Restart emacs
 ;; To handle smart quotes
 ;; Not sure how to force that
 ;;
+
+### ERROR: apply: Spawning child process: Invalid argument ###
+
+Starting a shell `M-x shell`, starting a grep `M-x rgrep` and anything that spawns child processes fails with
+
+```
+apply: Spawning child process: Invalid argument
+
+`M-x eshell` works.
+
+`M-x toggle-debug-on-error` try again, see what is reported... Nothing.
+
+The value of the bash binary is hard coded, make sure the bash binary is installed at:
+
+```
+  (setq explicit-shell-file-name "C:/Program Files/Git/bin/bash.exe")
+```
