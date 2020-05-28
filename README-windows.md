@@ -13,6 +13,8 @@ If you want to use that directory then as per
 http://stackoverflow.com/questions/885793/emacs-error-when-calling-server-start
 you will need to change the file's ownership to you.
 
+Recommendation: Set HOME to C:\Users\<user>
+
 ;;
 ;; After saving file,
 ;; revert-buffer-with-coding-system windows-1250
