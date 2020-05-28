@@ -1,4 +1,8 @@
-For Windows you will need to have msysGit installed and on your PATH.
+### Git for Windows ###
+
+For Windows you will need to have [Git for Windows](https://gitforwindows.org/) installed and on your PATH.
+
+### Configure HOME environment variable ###
 
 The Windows HOME environment variable must be set to something that you own or
 you will get the "The directory <XXX> is unsafe".
