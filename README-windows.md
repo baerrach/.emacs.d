@@ -15,6 +15,8 @@ you will need to change the file's ownership to you.
 
 Recommendation: Set HOME to C:\Users\<user>
 
+### TODO: Handling smart quotes ###
+
 ;;
 ;; After saving file,
 ;; revert-buffer-with-coding-system windows-1250
