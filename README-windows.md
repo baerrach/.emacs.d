@@ -15,6 +15,14 @@ you will need to change the file's ownership to you.
 
 Recommendation: Set HOME to C:\Users\<user>
 
+### ag (the silver searcher) and Windows ###
+
+Download and install the latest release of ag from  https://github.com/k-takata/the_silver_searcher-win32/releases into "C:\ag".
+
+Edit the "User variables for <user>" > "Path" variable, and add a new entry for "C:\ag"
+
+Restart emacs
+
 ### TODO: Handling smart quotes ###
 
 ;;
