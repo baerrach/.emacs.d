@@ -93,6 +93,7 @@
 (require 'setup-dired)
 (require 'setup-dired-narrow)
 (require 'setup-disabled-commands)
+(require 'setup-edit-server)
 (require 'setup-el-patch)
 (require 'setup-expand-region)
 (require 'setup-files)

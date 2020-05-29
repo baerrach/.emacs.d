@@ -44,6 +44,7 @@ the bits that you need.
 * ivy - recent files added to switch buffer list.
 * swiper - replaces isearch
 * counsel - replaces some M-x commands to work better with ivy
+* edit-server - edit text boxes from a Web Browser with Emacs
 
 ### Trouble Shooting ###
 
