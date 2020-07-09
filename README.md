@@ -22,29 +22,26 @@ the bits that you need.
 
 **TOOD** Scan through init.el and provide overview
 
-* imenu - display list of things in the file in a hierarchical menu drilling
-  down into each new level, useful in js2-mode and markdown-mode
-* js2-mode - hydra for refactoring, bound to `C-c h r`
-* string inflection bound to `C-c C-u`, rotates through snake, camel, underscore
-  casing.
-* expand region `er/` prefix, use `C-'` to `er/expand-region`
-* visual regexp `vr/` prefix.
-* browse kill ring
-* hydra - all hydra's heads should be prefixed to `C-c h <a key>`
-* multiple cursors - hydra bound to `C-h h m`
+* animated guide to paredit http://danmidwood.com/content/2014/11/21/animated-paredit.html
 * avy (replaces ace jump)
-* moving faster `C-S-n` and `C-S-p`
+* browse kill ring
 * comment or uncomment region `C-c c`
-* animated guide to paredit
-  http://danmidwood.com/content/2014/11/21/animated-paredit.html
-* simplezen for html https://github.com/magnars/simplezen.el
-* guidekey - needs configuring. Work out which key sequences are used
-  infrequently and would benefit from popups
-* webmode - see shortcut list (http://web-mode.org/)
-* ivy - recent files added to switch buffer list.
-* swiper - replaces isearch
 * counsel - replaces some M-x commands to work better with ivy
 * edit-server - edit text boxes from a Web Browser with Emacs
+* expand region `er/` prefix, use `C-'` to `er/expand-region`
+* guidekey - needs configuring. Work out which key sequences are used infrequently and would benefit from popups
+* hydra - all hydra's heads should be prefixed to `C-c h <a key>`
+* imenu - display list of things in the file in a hierarchical menu drilling down into each new level, useful in js2-mode and markdown-mode
+* ivy - recent files added to switch buffer list.
+* js2-mode - hydra for refactoring, bound to `C-c h r`
+* moving faster `C-S-n` and `C-S-p`
+* multiple cursors - hydra bound to `C-h h m`
+* simplezen for html https://github.com/magnars/simplezen.el
+* string inflection bound to `C-c C-u`, rotates through snake, camel, underscore casing.
+* swiper - replaces isearch
+* visual regexp `vr/` prefix.
+* webmode - see shortcut list (http://web-mode.org/)
+
 
 ### Trouble Shooting ###
 
