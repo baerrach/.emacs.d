@@ -39,6 +39,7 @@ the bits that you need.
 * simplezen for html https://github.com/magnars/simplezen.el
 * string inflection bound to `C-c C-u`, rotates through snake, camel, underscore casing.
 * swiper - replaces isearch
+* vlf - very large file handling
 * visual regexp `vr/` prefix.
 * webmode - see shortcut list (http://web-mode.org/)
 

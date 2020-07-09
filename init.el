@@ -139,6 +139,7 @@
 (require 'setup-unicode-fonts)
 (require 'setup-uniquify)
 (require 'setup-visual-regexp)
+(require 'setup-vlf)
 (require 'setup-wdired)
 (require 'setup-web-mode)
 (require 'setup-wgrep)
