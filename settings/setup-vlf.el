@@ -2,6 +2,7 @@
 
 (use-package vlf
   :after (hydra)
+  :bind (("C-c h v" . hydra-vlf/body))
   :config
   (require 'vlf-setup)
   (defhydra hydra-vlf (:color blue :hint nil)
