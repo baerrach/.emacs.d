@@ -20,6 +20,7 @@
                        company-echo-metadata-frontend) "always show tooltip")
   (completion-styles '(substring partial-completion emacs22))
   :config
+  (require 'company-dabbrev-code)
   ;; See https://github.com/company-mode/company-mode/issues/360#issuecomment-366937880
   ;; Must add mode to company-dabbrev-code-modes for company-dabbrev-code-everywhere to work
   (add-to-list 'company-dabbrev-code-modes 'markdown-mode))
