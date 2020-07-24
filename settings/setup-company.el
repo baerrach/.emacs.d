@@ -16,6 +16,8 @@
   (company-dabbrev-downcase nil "Replacement text should not be downcased, it should use the case of the text it matched")
   (company-dabbrev-ignore-case "Replacement text should match candidate, even if prefix is different")
   (company-idle-delay nil "only show company on manual invocation")
+  (company-frontends '(company-pseudo-tooltip-frontend
+                       company-echo-metadata-frontend) "always show tooltip")
   (completion-styles '(substring partial-completion emacs22))
   :config
   ;; See https://github.com/company-mode/company-mode/issues/360#issuecomment-366937880
