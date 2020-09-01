@@ -4,6 +4,8 @@
   :commands org-mode
   :bind (:map org-mode-map
          ("C-c a" . org-agenda)
+         ;; Disable conflicting keys
+         ("C-'" . nil)
          ;; Disable archive keys
          ("<C-tab>" . nil)
          ("C-c $" . nil) ; disable org-archive-subtree
