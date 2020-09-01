@@ -2,7 +2,8 @@
 
 (use-package org
   :commands org-mode
-  :bind (("C-c a" . org-agenda)
+  :bind (:map org-mode-map
+         ("C-c a" . org-agenda)
          ;; Disable archive keys
          ("<C-tab>" . nil)
          ("C-c $" . nil) ; disable org-archive-subtree
