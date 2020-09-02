@@ -13,6 +13,8 @@
          ("C-c C-x C-s" . nil) ; disable org-archive-subtree
          ("C-c C-x a" . nil))
   :custom
+  (org-babel-load-languages '((emacs-lisp . t)
+                              (shell . t)))
   (org-clock-persist t "Save the running clock and all clock history when exiting Emacs, load it on startup")
   (org-clock-persist-query-resume nil "Do not prompt to resume an active clock")
   (org-clock-out-when-done t "Clock out when moving task to a done state")
