@@ -131,6 +131,7 @@
 (require 'setup-smart-forward)
 (require 'setup-smartparens)
 (require 'setup-smooth-scrolling)
+(require 'setup-so-long)
 (require 'setup-string-inflection)
 (require 'setup-swiper)
 (require 'setup-systemd-mode)
