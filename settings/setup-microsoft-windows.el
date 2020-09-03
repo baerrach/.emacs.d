@@ -1,9 +1,9 @@
 (when (equal system-type 'windows-nt)
   ;; When running in Windows, we use Git Bash as alternate shell
+  ;; See M-x describe-function shell for full details on these variables
   (setq explicit-shell-file-name "C:/Program Files/Git/bin/bash.exe")
-  (setq shell-file-name "bash")
+  (setq shell-file-name explicit-shell-file-name)
   (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
-  (setenv "SHELL" "bash")
   ;; Tramp is used by magit
   (setq tramp-encoding-shell "C:/Program Files/Git/bin/bash.exe")
   (setq w32-quote-process-args ?\")
