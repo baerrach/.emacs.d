@@ -14,6 +14,7 @@
          ("C-c C-x a" . nil))
   :custom
   (org-babel-load-languages '((emacs-lisp . t)
+                              (eshell . t)
                               (shell . t)))
   (org-confirm-babel-evaluate nil)
   (org-clock-persist t "Save the running clock and all clock history when exiting Emacs, load it on startup")
