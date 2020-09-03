@@ -96,6 +96,7 @@
 (require 'setup-edit-server)
 (require 'setup-el-patch)
 (require 'setup-expand-region)
+(require 'setup-explain-pause-mode)
 (require 'setup-files)
 (require 'setup-flycheck)
 (require 'setup-flycheck-pos-tip)
