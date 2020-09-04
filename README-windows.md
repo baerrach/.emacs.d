@@ -43,8 +43,6 @@ apply: Spawning child process: Invalid argument
 
 `M-x toggle-debug-on-error` try again, see what is reported... Nothing.
 
-The value of the bash binary is hard coded, make sure the bash binary is installed at:
+Make sure the bash binary is on the %PATH% variable.
+See `settings/setup-microsoft-windows.el`
 
-```
-  (setq explicit-shell-file-name "C:/Program Files/Git/bin/bash.exe")
-```
