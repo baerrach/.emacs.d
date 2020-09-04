@@ -23,6 +23,7 @@ the bits that you need.
 **TOOD** Scan through init.el and provide overview
 
 * animated guide to paredit http://danmidwood.com/content/2014/11/21/animated-paredit.html
+* smartparens by example https://ebzzry.io/en/emacs-pairs/
 * avy (replaces ace jump)
 * browse kill ring
 * comment or uncomment region `C-c c`
