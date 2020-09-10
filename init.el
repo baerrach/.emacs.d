@@ -62,12 +62,6 @@
 (require 'setup-emacs-appearance)
 (require 'setup-emacs-theme)
 
-;;; Setup order independent packages
-(require 'setup-emacs-server)
-(require 'setup-debugger)
-(require 'setup-desktop)
-(require 'setup-saveplace)
-
 ;;; Operating Specific setups
 (require 'setup-mac)
 (require 'setup-microsoft-windows)
@@ -89,12 +83,15 @@
 (require 'setup-counsel-projectile)
 (require 'setup-css-eldoc)
 (require 'setup-dash)
+(require 'setup-debugger)
 (require 'setup-defuns)
+(require 'setup-desktop)
 (require 'setup-dired)
 (require 'setup-dired-narrow)
 (require 'setup-disabled-commands)
 (require 'setup-edit-server)
 (require 'setup-el-patch)
+(require 'setup-emacs-server)
 (require 'setup-expand-region)
 (require 'setup-explain-pause-mode)
 (require 'setup-files)
@@ -130,6 +127,7 @@
 (require 'setup-rjsx-mode)
 (require 'setup-ruby-mode)
 (require 'setup-savehist)
+(require 'setup-saveplace)
 (require 'setup-shell)
 (require 'setup-simplezen)
 (require 'setup-smart-forward)
