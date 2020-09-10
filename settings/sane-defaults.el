@@ -49,10 +49,6 @@
 ;; Don't ring the bell
 (setq ring-bell-function 'ignore)
 
-;; Save minibuffer history
-(savehist-mode 1)
-(setq history-length 1000)
-
 ;; Undo/redo window configuration with C-c <left>/<right>
 (winner-mode 1)
 

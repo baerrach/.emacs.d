@@ -128,6 +128,7 @@
 (require 'setup-recentf)
 (require 'setup-rjsx-mode)
 (require 'setup-ruby-mode)
+(require 'setup-savehist)
 (require 'setup-shell)
 (require 'setup-simplezen)
 (require 'setup-smart-forward)
