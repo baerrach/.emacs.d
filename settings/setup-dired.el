@@ -3,6 +3,8 @@
 (straight-use-package '(dired :type built-in))
 
 (use-package dired
+  ;; Loads after 1 second of idle time.
+  :defer 1
   :after (dash)
   :bind (:map dired-mode-map
               ("C-a" . dired-back-to-start-of-files) ;; C-a is nicer in dired if it moves back to start of files
