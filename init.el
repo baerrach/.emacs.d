@@ -80,7 +80,6 @@
 (require 'setup-ag)
 (require 'setup-amx)
 (require 'setup-apache-mode)
-(require 'setup-auto-package-update)
 (require 'setup-avy)
 (require 'setup-browse-kill-ring)
 (require 'setup-company)
