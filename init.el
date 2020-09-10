@@ -125,6 +125,7 @@
 (require 'setup-projectile)
 (require 'setup-rainbow-mode)
 (require 'setup-re-builder)
+(require 'setup-recentf)
 (require 'setup-rjsx-mode)
 (require 'setup-ruby-mode)
 (require 'setup-shell)

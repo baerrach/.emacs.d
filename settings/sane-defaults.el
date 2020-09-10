@@ -49,10 +49,6 @@
 ;; Don't ring the bell
 (setq ring-bell-function 'ignore)
 
-;; Save a list of recent files visited.
-(recentf-mode 1)
-(setq recentf-max-saved-items 100) ;; just 20 is too recent
-
 ;; Save minibuffer history
 (savehist-mode 1)
 (setq history-length 1000)
