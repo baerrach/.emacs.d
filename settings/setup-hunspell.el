@@ -1,6 +1,8 @@
 (require 'use-package)
 
 (use-package ispell
+  ;; Loads after 2 second of idle time.
+  :defer 2
   :custom
   (ispell-program-name (executable-find "hunspell"))
 
