@@ -1,13 +1,6 @@
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 
-;; Auto refresh buffers
-(global-auto-revert-mode 1)
-
-;; Also auto refresh dired, but be quiet about it
-(setq global-auto-revert-non-file-buffers t)
-(setq auto-revert-verbose nil)
-
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)
 
