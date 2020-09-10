@@ -1,6 +1,8 @@
 (require 'use-package)
 
 (use-package ivy
+  ;; Loads after 1 second of idle time.
+  :defer 1
   :diminish
   :custom
   (enable-recursive-minibuffers t)
