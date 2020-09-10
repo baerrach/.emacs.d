@@ -49,9 +49,6 @@
 ;; Don't ring the bell
 (setq ring-bell-function 'ignore)
 
-;; Undo/redo window configuration with C-c <left>/<right>
-(winner-mode 1)
-
 ;; Never insert tabs
 (setq-default indent-tabs-mode nil)
 
