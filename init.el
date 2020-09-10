@@ -115,6 +115,7 @@
 (require 'setup-lsp-mode)
 (require 'setup-magit)
 (require 'setup-markdown-mode)
+(require 'setup-minibuffer)
 (require 'setup-move-text)
 (require 'setup-multiple-cursors)
 (require 'setup-olivetti)
