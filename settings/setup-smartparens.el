@@ -12,6 +12,7 @@
          ("C-M-f" . sp-forward-sexp)
          ("C-M-b" . sp-backward-sexp))
   :custom
+  (require 'smartparens-config)
   (sp-autoescape-string-quote nil)
   :config
   (sp-local-pair 'markdown-mode "'" nil :actions '(:rem insert))
