@@ -6,6 +6,8 @@
          ("C-c a" . org-agenda)
          ;; Disable conflicting keys
          ("C-'" . nil)
+         ;; Disable timestamp overlays
+         ("C-c C-x C-t" . nil)
          ;; Disable archive keys
          ("<C-tab>" . nil)
          ("C-c $" . nil) ; disable org-archive-subtree
