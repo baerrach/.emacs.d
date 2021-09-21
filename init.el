@@ -117,6 +117,7 @@
 (require 'setup-minibuffer)
 (require 'setup-move-text)
 (require 'setup-multiple-cursors)
+(require 'setup-nginx-mode)
 (require 'setup-olivetti)
 (require 'setup-org-mode)
 (require 'setup-personal)
