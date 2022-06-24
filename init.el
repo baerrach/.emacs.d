@@ -164,3 +164,6 @@
 ;;
 
 ;; Run eslisp lint over files
+
+; Always use bae/work-settings as default
+(bae/work-settings)
