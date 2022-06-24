@@ -13,7 +13,10 @@
          ("C-c $" . nil) ; disable org-archive-subtree
          ("C-c C-x A" . nil)
          ("C-c C-x C-s" . nil) ; disable org-archive-subtree
-         ("C-c C-x a" . nil))
+         ("C-c C-x a" . nil)
+         ;; Bind org-shiftup/down keys instead of org-shiftmetaup/dow
+         ("<M-S-up>" . org-shiftup)
+         ("<M-S-down>" . org-shiftdown))
   :custom
   (org-babel-load-languages '((emacs-lisp . t)
                               (eshell . t)
