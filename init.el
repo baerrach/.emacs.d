@@ -94,7 +94,7 @@
 (require 'setup-el-patch)
 (require 'setup-emacs-server)
 (require 'setup-expand-region)
-(require 'setup-explain-pause-mode)
+;(require 'setup-explain-pause-mode)
 (require 'setup-files)
 (require 'setup-flycheck)
 (require 'setup-flycheck-pos-tip)
