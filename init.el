@@ -47,6 +47,7 @@
 
 ;; Initialize package handling
 (require 'setup-use-package)
+(require 'setup-org-mode)
 (require 'setup-delight) ; needed for use-package :delight
 (require 'setup-diminish) ; needed for use-package :diminish
 (require 'setup-bind-key) ; needed for use-package :bind
@@ -119,7 +120,6 @@
 (require 'setup-multiple-cursors)
 (require 'setup-nginx-mode)
 (require 'setup-olivetti)
-(require 'setup-org-mode)
 (require 'setup-personal)
 (require 'setup-php-mode)
 (require 'setup-prettier-js)
