@@ -7,6 +7,8 @@
          ("C-S-z" . undo-tree-redo)
          :map undo-tree-map
          ("C-/" . nil))
+  :custom
+  (undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
   :config
   (global-undo-tree-mode))
 
