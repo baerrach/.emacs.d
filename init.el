@@ -119,6 +119,7 @@
 (require 'setup-move-text)
 (require 'setup-multiple-cursors)
 (require 'setup-nginx-mode)
+(require 'setup-nxml-mode)
 (require 'setup-olivetti)
 (require 'setup-personal)
 (require 'setup-php-mode)
