@@ -6,12 +6,12 @@
   ;; that some commands will dislike the spaces in the directories.
   ;;
   ;; Ensure that your %PATH% is setup to include C:/Program Files/Git/bin/
-  (setq shell-file-name "bash")
-  (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
+;  (setq shell-file-name "bash")
+;  (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
   ;; Tramp is used by magit
-  (setq tramp-encoding-shell "bash")
-  (setq w32-quote-process-args ?\")
-  (setq null-device "/dev/null")
+;  (setq tramp-encoding-shell "bash")
+;  (setq w32-quote-process-args ?\")
+;  (setq null-device "/dev/null")
 
   ;;
   ;; After saving file,
