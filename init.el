@@ -142,6 +142,7 @@
 (require 'setup-swiper)
 (require 'setup-systemd-mode)
 (require 'setup-tide)
+;(require 'setup-tramp) ;; requires more work
 (require 'setup-undo-tree)
 (require 'setup-unicode-fonts)
 (require 'setup-uniquify)

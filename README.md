@@ -59,6 +59,16 @@ the bits that you need.
 ;; Use commands: <mode-name>/command to defer loading until that command is invoked
 ```
 
+#### Debugging ####
+
+See [Function Debugging](https://www.gnu.org/software/emacs/manual/html_node/elisp/Function-Debugging.html) for more details.
+
+Often you'll want to step into an emacs function to see what is going on.
+
+From the `*.el` file you can locate the name of the funtion, then use `M-x debug-on-entry` and specify the function name.
+
+Use `M-x cancel-debug-on-entry` to remove it.
+
 ## New tools to use ##
 
 ## TODO ##
