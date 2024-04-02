@@ -111,7 +111,7 @@
 (require 'setup-js2-mode)
 (require 'setup-json-mode)
 (require 'setup-lsp-mode)
-(require 'setup-lsp-python-ms)
+(require 'setup-lsp-pyright)
 (require 'setup-macros)
 (require 'setup-magit)
 (require 'setup-markdown-mode)
