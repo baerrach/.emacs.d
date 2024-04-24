@@ -98,7 +98,6 @@
 (require 'setup-files)
 (require 'setup-flycheck)
 (require 'setup-flycheck-pos-tip)
-(require 'setup-fullframe)
 (require 'setup-grep)
 (require 'setup-guide-key)
 (require 'setup-highlight-escape-sequences)
