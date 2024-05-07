@@ -1,3 +1,17 @@
+### Cygwin and Make ###
+
+Straight will compile Emacs packages and requires Make.
+
+Download cygwin from https://www.cygwin.com/ and install it to C:\cygwin64 with the packages downloaded to C:\cygwin-packages.
+
+Change the view to "Full", and in Search type "make", change the New column from "skip" to a version.
+
+Click Next and let the installation complete.
+
+Edit the Windows PATH variable to include "C:\cygwin64\bin;"
+
+Move the setup binary into C:\cygwin-packages.
+
 ### Git for Windows ###
 
 For Windows you will need to have [Git for Windows](https://gitforwindows.org/) installed and on your PATH.

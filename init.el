@@ -17,6 +17,11 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;;; Ensure org is loaded before any other package attempts to load it and incorrectly use the prebuilt version
+;; See "The wrong version of my package was loaded"
+;; https://github.com/radian-software/straight.el?tab=readme-ov-file#the-wrong-version-of-my-package-was-loaded
+(straight-use-package 'org)
+
 ;; https://github.com/raxod502/straight.el/blob/develop/README.md#integration-with-use-package
 (setq straight-use-package-by-default t)
 (straight-use-package 'use-package)

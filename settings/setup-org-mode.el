@@ -1,5 +1,14 @@
 (require 'use-package)
 
+;;; TROUBLE SHOOTING
+;;
+;;; org-agenda is EMPTY
+;;
+;; org-agenda-files is a variable value is nil
+;; Run `describe-variable org-agenda` and check it points to your agenda file.
+;; This is commonly setup in ~/.emacs.d/custom.el
+;;
+
 (use-package org
   :commands org-mode
   :bind (:map org-mode-map
