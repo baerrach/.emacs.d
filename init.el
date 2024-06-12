@@ -123,6 +123,7 @@
 (require 'setup-move-text)
 (require 'setup-multiple-cursors)
 (require 'setup-nginx-mode)
+(require 'setup-nlinum)
 (require 'setup-nxml-mode)
 (require 'setup-olivetti)
 (require 'setup-personal)

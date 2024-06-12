@@ -5,6 +5,6 @@
   (interactive)
   (unwind-protect
       (progn
-        (linum-mode 1)
+        (nlinum-mode 1)
         (call-interactively 'goto-line))
-    (linum-mode -1)))
+    (nlinum-mode -1)))
