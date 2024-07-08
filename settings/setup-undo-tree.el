@@ -8,6 +8,7 @@
          :map undo-tree-map
          ("C-/" . nil))
   :custom
+  (undo-tree-auto-save-history nil)
   (undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
   :config
   (defun bae/undo-tree-overridden-undo-bindings-p (r)
