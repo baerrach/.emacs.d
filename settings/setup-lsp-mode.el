@@ -2,13 +2,8 @@
 
 (use-package lsp-mode
   :commands lsp-mode
-  :hook ((lsp-after-open . lsp-enable-imenu)
-         (python-mode . lsp))
-  :config
-  (lsp-register-client
-   (make-lsp-client :new-connection (lsp-stdio-connection "pyls")
-                    :major-modes '(python-mode)
-                    :server-id 'pyls)))
+  :hook ((lsp-after-open . lsp-enable-imenu))
+  )
 
 (use-package lsp-ui
   :after (lsp-mode)

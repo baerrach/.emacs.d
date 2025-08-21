@@ -1,6 +1,20 @@
+### Install Emacs via pacman ###
+
+https://www.msys2.org/docs/installer/ and install.
+
+PREFER URCT binaries, see https://www.msys2.org/docs/environments/#msvcrt-vs-ucrt
+
+pacman -S mingw-w64-ucrt-x86_64-emacs
+
+### Native Compliation of binaries, Straight compilation of packages ###
+
+Straight will compile Emacs packages and requires toolchains like Make and gcc.
+
+This will work out of the box with the mingw-w64-ucrt-x86_64-emacs version of emacs.
+
 ### Git for Windows ###
 
-For Windows you will need to have [Git for Windows](https://gitforwindows.org/) installed and on your PATH.
+For Windows you will need to have [Git for Windows](https://gitforwindows.org/) installed and on your PATH (before msys2)
 
 ### Configure HOME environment variable ###
 
@@ -19,9 +33,7 @@ Recommendation: Set HOME to C:\Users\<user>
 
 Download and install the latest release of ag from  https://github.com/k-takata/the_silver_searcher-win32/releases into "C:\ag".
 
-Edit the "User variables for <user>" > "Path" variable, and add a new entry for "C:\ag"
-
-Restart emacs
+Edit the Windows PATH variable to include "C:\ag"
 
 ### TODO: Handling smart quotes ###
 

@@ -17,6 +17,11 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;;; Ensure org is loaded before any other package attempts to load it and incorrectly use the prebuilt version
+;; See "The wrong version of my package was loaded"
+;; https://github.com/radian-software/straight.el?tab=readme-ov-file#the-wrong-version-of-my-package-was-loaded
+(straight-use-package 'org)
+
 ;; https://github.com/raxod502/straight.el/blob/develop/README.md#integration-with-use-package
 (setq straight-use-package-by-default t)
 (straight-use-package 'use-package)
@@ -98,7 +103,6 @@
 (require 'setup-files)
 (require 'setup-flycheck)
 (require 'setup-flycheck-pos-tip)
-(require 'setup-fullframe)
 (require 'setup-grep)
 (require 'setup-guide-key)
 (require 'setup-highlight-escape-sequences)
@@ -111,7 +115,7 @@
 (require 'setup-js2-mode)
 (require 'setup-json-mode)
 (require 'setup-lsp-mode)
-(require 'setup-lsp-python-ms)
+(require 'setup-lsp-pyright)
 (require 'setup-macros)
 (require 'setup-magit)
 (require 'setup-markdown-mode)
@@ -119,6 +123,8 @@
 (require 'setup-move-text)
 (require 'setup-multiple-cursors)
 (require 'setup-nginx-mode)
+(require 'setup-nlinum)
+(require 'setup-nxml-mode)
 (require 'setup-olivetti)
 (require 'setup-personal)
 (require 'setup-php-mode)
@@ -141,6 +147,7 @@
 (require 'setup-swiper)
 (require 'setup-systemd-mode)
 (require 'setup-tide)
+;(require 'setup-tramp) ;; requires more work
 (require 'setup-undo-tree)
 (require 'setup-unicode-fonts)
 (require 'setup-uniquify)
