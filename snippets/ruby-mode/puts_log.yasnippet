@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: puts region for debug
+# key: log
+# expand-env: ((yas-wrap-around-region 'nil))
+# contributor: barrie.treloar@gmail.com
+# --
+puts "$1$0=#{${1:`yas-selected-text`}}"
