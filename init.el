@@ -126,6 +126,7 @@
 (require 'setup-nlinum)
 (require 'setup-nxml-mode)
 (require 'setup-olivetti)
+(require 'setup-org-roam)
 (require 'setup-personal)
 (require 'setup-php-mode)
 (require 'setup-prettier-js)
