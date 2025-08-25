@@ -39,3 +39,4 @@ var/
 /eln-cache/
 /bookmarks
 /org-roam.db
+/org-persist/

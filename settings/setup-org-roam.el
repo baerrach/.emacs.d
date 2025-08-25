@@ -1,15 +1,15 @@
 (require 'use-package)
 
-;; Dependencies
-; https://www.sqlite.org/download.html
+;;; Dependencies
+;; See https://www.sqlite.org/download.html
 
 (use-package org-roam
   :after (emacsql emacsql-sqlite hydra)
   :bind (("C-c h r" . hydra-org-roam/body)
          )
-  :custom
-;  (org-roam-database-connector 'sqlite-builtin)
-  (org-roam-directory "D:/wiki")
+  ;; Don't set this via :custom, it needs to be different across Emacs installations
+  ;; Use custom: instead user M-X customize-variable so the values are stored in ~/.emacs.d/custom.el
+  ; (org-roam-directory "use M-x customize-variable instead")
   :config
   (add-to-list 'company-backends 'company-capf)
   (org-roam-db-autosync-mode)

@@ -1,6 +1,7 @@
 (require 'use-package)
 
 (use-package ws-butler
+  :straight (:type git :host github :repo "lewang/ws-butler" :branch "master")
   :diminish
   :custom
   (show-trailing-whitespace t)
